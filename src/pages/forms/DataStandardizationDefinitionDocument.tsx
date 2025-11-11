@@ -91,6 +91,44 @@ const DataStandardizationDefinitionDocument: React.FC = () => {
           표준 도메인의 한 유형으로, 특정 데이터 항목이 미리 정해진 값의 목록을 가질 때 그 코드값과 코드명을 정의합니다 (예: 성별 코드 'M/F', 부서 코드).
         </p>
 
+        <h2 className="text-xl font-semibold mb-3 flex items-center">
+          <span className="text-2xl mr-2">2.</span> 목적 및 역할 (Purpose and Role)
+        </h2>
+        <ul className="list-disc list-inside mb-4 text-gray-700 space-y-1">
+          <li><strong>데이터 품질 및 일관성 확보:</strong> 시스템 내외부에서 사용되는 모든 데이터의 용어와 의미를 통일하여 데이터의 정확성, 일관성 및 공유성을 극대화합니다.</li>
+          <li><strong>업무 이해도 증진:</strong> 표준 용어 사전을 제공하여, 기획자, 개발자, 사용자 등 모든 이해관계자가 데이터에 대한 동일한 이해를 갖도록 돕습니다.</li>
+          <li><strong>시스템 개발 및 유지보수 효율 증대:</strong> 데이터 명칭, 타입 등이 표준화됨으로써 데이터베이스 설계, 프로그램 개발, 인터페이스 구축 등의 작업이 효율화되고, 시스템 변경 및 유지보수가 용이해집니다.</li>
+          <li><strong>감리 및 검증 자료:</strong> 감리원이 데이터베이스 정의서 및 현행 시스템 분석 결과와 비교하여, 데이터 표준이 적절하게 정의되었고 개발 산출물에 충실히 적용되었는지 검증하는 기준을 제공합니다.</li>
+        </ul>
+
+        <h2 className="text-xl font-semibold mb-3 flex items-center">
+          <span className="text-2xl mr-2">3.</span> 작성 주체 및 시점 (Author and Timing)
+        </h2>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border-2 border-gray-300">
+            <thead>
+              <tr>
+                <th className="border border-gray-300 px-4 py-2">항목</th>
+                <th className="border border-gray-300 px-4 py-2">상세 내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2 font-bold">작성 주체</td>
+                <td className="border border-gray-300 px-4 py-2"><strong>사업자 (개발사/수행사)</strong>의 데이터 모델러(Data Modeler) 또는 <strong>데이터 아키텍트(DA)</strong>가 주도적으로 작성하며, 발주처의 업무 담당자와 협의하여 표준 용어를 확정합니다.</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2 font-bold">최초 작성 시점</td>
+                <td className="border border-gray-300 px-4 py-2">프로젝트 착수 단계 또는 요구분석 단계 초기에 데이터 모델링 활동을 시작하기 이전에 수립되어야 합니다.</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 px-4 py-2 font-bold">갱신 시점</td>
+                <td className="border border-gray-300 px-4 py-2">프로젝트 진행 중 새로운 데이터 용어, 코드, 도메인이 추가되거나 기존 표준에 대한 변경 요청이 있을 경우 지속적으로 갱신하여 최신 상태를 유지해야 합니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <h3 className="text-lg font-semibold mb-3 flex items-center">
           <span className="text-2xl mr-2">👩‍⚖️</span> 정보시스템 감리 관점
         </h3>

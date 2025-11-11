@@ -79,7 +79,7 @@ export default function Home() {
 
       {/* All Categories Grid (only if no search term) */}
       {!searchTerm && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-8 gap-4">
           {[
             { name: '사업수행', path: '/project-plan', icon: '📝' },
             { name: '요구사항', path: '/requirements', icon: '📋' },

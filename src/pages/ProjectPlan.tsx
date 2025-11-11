@@ -1,7 +1,7 @@
 const projectPlanDeliverables = [
   {
     category: '관리/계획 (QA)',
-    deliverables: '제안요청서/제안서/계약서/사업수행계획서, 품질보증 계획서, 보안정책서/시스템 보안정책서, 보안 취약점 분석평가 보고서, 요구사항 추적표, 총괄 시험 계획서, 반복계획서 (반복적 방법론 적용 시)',
+    deliverables: '제안요청서/제안서/계약서/사업수행계획서, 품질보증 계획서, 보안정책서/시스템 보안정책서, 보안 취약점 분석평가 보고서, <a href="/forms/requirements-traceability-matrix" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">요구사항 추적표</a>, 총괄 시험 계획서, 반복계획서 (반복적 방법론 적용 시)',
   },
 ];
 
@@ -23,7 +23,7 @@ const ProjectPlan = () => {
             {projectPlanDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4">{item.deliverables}</td>
+                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
               </tr>
             ))}
           </tbody>

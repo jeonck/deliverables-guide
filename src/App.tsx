@@ -10,6 +10,7 @@ import QA from './pages/QA';
 import Security from './pages/Security';
 import Etc from './pages/Etc';
 import Transition from './pages/Transition';
+import RequirementsTraceabilityMatrix from './pages/forms/RequirementsTraceabilityMatrix';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/security" element={<Security />} />
             <Route path="/transition" element={<Transition />} />
             <Route path="/etc" element={<Etc />} />
+            <Route path="/forms/requirements-traceability-matrix" element={<RequirementsTraceabilityMatrix />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

@@ -9,7 +9,7 @@ const testDeliverables = [
   },
   {
     category: '관리 (QA)',
-    deliverables: '요구사항 추적표, 품질보증활동 계획/결과서',
+    deliverables: '<a href="/forms/requirements-traceability-matrix" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">요구사항 추적표</a>, 품질보증활동 계획/결과서',
   },
 ];
 
@@ -31,7 +31,7 @@ const Testing = () => {
             {testDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4">{item.deliverables}</td>
+                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
               </tr>
             ))}
           </tbody>

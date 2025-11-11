@@ -13,7 +13,7 @@ const implementationDeliverables = [
   },
   {
     category: '관리/표준 (QA)',
-    deliverables: '적용 방법론 및 개발 표준, 요구사항 추적표, 품질보증활동 계획/결과서, 반복 계획/평가서',
+    deliverables: '적용 방법론 및 개발 표준, <a href="/forms/requirements-traceability-matrix" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">요구사항 추적표</a>, 품질보증활동 계획/결과서, 반복 계획/평가서',
   },
 ];
 
@@ -35,7 +35,7 @@ const Implementation = () => {
             {implementationDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4">{item.deliverables}</td>
+                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
               </tr>
             ))}
           </tbody>

@@ -62,39 +62,43 @@ const DataStandardizationDefinitionDocument: React.FC = () => {
           <span className="text-2xl mr-2">1.</span> 정의 (Definition)
         </h2>
         <p className="mb-4 text-gray-700">
+          데이터 표준화 정의서는 정보시스템의 데이터를 관리하는 데 필요한 일관된 규칙과 기준을 명문화한 문서입니다. 이는 데이터 요소(컬럼), 도메인, 코드, 용어 등에 대한 표준 이름, 정의, 형식, 허용 값 등을 통일시켜 시스템 전반에 걸쳐 데이터의 의미적 일관성을 확보하고 데이터 품질을 유지하기 위한 핵심 기준 문서입니다.
+        </p>
+        <p className="mb-4 text-gray-700">
           데이터 표준화 정의서는 전사적인 데이터 품질 및 상호 운용성을 확보하기 위해 수립하는 기준 문서이며, 주요 구성 요소는 다음과 같습니다.
+        </p>
 
-          <h3 className="text-lg font-semibold mt-4 mb-2">표준 용어 정의서 (Standard Vocabulary Definition):</h3>
-          <p className="mb-2 text-gray-700">
-            업무적으로 사용되는 개념이나 데이터 항목에 대해 전사적인 <strong>통일된 이름(명칭)</strong>과 명확한 정의를 부여합니다.
-            예: '고객명', '계약일자' 등.
-          </p>
+        <h3 className="text-lg font-semibold mt-4 mb-2">표준 용어 정의서 (Standard Vocabulary Definition):</h3>
+        <p className="mb-2 text-gray-700">
+          업무적으로 사용되는 개념이나 데이터 항목에 대해 전사적인 <strong>통일된 이름(명칭)</strong>과 명확한 정의를 부여합니다.
+          예: '고객명', '계약일자' 등.
+        </p>
 
-          <h3 className="text-lg font-semibold mt-4 mb-2">표준 단어 정의서 (Standard Word Definition):</h3>
-          <p className="mb-2 text-gray-700">
-            표준 용어를 구성하는 가장 기본적인 최소 단위의 명사형 단어에 대한 표준(단어명, 영문명, 약어 등)을 정의합니다. 이는 용어 생성 시 중복 및 불일치를 방지하는 기반이 됩니다.
-            예: '고객', '계약', '일자', '번호' 등의 원자 단어.
-          </p>
+        <h3 className="text-lg font-semibold mt-4 mb-2">표준 단어 정의서 (Standard Word Definition):</h3>
+        <p className="mb-2 text-gray-700">
+          표준 용어를 구성하는 가장 기본적인 최소 단위의 명사형 단어에 대한 표준(단어명, 영문명, 약어 등)을 정의합니다. 이는 용어 생성 시 중복 및 불일치를 방지하는 기반이 됩니다.
+          예: '고객', '계약', '일자', '번호' 등의 원자 단어.
+        </p>
 
-          <h3 className="text-lg font-semibold mt-4 mb-2">표준 도메인 정의서 (Standard Domain Definition):</h3>
-          <p className="mb-2 text-gray-700">
-            데이터 <strong>컬럼(속성)</strong>이 가질 수 있는 <strong>성격(데이터 형식)</strong>을 그룹화한 개념입니다. 주로 데이터 타입(예: 문자형, 숫자형, 날짜형), 길이, 저장 및 표현 형식, 그리고 허용 가능한 값의 범위나 목록(표준 코드 포함) 등을 정의하여 데이터의 일관성을 확보합니다.
-            예: '금액 도메인' (숫자형, 길이 15, 소수점 2자리), '날짜 도메인' (DATE 타입, YYYY-MM-DD 형식).
-          </p>
+        <h3 className="text-lg font-semibold mt-4 mb-2">표준 도메인 정의서 (Standard Domain Definition):</h3>
+        <p className="mb-2 text-gray-700">
+          데이터 <strong>컬럼(속성)</strong>이 가질 수 있는 <strong>성격(데이터 형식)</strong>을 그룹화한 개념입니다. 주로 데이터 타입(예: 문자형, 숫자형, 날짜형), 길이, 저장 및 표현 형식, 그리고 허용 가능한 값의 범위나 목록(표준 코드 포함) 등을 정의하여 데이터의 일관성을 확보합니다.
+          예: '금액 도메인' (숫자형, 길이 15, 소수점 2자리), '날짜 도메인' (DATE 타입, YYYY-MM-DD 형식).
+        </p>
 
-          <h3 className="text-lg font-semibold mt-4 mb-2">표준 코드 정의서 (Standard Code Definition):</h3>
-          <p className="mb-4 text-gray-700">
-            표준 도메인의 한 유형으로, 특정 데이터 항목이 미리 정해진 값의 목록을 가질 때 그 코드값과 코드명을 정의합니다 (예: 성별 코드 'M/F', 부서 코드).
-          </p>
+        <h3 className="text-lg font-semibold mt-4 mb-2">표준 코드 정의서 (Standard Code Definition):</h3>
+        <p className="mb-4 text-gray-700">
+          표준 도메인의 한 유형으로, 특정 데이터 항목이 미리 정해진 값의 목록을 가질 때 그 코드값과 코드명을 정의합니다 (예: 성별 코드 'M/F', 부서 코드).
+        </p>
 
-          <h3 className="text-lg font-semibold mb-3 flex items-center">
-            <span className="text-2xl mr-2">👩‍⚖️</span> 정보시스템 감리 관점
-          </h3>
-          <p className="mb-4 text-gray-700">
-            감리에서는 이 정의서들을 통해 시스템의 데이터 관리 상태를 점검합니다.
-          </p>
-          <ul className="list-disc list-inside mb-4 text-gray-700 space-y-1">
-            <li><strong>정의의 적정성:</strong> 표준 용어, 단어, 도메인 등이 업무 요구사항을 충분히 반영하고 명확하며 유일하게 정의되었는지 확인합니다.</li>
-            <li><strong>적용의 일관성:</strong> 실제 구축된 <strong>데이터 모델(테이블, 컬럼명)</strong>과 데이터베이스가 정의된 표준을 일관되게 준수하고 있는지 확인합니다.</li>
-            <li><strong>관리 체계:</strong> 정의된 표준을 유지하고 변경하는 관리 절차 및 조직이 수립되어 운영되고 있는지를 확인합니다.</li>
-          </ul>
+        <h3 className="text-lg font-semibold mb-3 flex items-center">
+          <span className="text-2xl mr-2">👩‍⚖️</span> 정보시스템 감리 관점
+        </h3>
+        <p className="mb-4 text-gray-700">
+          감리에서는 이 정의서들을 통해 시스템의 데이터 관리 상태를 점검합니다.
+        </p>
+        <ul className="list-disc list-inside mb-4 text-gray-700 space-y-1">
+          <li><strong>정의의 적정성:</strong> 표준 용어, 단어, 도메인 등이 업무 요구사항을 충분히 반영하고 명확하며 유일하게 정의되었는지 확인합니다.</li>
+          <li><strong>적용의 일관성:</strong> 실제 구축된 <strong>데이터 모델(테이블, 컬럼명)</strong>과 데이터베이스가 정의된 표준을 일관되게 준수하고 있는지 확인합니다.</li>
+          <li><strong>관리 체계:</strong> 정의된 표준을 유지하고 변경하는 관리 절차 및 조직이 수립되어 운영되고 있는지를 확인합니다.</li>
+        </ul>

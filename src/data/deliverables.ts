@@ -138,6 +138,7 @@ export const allDeliverables: Deliverable[] = [
     name: '시스템 전환 계획서',
     category: '설계',
     categoryPath: '/design',
+    formPath: '/forms/system-transition-plan',
   },
   {
     name: '보안정책서/시스템 보안정책서',

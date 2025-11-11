@@ -5,7 +5,7 @@ const designDeliverables = [
   },
   {
     category: '응용/인터페이스',
-    deliverables: '응용시스템 설계서, 인터페이스 설계서, <a href="/#/forms/user-interface-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">사용자 인터페이스 설계서</a>, 접근 권한 설계서',
+    deliverables: '<a href="/#/forms/application-system-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">응용시스템 설계서</a>, 인터페이스 설계서, <a href="/#/forms/user-interface-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">사용자 인터페이스 설계서</a>, 접근 권한 설계서',
   },
   {
     category: '데이터베이스',

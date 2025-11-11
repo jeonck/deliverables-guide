@@ -19,6 +19,7 @@ import AppliedMethodologyAndDevelopmentStandards from './pages/forms/AppliedMeth
 import UnitTestPlan from './pages/forms/UnitTestPlan';
 import IntegrationTestPlan from './pages/forms/IntegrationTestPlan';
 import QualityAssurancePlan from './pages/forms/QualityAssurancePlan';
+import ApplicationSystemDesignDocument from './pages/forms/ApplicationSystemDesignDocument';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             <Route path="/forms/unit-test-plan" element={<UnitTestPlan />} />
             <Route path="/forms/integration-test-plan" element={<IntegrationTestPlan />} />
             <Route path="/forms/quality-assurance-plan" element={<QualityAssurancePlan />} />
+            <Route path="/forms/application-system-design-document" element={<ApplicationSystemDesignDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

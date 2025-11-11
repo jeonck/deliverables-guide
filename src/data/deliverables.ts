@@ -114,6 +114,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/design',
   },
   {
+    name: '응용시스템 설계서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/application-system-design-document',
+  },
+  {
     name: '인터페이스 설계서',
     category: '설계',
     categoryPath: '/design',

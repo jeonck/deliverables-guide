@@ -4,18 +4,17 @@ import * as XLSX from 'xlsx';
 
 const RequirementsDefinitionDocument: React.FC = () => {
   const tableData = [
-    ['구성 요소', '설명', '출처'],
-    ['요구사항 ID', '각 요구사항을 식별하기 위한 고유 번호', ''],
-    ['요구사항명', '요구사항의 이름 또는 간략한 제목', ''],
-    ['설명', '요구사항에 대한 구체적인 설명', ''],
-    ['중요도', '해당 요구사항의 중요 수준', ''],
-    ['우선순위', '요구사항 구현의 우선순위', ''],
-    ['제약사항', '요구사항 이행과 관련된 제약 조건', ''],
-    ['출처', '요구사항의 근거 또는 발생원(예: 제안요청서, 회의록 등)', ''],
-    ['수용여부', '해당 요구사항의 프로젝트 수용 결정 여부', ''],
-    ['수용불가사유', '수용이 불가능할 경우 그 이유', ''],
+    ['구성 요소', '설명'],
+    ['요구사항 ID', '각 요구사항을 식별하기 위한 고유 번호'],
+    ['요구사항명', '요구사항의 이름 또는 간략한 제목'],
+    ['설명', '요구사항에 대한 구체적인 설명'],
+    ['중요도', '해당 요구사항의 중요 수준'],
+    ['우선순위', '요구사항 구현의 우선순위'],
+    ['제약사항', '요구사항 이행과 관련된 제약 조건'],
+    ['수용여부', '해당 요구사항의 프로젝트 수용 결정 여부'],
+    ['수용불가사유', '수용이 불가능할 경우 그 이유'],
     // Example row
-    ['REQ-001', '회원가입 기능', '사용자가 시스템에 회원으로 가입할 수 있도록 한다.', '높음', '1순위', '본인인증 필수', '제안요청서', '수용', ''],
+    ['REQ-001', '회원가입 기능', '사용자가 시스템에 회원으로 가입할 수 있도록 한다.', '높음', '1순위', '본인인증 필수', '수용', ''],
   ];
 
   const handleExcelDownload = () => {
@@ -45,60 +44,45 @@ const RequirementsDefinitionDocument: React.FC = () => {
             <tr>
               <th className="border border-gray-300 px-4 py-2">구성 요소</th>
               <th className="border border-gray-300 px-4 py-2">설명</th>
-              <th className="border border-gray-300 px-4 py-2">출처</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">요구사항 ID</td>
               <td className="border border-gray-300 px-4 py-2">각 요구사항을 식별하기 위한 고유 번호</td>
-              <td className="border border-gray-300 px-4 py-2"></td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">요구사항명</td>
               <td className="border border-gray-300 px-4 py-2">요구사항의 이름 또는 간략한 제목</td>
-              <td className="border border-gray-300 px-4 py-2"></td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">설명</td>
               <td className="border border-gray-300 px-4 py-2">요구사항에 대한 구체적인 설명</td>
-              <td className="border border-gray-300 px-4 py-2"></td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">중요도</td>
               <td className="border border-gray-300 px-4 py-2">해당 요구사항의 중요 수준</td>
-              <td className="border border-gray-300 px-4 py-2"></td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">우선순위</td>
               <td className="border border-gray-300 px-4 py-2">요구사항 구현의 우선순위</td>
-              <td className="border border-gray-300 px-4 py-2"></td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">제약사항</td>
               <td className="border border-gray-300 px-4 py-2">요구사항 이행과 관련된 제약 조건</td>
-              <td className="border border-gray-300 px-4 py-2"></td>
-            </tr>
-            <tr>
-              <td className="border border-gray-300 px-4 py-2 font-bold">출처</td>
-              <td className="border border-gray-300 px-4 py-2">요구사항의 근거 또는 발생원(예: 제안요청서, 회의록 등)</td>
-              <td className="border border-gray-300 px-4 py-2"></td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">수용여부</td>
               <td className="border border-gray-300 px-4 py-2">해당 요구사항의 프로젝트 수용 결정 여부</td>
-              <td className="border border-gray-300 px-4 py-2"></td>
             </tr>
             <tr>
               <td className="border border-gray-300 px-4 py-2 font-bold">수용불가사유</td>
               <td className="border border-gray-300 px-4 py-2">수용이 불가능할 경우 그 이유</td>
-              <td className="border border-gray-300 px-4 py-2"></td>
             </tr>
             {/* Example row */}
             <tr>
               <td className="border border-gray-300 px-4 py-2">REQ-001</td>
               <td className="border border-gray-300 px-4 py-2">회원가입 기능</td>
-              <td className="border border-gray-300 px-4 py-2">제안요청서</td>
             </tr>
           </tbody>
         </table>

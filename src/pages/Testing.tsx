@@ -3,7 +3,7 @@ import React from 'react';
 
 const testDeliverables = [
   {
-    category: '시험 결과/계획',
+    category: '시험 계획/결과',
     deliverables: [
       { name: '총괄 시험 계획서', path: '/forms/master-test-plan' },
       { name: '통합시험 계획/결과서', path: '/testing' },

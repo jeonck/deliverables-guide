@@ -255,6 +255,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/implementation',
   },
   {
+    name: '적용 방법론 및 개발 표준',
+    category: '구현',
+    categoryPath: '/implementation',
+    formPath: '/forms/applied-methodology-and-development-standards',
+  },
+  {
     name: '요구사항 추적표',
     category: '구현',
     categoryPath: '/implementation',

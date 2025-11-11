@@ -15,6 +15,7 @@ import RequirementsDefinitionDocument from './pages/forms/RequirementsDefinition
 import DocumentManagement from './pages/DocumentManagement';
 import UserInterfaceDesignDocument from './pages/forms/UserInterfaceDesignDocument';
 import ProcessDefinitionDocument from './pages/forms/ProcessDefinitionDocument';
+import AppliedMethodologyAndDevelopmentStandards from './pages/forms/AppliedMethodologyAndDevelopmentStandards';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path="/forms/requirements-definition-document" element={<RequirementsDefinitionDocument />} />
             <Route path="/forms/user-interface-design-document" element={<UserInterfaceDesignDocument />} />
             <Route path="/forms/process-definition-document" element={<ProcessDefinitionDocument />} />
+            <Route path="/forms/applied-methodology-and-development-standards" element={<AppliedMethodologyAndDevelopmentStandards />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

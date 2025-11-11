@@ -23,7 +23,7 @@ const testDeliverables = [
     category: '관리 (QA)',
     deliverables: [
       { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
-      { name: '품질보증활동 계획/결과서', path: '/testing' },
+      { name: '품질보증활동 계획/결과서', path: '/forms/quality-assurance-activity-plan-result' },
     ],
   },
 ];

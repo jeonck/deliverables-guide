@@ -315,6 +315,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/implementation',
   },
   {
+    name: '품질보증활동 계획/결과서',
+    category: '구현',
+    categoryPath: '/implementation',
+    formPath: '/forms/quality-assurance-activity-plan-result',
+  },
+  {
     name: '반복 계획/평가서',
     category: '구현',
     categoryPath: '/implementation',

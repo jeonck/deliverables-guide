@@ -25,6 +25,7 @@ import AcceptanceTestPlan from './pages/forms/AcceptanceTestPlan';
 import AsIsBusinessAnalysisDocument from './pages/forms/AsIsBusinessAnalysisDocument';
 import AsIsSystemAnalysisDocument from './pages/forms/AsIsSystemAnalysisDocument';
 import DatabaseStandardDesignGuidelines from './pages/forms/DatabaseStandardDesignGuidelines';
+import QualityAssuranceActivityPlanResult from './pages/forms/QualityAssuranceActivityPlanResult';
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
             <Route path="/forms/as-is-business-analysis-document" element={<AsIsBusinessAnalysisDocument />} />
             <Route path="/forms/as-is-system-analysis-document" element={<AsIsSystemAnalysisDocument />} />
             <Route path="/forms/database-standard-design-guidelines" element={<DatabaseStandardDesignGuidelines />} />
+            <Route path="/forms/quality-assurance-activity-plan-result" element={<QualityAssuranceActivityPlanResult />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

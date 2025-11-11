@@ -35,7 +35,7 @@ const implementationDeliverables = [
     deliverables: [
       { name: '적용 방법론 및 개발 표준', path: '/forms/applied-methodology-and-development-standards' },
       { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
-      { name: '품질보증활동 계획/결과서', path: '/implementation' },
+      { name: '품질보증활동 계획/결과서', path: '/forms/quality-assurance-activity-plan-result' },
       { name: '반복 계획/평가서', path: '/implementation' },
     ],
   },

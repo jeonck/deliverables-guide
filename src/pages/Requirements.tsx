@@ -1,7 +1,7 @@
 const analysisDeliverables = [
   {
     category: '요구사항/업무',
-    deliverables: '사용자 요구사항 정의서, 사용자 요구사항 분석서, 현행 업무 분석서, 현행 시스템 분석서',
+    deliverables: '<a href="/#/forms/requirements-definition-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">사용자 요구사항 정의서</a>, 사용자 요구사항 분석서, 현행 업무 분석서, 현행 시스템 분석서',
   },
   {
     category: '시스템/아키텍처',
@@ -35,7 +35,7 @@ const Requirements = () => {
             {analysisDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4">{item.deliverables}</td>
+                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
               </tr>
             ))}
           </tbody>

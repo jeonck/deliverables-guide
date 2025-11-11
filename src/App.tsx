@@ -11,6 +11,7 @@ import Security from './pages/Security';
 import Etc from './pages/Etc';
 import Transition from './pages/Transition';
 import RequirementsTraceabilityMatrix from './pages/forms/RequirementsTraceabilityMatrix';
+import RequirementsDefinitionDocument from './pages/forms/RequirementsDefinitionDocument';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/transition" element={<Transition />} />
             <Route path="/etc" element={<Etc />} />
             <Route path="/forms/requirements-traceability-matrix" element={<RequirementsTraceabilityMatrix />} />
+            <Route path="/forms/requirements-definition-document" element={<RequirementsDefinitionDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

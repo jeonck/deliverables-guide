@@ -101,6 +101,12 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/data-standardization-definition-document',
   },
   {
+    name: '데이터 체계 정의서',
+    category: '요구사항',
+    categoryPath: '/requirements',
+    formPath: '/forms/data-system-definition-document',
+  },
+  {
     name: '데이터베이스 표준설계 지침서',
     category: '요구사항',
     categoryPath: '/requirements',

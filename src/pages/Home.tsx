@@ -60,14 +60,12 @@ export default function Home() {
                       <span>{deliverable.category}</span>
                     )}
                     {deliverable.formPath && (
-                      <a
-                        href={`/#${deliverable.formPath}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Link
+                        to={deliverable.formPath}
                         className="text-green-600 hover:underline"
                       >
                         양식 보기
-                      </a>
+                      </Link>
                     )}
                   </div>
                 </div>

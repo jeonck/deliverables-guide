@@ -1,19 +1,42 @@
+import { Link } from 'react-router-dom';
+
 const implementationDeliverables = [
   {
     category: '시스템/아키텍처',
-    deliverables: '시스템 아키텍처 정의서, 시스템 설치시험 결과서, 보안정책 및 설계서, 시스템시험 계획서',
+    deliverables: [
+      { name: '시스템 아키텍처 정의서', path: '/implementation' },
+      { name: '시스템 설치시험 결과서', path: '/implementation' },
+      { name: '보안정책 및 설계서', path: '/implementation' },
+      { name: '시스템시험 계획서', path: '/implementation' },
+    ],
   },
   {
     category: '응용시스템',
-    deliverables: '프로그램 소스, 구현된 응용시스템, 단위시험 계획/결과서, 통합시험 계획서',
+    deliverables: [
+      { name: '프로그램 소스', path: '/implementation' },
+      { name: '구현된 응용시스템', path: '/implementation' },
+      { name: '단위시험 계획/결과서', path: '/implementation' },
+      { name: '통합시험 계획서', path: '/implementation' },
+    ],
   },
   {
     category: '데이터베이스',
-    deliverables: '데이터베이스 설계서, 테이블 정의서, 데이터베이스 테이블, 프로그램 코드, 단위시험 결과서',
+    deliverables: [
+      { name: '데이터베이스 설계서', path: '/implementation' },
+      { name: '테이블 정의서', path: '/implementation' },
+      { name: '데이터베이스 테이블', path: '/implementation' },
+      { name: '프로그램 코드', path: '/implementation' },
+      { name: '단위시험 결과서', path: '/implementation' },
+    ],
   },
   {
     category: '관리/표준 (QA)',
-    deliverables: '<a href="#/forms/applied-methodology-and-development-standards" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">적용 방법론 및 개발 표준</a>, 요구사항 추적표, 품질보증활동 계획/결과서, 반복 계획/평가서',
+    deliverables: [
+      { name: '적용 방법론 및 개발 표준', path: '/forms/applied-methodology-and-development-standards' },
+      { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
+      { name: '품질보증활동 계획/결과서', path: '/implementation' },
+      { name: '반복 계획/평가서', path: '/implementation' },
+    ],
   },
 ];
 
@@ -35,7 +58,16 @@ const Implementation = () => {
             {implementationDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
+                <td className="px-6 py-4">
+                  {item.deliverables.map((deliverable, dIndex) => (
+                    <React.Fragment key={dIndex}>
+                      <Link to={deliverable.path} className="text-blue-600 hover:underline">
+                        {deliverable.name}
+                      </Link>
+                      {dIndex < item.deliverables.length - 1 && ', '}
+                    </React.Fragment>
+                  ))}
+                </td>
               </tr>
             ))}
           </tbody>

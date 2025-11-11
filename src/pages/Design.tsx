@@ -1,27 +1,55 @@
+import { Link } from 'react-router-dom';
+
 const designDeliverables = [
   {
     category: '시스템/아키텍처',
-    deliverables: '<a href="#/forms/architecture-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">아키텍처 설계서</a>, 시스템 설치 및 검증 계획서, 시스템 전환 계획서, 보안정책서/시스템 보안정책서',
+    deliverables: [
+      { name: '아키텍처 설계서', path: '/forms/architecture-design-document' },
+      { name: '시스템 설치 및 검증 계획서', path: '/design' },
+      { name: '시스템 전환 계획서', path: '/design' },
+      { name: '보안정책서/시스템 보안정책서', path: '/design' },
+    ],
   },
   {
     category: '응용/인터페이스',
-    deliverables: '<a href="#/forms/application-system-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">응용시스템 설계서</a>, 인터페이스 설계서, <a href="#/forms/user-interface-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">사용자 인터페이스 설계서</a>, 접근 권한 설계서',
+    deliverables: [
+      { name: '응용시스템 설계서', path: '/forms/application-system-design-document' },
+      { name: '인터페이스 설계서', path: '/design' },
+      { name: '사용자 인터페이스 설계서', path: '/forms/user-interface-design-document' },
+      { name: '접근 권한 설계서', path: '/design' },
+    ],
   },
   {
     category: '데이터베이스',
-    deliverables: '데이터베이스 설계서, 테이블/프로그램 연관도, 테이블 정의서 (객체지향 모델), 코드설계서 (객체지향 모델)',
+    deliverables: [
+      { name: '데이터베이스 설계서', path: '/design' },
+      { name: '테이블/프로그램 연관도', path: '/design' },
+      { name: '테이블 정의서 (객체지향 모델)', path: '/design' },
+      { name: '코드설계서 (객체지향 모델)', path: '/design' },
+    ],
   },
   {
     category: '계획 (DB)',
-    deliverables: '백업 및 복구계획서, 초기데이터 구축 계획서, 데이터 전환계획서, 데이터 전환프로그램',
+    deliverables: [
+      { name: '백업 및 복구계획서', path: '/design' },
+      { name: '초기데이터 구축 계획서', path: '/design' },
+      { name: '데이터 전환계획서', path: '/design' },
+      { name: '데이터 전환프로그램', path: '/design' },
+    ],
   },
   {
     category: '계획 (시험)',
-    deliverables: '<a href="#/forms/unit-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">단위시험 계획서</a>, <a href="#/forms/integration-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">통합시험 계획서</a>',
+    deliverables: [
+      { name: '단위시험 계획서', path: '/forms/unit-test-plan' },
+      { name: '통합시험 계획서', path: '/forms/integration-test-plan' },
+    ],
   },
   {
     category: '관리/전략 (QA)',
-    deliverables: '시스템 전환 전략서, 반복 계획/평가서',
+    deliverables: [
+      { name: '시스템 전환 전략서', path: '/design' },
+      { name: '반복 계획/평가서', path: '/design' },
+    ],
   },
 ];
 
@@ -43,7 +71,16 @@ const Design = () => {
             {designDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
+                <td className="px-6 py-4">
+                  {item.deliverables.map((deliverable, dIndex) => (
+                    <React.Fragment key={dIndex}>
+                      <Link to={deliverable.path} className="text-blue-600 hover:underline">
+                        {deliverable.name}
+                      </Link>
+                      {dIndex < item.deliverables.length - 1 && ', '}
+                    </React.Fragment>
+                  ))}
+                </td>
               </tr>
             ))}
           </tbody>

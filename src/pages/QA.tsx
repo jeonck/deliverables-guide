@@ -1,8 +1,37 @@
+import { Link } from 'react-router-dom';
+
 const QADeliverables = [
-    { phase: '분석', deliverables: '<a href="#/forms/quality-assurance-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">품질보증 계획서</a>, 요구사항 추적표, 총괄 시험 계획서' },
-    { phase: '설계', deliverables: '시스템 전환 전략서, 반복 계획/평가서' },
-    { phase: '구현', deliverables: '적용 방법론 및 개발 표준, 요구사항 추적표, 품질보증활동 계획/결과서, 반복 계획/평가서' },
-    { phase: '테스트', deliverables: '요구사항 추적표, 품질보증활동 계획/결과서' },
+    {
+        phase: '분석',
+        deliverables: [
+            { name: '품질보증 계획서', path: '/forms/quality-assurance-plan' },
+            { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
+            { name: '총괄 시험 계획서', path: '/qa' },
+        ],
+    },
+    {
+        phase: '설계',
+        deliverables: [
+            { name: '시스템 전환 전략서', path: '/qa' },
+            { name: '반복 계획/평가서', path: '/qa' },
+        ],
+    },
+    {
+        phase: '구현',
+        deliverables: [
+            { name: '적용 방법론 및 개발 표준', path: '/forms/applied-methodology-and-development-standards' },
+            { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
+            { name: '품질보증활동 계획/결과서', path: '/qa' },
+            { name: '반복 계획/평가서', path: '/qa' },
+        ],
+    },
+    {
+        phase: '테스트',
+        deliverables: [
+            { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
+            { name: '품질보증활동 계획/결과서', path: '/qa' },
+        ],
+    },
 ];
 
 const QA = () => {
@@ -23,7 +52,16 @@ const QA = () => {
                         {QADeliverables.map((item, index) => (
                             <tr key={index}>
                                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.phase}</td>
-                                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
+                                <td className="px-6 py-4">
+                                    {item.deliverables.map((deliverable, dIndex) => (
+                                        <React.Fragment key={dIndex}>
+                                            <Link to={deliverable.path} className="text-blue-600 hover:underline">
+                                                {deliverable.name}
+                                            </Link>
+                                            {dIndex < item.deliverables.length - 1 && ', '}
+                                        </React.Fragment>
+                                    ))}
+                                </td>
                             </tr>
                         ))}
                     </tbody>

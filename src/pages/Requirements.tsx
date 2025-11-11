@@ -1,19 +1,41 @@
+import { Link } from 'react-router-dom';
+
 const analysisDeliverables = [
   {
     category: '요구사항/업무',
-    deliverables: '<a href="#/forms/requirements-definition-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">사용자 요구사항 정의서</a>, 사용자 요구사항 분석서, 현행 업무 분석서, 현행 시스템 분석서',
+    deliverables: [
+      { name: '사용자 요구사항 정의서', path: '/forms/requirements-definition-document' },
+      { name: '사용자 요구사항 분석서', path: '/requirements' },
+      { name: '현행 업무 분석서', path: '/requirements' },
+      { name: '현행 시스템 분석서', path: '/requirements' },
+    ],
   },
   {
     category: '시스템/아키텍처',
-    deliverables: '시스템 환경 분석서 (정보자원 조사서, 조사현황 등), 아키텍처 설계서, 시스템 아키텍처 검증결과 보고서',
+    deliverables: [
+      { name: '시스템 환경 분석서 (정보자원 조사서, 조사현황 등)', path: '/requirements' },
+      { name: '아키텍처 설계서', path: '/forms/architecture-design-document' },
+      { name: '시스템 아키텍처 검증결과 보고서', path: '/requirements' },
+    ],
   },
   {
     category: '모델링/응용',
-    deliverables: '이벤트 시나리오, 기능차트/데이터흐름도/<a href="/#/forms/process-definition-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">프로세스 정의서</a>, 엔티티 정의서, 엔티티 관계도, 엔티티/프로세스 매트릭스',
+    deliverables: [
+      { name: '이벤트 시나리오', path: '/requirements' },
+      { name: '기능차트/데이터흐름도', path: '/requirements' },
+      { name: '프로세스 정의서', path: '/forms/process-definition-document' },
+      { name: '엔티티 정의서', path: '/requirements' },
+      { name: '엔티티 관계도', path: '/requirements' },
+      { name: '엔티티/프로세스 매트릭스', path: '/requirements' },
+    ],
   },
   {
     category: '데이터베이스',
-    deliverables: '전환데이타 분석서, 데이터베이스 표준설계 지침서, 기존 시스템 데이터 모형 분석서 (객체지향 모델)',
+    deliverables: [
+      { name: '전환데이타 분석서', path: '/requirements' },
+      { name: '데이터베이스 표준설계 지침서', path: '/requirements' },
+      { name: '기존 시스템 데이터 모형 분석서 (객체지향 모델)', path: '/requirements' },
+    ],
   },
 ];
 
@@ -35,7 +57,16 @@ const Requirements = () => {
             {analysisDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
+                <td className="px-6 py-4">
+                  {item.deliverables.map((deliverable, dIndex) => (
+                    <React.Fragment key={dIndex}>
+                      <Link to={deliverable.path} className="text-blue-600 hover:underline">
+                        {deliverable.name}
+                      </Link>
+                      {dIndex < item.deliverables.length - 1 && ', '}
+                    </React.Fragment>
+                  ))}
+                </td>
               </tr>
             ))}
           </tbody>

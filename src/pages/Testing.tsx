@@ -1,15 +1,29 @@
+import { Link } from 'react-router-dom';
+
 const testDeliverables = [
   {
     category: '시험 결과/계획',
-    deliverables: '통합시험 계획/결과서, 시스템 시험 계획/결과서, 시스템 튜닝 계획/결과서, <a href="#/forms/acceptance-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">인수시험 계획서</a>',
+    deliverables: [
+      { name: '통합시험 계획/결과서', path: '/testing' },
+      { name: '시스템 시험 계획/결과서', path: '/testing' },
+      { name: '시스템 튜닝 계획/결과서', path: '/testing' },
+      { name: '인수시험 계획서', path: '/forms/acceptance-test-plan' },
+    ],
   },
   {
     category: '문서/교육',
-    deliverables: '사용자/운영자 지침서, 교육교재, 교육 계획서',
+    deliverables: [
+      { name: '사용자/운영자 지침서', path: '/testing' },
+      { name: '교육교재', path: '/testing' },
+      { name: '교육 계획서', path: '/testing' },
+    ],
   },
   {
     category: '관리 (QA)',
-    deliverables: '<a href="/#/forms/requirements-traceability-matrix" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">요구사항 추적표</a>, 품질보증활동 계획/결과서',
+    deliverables: [
+      { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
+      { name: '품질보증활동 계획/결과서', path: '/testing' },
+    ],
   },
 ];
 
@@ -31,7 +45,16 @@ const Testing = () => {
             {testDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
+                <td className="px-6 py-4">
+                  {item.deliverables.map((deliverable, dIndex) => (
+                    <React.Fragment key={dIndex}>
+                      <Link to={deliverable.path} className="text-blue-600 hover:underline">
+                        {deliverable.name}
+                      </Link>
+                      {dIndex < item.deliverables.length - 1 && ', '}
+                    </React.Fragment>
+                  ))}
+                </td>
               </tr>
             ))}
           </tbody>

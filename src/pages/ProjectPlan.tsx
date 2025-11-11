@@ -1,7 +1,17 @@
+import { Link } from 'react-router-dom';
+
 const projectPlanDeliverables = [
   {
     category: '관리/계획 (QA)',
-    deliverables: '제안요청서/제안서/계약서/사업수행계획서, <a href="#/forms/quality-assurance-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">품질보증 계획서</a>, 보안정책서/시스템 보안정책서, 보안 취약점 분석평가 보고서, <a href="#/forms/requirements-traceability-matrix" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">요구사항 추적표</a>, 총괄 시험 계획서, 반복계획서 (반복적 방법론 적용 시)',
+    deliverables: [
+      { name: '제안요청서/제안서/계약서/사업수행계획서', path: '/project-plan' },
+      { name: '품질보증 계획서', path: '/forms/quality-assurance-plan' },
+      { name: '보안정책서/시스템 보안정책서', path: '/project-plan' },
+      { name: '보안 취약점 분석평가 보고서', path: '/project-plan' },
+      { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
+      { name: '총괄 시험 계획서', path: '/project-plan' },
+      { name: '반복계획서 (반복적 방법론 적용 시)', path: '/project-plan' },
+    ],
   },
 ];
 
@@ -23,7 +33,16 @@ const ProjectPlan = () => {
             {projectPlanDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
+                <td className="px-6 py-4">
+                  {item.deliverables.map((deliverable, dIndex) => (
+                    <React.Fragment key={dIndex}>
+                      <Link to={deliverable.path} className="text-blue-600 hover:underline">
+                        {deliverable.name}
+                      </Link>
+                      {dIndex < item.deliverables.length - 1 && ', '}
+                    </React.Fragment>
+                  ))}
+                </td>
               </tr>
             ))}
           </tbody>

@@ -8,6 +8,7 @@ const categories = [
   { name: '테스트', path: '/testing', icon: '🧪' },
   { name: '품질보증', path: '/qa', icon: '🛡️' },
   { name: '보안', path: '/security', icon: '🔒' },
+  { name: '전환', path: '/transition', icon: '🚚' },
   { name: '기타', path: '/etc', icon: '📎' },
 ];
 

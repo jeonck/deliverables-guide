@@ -9,6 +9,7 @@ import Testing from './pages/Testing';
 import QA from './pages/QA';
 import Security from './pages/Security';
 import Etc from './pages/Etc';
+import Transition from './pages/Transition';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/testing" element={<Testing />} />
             <Route path="/qa" element={<QA />} />
             <Route path="/security" element={<Security />} />
+            <Route path="/transition" element={<Transition />} />
             <Route path="/etc" element={<Etc />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

@@ -1,23 +1,23 @@
-const testDeliverables = [
+const transitionDeliverables = [
   {
-    category: '시험 결과/계획',
-    deliverables: '통합시험 계획/결과서, 시스템 시험 계획/결과서, 시스템 튜닝 계획/결과서, 인수시험 계획서',
+    category: '운영 준비',
+    deliverables: '운영환경 설치 결과서, 초기데이터 구축 결과서, 데이터 전환 결과서, 시스템 및 업무 전환 결과서, 사용자 인수시험 결과서',
   },
   {
-    category: '문서/교육',
-    deliverables: '사용자/운영자 지침서, 교육교재, 교육 계획서',
+    category: '관리/인수',
+    deliverables: '적용방법론 및 사업 표준, 교육교재, 교육 결과서, 인수운영 조직도',
   },
   {
-    category: '관리 (QA)',
-    deliverables: '요구사항 추적표, 품질보증활동 계획/결과서',
+    category: '종료',
+    deliverables: '사용자 요구사항 반영 (최종 확인)',
   },
 ];
 
-const Testing = () => {
+const Transition = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-2">테스트 (시험 활동)</h1>
-      <p className="mb-8 text-gray-600">구조적/정보공학적 모델 및 객체지향/컴포넌트기반 모델의 '시험' 시점을 포괄합니다.</p>
+      <h1 className="text-3xl font-bold mb-2">전환 (전개/운영 준비)</h1>
+      <p className="mb-8 text-gray-600">구조적/정보공학적 모델 및 객체지향/컴포넌트기반 모델의 '전개' 시점을 포괄합니다.</p>
 
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white rounded-lg shadow">
@@ -28,7 +28,7 @@ const Testing = () => {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
-            {testDeliverables.map((item, index) => (
+            {transitionDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
                 <td className="px-6 py-4">{item.deliverables}</td>
@@ -41,4 +41,4 @@ const Testing = () => {
   );
 };
 
-export default Testing;
+export default Transition;

@@ -27,6 +27,7 @@ const Navbar = () => {
             <NavLink to="/testing">테스트</NavLink>
             <NavLink to="/qa">품질보증</NavLink>
             <NavLink to="/security">보안</NavLink>
+            <NavLink to="/transition">전환</NavLink>
             <NavLink to="/etc">기타</NavLink>
           </div>
 
@@ -62,6 +63,7 @@ const Navbar = () => {
             <MobileNavLink to="/testing" onClick={() => setIsOpen(false)}>테스트</MobileNavLink>
             <MobileNavLink to="/qa" onClick={() => setIsOpen(false)}>품질보증</MobileNavLink>
             <MobileNavLink to="/security" onClick={() => setIsOpen(false)}>보안</MobileNavLink>
+            <MobileNavLink to="/transition" onClick={() => setIsOpen(false)}>전환</MobileNavLink>
             <MobileNavLink to="/etc" onClick={() => setIsOpen(false)}>기타</MobileNavLink>
           </div>
         </div>

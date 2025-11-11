@@ -36,6 +36,37 @@ const RequirementsTraceabilityMatrix: React.FC = () => {
           엑셀 다운로드
         </button>
       </div>
+
+      <div className="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
+        <h2 className="text-xl font-semibold mb-3 flex items-center">
+          <span className="text-2xl mr-2">📝</span> 요구사항 추적표 (Requirements Traceability Matrix) 정의
+        </h2>
+        <p className="mb-4 text-gray-700">
+          정보시스템 감리 수행 시 활용되는 요구사항 추적표 (Requirements Traceability Matrix, RTM)는 요구사항 정의서에 기록된 개별 요구사항들이 프로젝트 진행 단계마다 적정하게 반영되었는지를 추적하고 확인할 수 있도록 작성하는 문서입니다.
+        </p>
+        <p className="mb-4 text-gray-700">
+          쉽게 말해, '요구사항'이 프로젝트의 각 산출물(설계서, 구현 코드, 테스트 케이스 등)에 빠짐없이, 그리고 올바르게 구현되었는지를 검증하기 위한 추적 관리 목록이라고 할 수 있습니다.
+        </p>
+
+        <h2 className="text-xl font-semibold mb-3 flex items-center">
+          <span className="text-2xl mr-2">📌</span> 주요 목적 및 역할
+        </h2>
+        <ul className="list-disc list-inside mb-4 text-gray-700 space-y-1">
+          <li><strong>누락 방지:</strong> 초기 정의된 요구사항이 설계, 구현, 테스트 등 후속 작업에서 빠짐없이 반영되었는지 확인하여 요구사항 누락을 방지합니다.</li>
+          <li><strong>일관성 및 무결성 확보:</strong> 요구사항의 변경이나 수정이 발생했을 때, 관련 산출물들이 모두 업데이트되었는지 추적하여 프로젝트 전반의 일관성을 유지합니다.</li>
+          <li><strong>감리 및 품질 관리:</strong> 감리원이 설계 단계나 테스트 단계에서 산출물을 점검할 때, 요구사항이 적절히 이행되었는지 확인하는 핵심 근거 자료로 사용되어 프로젝트 <strong>품질 보증(QA)</strong>에 기여합니다.</li>
+          <li><strong>변경 영향 분석:</strong> 요구사항의 변경이 발생했을 때 어떤 산출물에 영향을 미치는지를 파악하여 변경 관리의 효율성을 높입니다.</li>
+        </ul>
+
+        <h2 className="text-xl font-semibold mb-3 flex items-center">
+          <span className="text-2xl mr-2">📜</span> 작성 주체 및 시점
+        </h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-1">
+          <li><strong>작성 주체:</strong> 일반적으로 <strong>사업자 (개발사)</strong>가 작성하며, 프로젝트의 품질 관리 및 감리 대응을 위해 관리합니다.</li>
+          <li><strong>최초 작성 시점:</strong> 주로 요구분석 단계에서 최초 작성되며, 프로젝트 진행에 따라 각 단계(설계, 구현, 테스트)의 산출물이 나올 때마다 지속적으로 갱신됩니다.</li>
+        </ul>
+      </div>
+
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border-2 border-gray-300">
           <thead>

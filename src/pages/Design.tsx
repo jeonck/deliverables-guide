@@ -23,7 +23,6 @@ const designDeliverables = [
   {
     category: '데이터베이스',
     deliverables: [
-      { name: '데이터베이스 설계서', path: '/design' },
       { name: '엔티티 정의서', path: '/forms/entity-definition-document' },
       { name: '속성 정의서', path: '/forms/attribute-definition-document' },
       { name: '컬럼 정의서', path: '/forms/column-definition-document' },

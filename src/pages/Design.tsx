@@ -39,6 +39,7 @@ const designDeliverables = [
     category: '계획 (DB)',
     deliverables: [
       { name: '백업 및 복구계획서', path: '/design' },
+      { name: '초기데이터 구축 계획서', path: '/forms/initial-data-construction-plan' },
       { name: '초기데이터 구축 계획서', path: '/design' },
       { name: '데이터 전환계획서', path: '/design' },
       { name: '데이터 전환프로그램', path: '/design' },

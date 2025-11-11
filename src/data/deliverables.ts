@@ -228,6 +228,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/design',
   },
   {
+    name: '초기데이터 구축 계획서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/initial-data-construction-plan',
+  },
+  {
     name: '백업 및 복구계획서',
     category: '설계',
     categoryPath: '/design',

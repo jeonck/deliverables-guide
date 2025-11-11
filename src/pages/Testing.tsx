@@ -5,6 +5,7 @@ const testDeliverables = [
   {
     category: '시험 결과/계획',
     deliverables: [
+      { name: '총괄 시험 계획서', path: '/forms/master-test-plan' },
       { name: '통합시험 계획/결과서', path: '/testing' },
       { name: '시스템 시험 계획/결과서', path: '/testing' },
       { name: '시스템 튜닝 계획/결과서', path: '/testing' },

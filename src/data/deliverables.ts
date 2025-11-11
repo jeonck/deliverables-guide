@@ -381,6 +381,12 @@ export const allDeliverables: Deliverable[] = [
   },
   // 테스트 (Testing)
   {
+    name: '총괄 시험 계획서',
+    category: '테스트',
+    categoryPath: '/testing',
+    formPath: '/forms/master-test-plan',
+  },
+  {
     name: '통합시험 계획/결과서',
     category: '테스트',
     categoryPath: '/testing',

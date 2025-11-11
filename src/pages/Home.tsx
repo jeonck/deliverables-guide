@@ -1,13 +1,19 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { allDeliverables } from '../data/deliverables';
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   const filteredDeliverables = allDeliverables.filter((deliverable) =>
     deliverable.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const handleCategoryLinkClick = (event: React.MouseEvent, path: string) => {
+    event.preventDefault();
+    navigate(path);
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -42,12 +48,16 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">{deliverable.name}</h3>
                   <p className="text-gray-600 mb-2">카테고리: {deliverable.category}</p>
                   <div className="flex space-x-2">
-                    <Link to={deliverable.categoryPath} className="text-blue-600 hover:underline">
+                    <Link
+                      to={deliverable.categoryPath}
+                      onClick={(e) => handleCategoryLinkClick(e, deliverable.categoryPath)}
+                      className="text-blue-600 hover:underline"
+                    >
                       카테고리 보기
                     </Link>
                     {deliverable.formPath && (
                       <a
-                        href={`#${deliverable.formPath}`}
+                        href={`/#${deliverable.formPath}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-green-600 hover:underline"

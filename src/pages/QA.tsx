@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';
 
 const QADeliverables = [
     {
@@ -35,6 +36,13 @@ const QADeliverables = [
 ];
 
 const QA = () => {
+    const navigate = useNavigate();
+
+    const handleLinkClick = (event: React.MouseEvent, path: string) => {
+        event.preventDefault();
+        navigate(path);
+    };
+
     return (
         <div>
             <h1 className="text-3xl font-bold mb-2">품질보증 (QA)</h1>
@@ -55,7 +63,11 @@ const QA = () => {
                                 <td className="px-6 py-4">
                                     {item.deliverables.map((deliverable, dIndex) => (
                                         <React.Fragment key={dIndex}>
-                                            <Link to={deliverable.path} className="text-blue-600 hover:underline">
+                                            <Link
+                                                to={deliverable.path}
+                                                onClick={(e) => handleLinkClick(e, deliverable.path)}
+                                                className="text-blue-600 hover:underline"
+                                            >
                                                 {deliverable.name}
                                             </Link>
                                             {dIndex < item.deliverables.length - 1 && ', '}

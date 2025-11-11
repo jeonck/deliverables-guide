@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import React from 'react'; // React를 명시적으로 임포트
 
 const analysisDeliverables = [
   {
@@ -40,6 +41,13 @@ const analysisDeliverables = [
 ];
 
 const Requirements = () => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (event: React.MouseEvent, path: string) => {
+    event.preventDefault(); // Prevent default Link behavior
+    navigate(path);
+  };
+
   return (
     <div>
       <h1 className="text-3xl font-bold mb-2">요구사항 (분석 단계)</h1>
@@ -60,7 +68,11 @@ const Requirements = () => {
                 <td className="px-6 py-4">
                   {item.deliverables.map((deliverable, dIndex) => (
                     <React.Fragment key={dIndex}>
-                      <Link to={deliverable.path} className="text-blue-600 hover:underline">
+                      <Link
+                        to={deliverable.path}
+                        onClick={(e) => handleLinkClick(e, deliverable.path)}
+                        className="text-blue-600 hover:underline"
+                      >
                         {deliverable.name}
                       </Link>
                       {dIndex < item.deliverables.length - 1 && ', '}

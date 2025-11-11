@@ -82,13 +82,17 @@ const Design = () => {
                 <td className="px-6 py-4">
                   {item.deliverables.map((deliverable, dIndex) => (
                     <React.Fragment key={dIndex}>
-                      <Link
-                        to={deliverable.path}
-                        onClick={(e) => handleLinkClick(e, deliverable.path)}
-                        className="text-blue-600 hover:underline"
-                      >
-                        {deliverable.name}
-                      </Link>
+                      {deliverable.path.startsWith('/forms/') ? (
+                        <Link
+                          to={deliverable.path}
+                          onClick={(e) => handleLinkClick(e, deliverable.path)}
+                          className="text-blue-600 hover:underline"
+                        >
+                          {deliverable.name}
+                        </Link>
+                      ) : (
+                        <span>{deliverable.name}</span>
+                      )}
                       {dIndex < item.deliverables.length - 1 && ', '}
                     </React.Fragment>
                   ))}

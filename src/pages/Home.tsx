@@ -48,13 +48,17 @@ export default function Home() {
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">{deliverable.name}</h3>
                   <p className="text-gray-600 mb-2">카테고리: {deliverable.category}</p>
                   <div className="flex space-x-2">
-                    <Link
-                      to={deliverable.categoryPath}
-                      onClick={(e) => handleCategoryLinkClick(e, deliverable.categoryPath)}
-                      className="text-blue-600 hover:underline"
-                    >
-                      카테고리 보기
-                    </Link>
+                    {deliverable.categoryPath.startsWith('/forms/') ? (
+                      <Link
+                        to={deliverable.categoryPath}
+                        onClick={(e) => handleCategoryLinkClick(e, deliverable.categoryPath)}
+                        className="text-blue-600 hover:underline"
+                      >
+                        카테고리 보기
+                      </Link>
+                    ) : (
+                      <span>{deliverable.category}</span>
+                    )}
                     {deliverable.formPath && (
                       <a
                         href={`/#${deliverable.formPath}`}

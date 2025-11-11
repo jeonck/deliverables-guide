@@ -449,6 +449,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/transition',
   },
   {
+    name: '교육 계획서',
+    category: '전환',
+    categoryPath: '/transition',
+    formPath: '/forms/education-plan',
+  },
+  {
     name: '시스템 및 업무 전환 결과서',
     category: '전환',
     categoryPath: '/transition',

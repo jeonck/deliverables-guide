@@ -166,6 +166,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/design',
   },
   {
+    name: '테이블 정의서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/table-definition-document',
+  },
+  {
     name: '컬럼 정의서',
     category: '설계',
     categoryPath: '/design',

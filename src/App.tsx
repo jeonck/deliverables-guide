@@ -30,6 +30,7 @@ import { DataStandardizationDefinitionDocument } from './pages/forms/DataStandar
 import EntityDefinitionDocument from './pages/forms/EntityDefinitionDocument';
 import AttributeDefinitionDocument from './pages/forms/AttributeDefinitionDocument';
 import ColumnDefinitionDocument from './pages/forms/ColumnDefinitionDocument';
+import TableDefinitionDocument from './pages/forms/TableDefinitionDocument';
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
             <Route path="/forms/entity-definition-document" element={<EntityDefinitionDocument />} />
             <Route path="/forms/attribute-definition-document" element={<AttributeDefinitionDocument />} />
             <Route path="/forms/column-definition-document" element={<ColumnDefinitionDocument />} />
+            <Route path="/forms/table-definition-document" element={<TableDefinitionDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

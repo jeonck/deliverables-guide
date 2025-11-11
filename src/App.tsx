@@ -28,6 +28,7 @@ import DatabaseStandardDesignGuidelines from './pages/forms/DatabaseStandardDesi
 import QualityAssuranceActivityPlanResult from './pages/forms/QualityAssuranceActivityPlanResult';
 import DataStandardizationDefinitionDocument from './pages/forms/DataStandardizationDefinitionDocument';
 import EntityDefinitionDocument from './pages/forms/EntityDefinitionDocument';
+import AttributeDefinitionDocument from './pages/forms/AttributeDefinitionDocument';
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
             <Route path="/forms/quality-assurance-activity-plan-result" element={<QualityAssuranceActivityPlanResult />} />
             <Route path="/forms/data-standardization-definition-document" element={<DataStandardizationDefinitionDocument />} />
             <Route path="/forms/entity-definition-document" element={<EntityDefinitionDocument />} />
+            <Route path="/forms/attribute-definition-document" element={<AttributeDefinitionDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

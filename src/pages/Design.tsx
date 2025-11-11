@@ -25,6 +25,7 @@ const designDeliverables = [
     deliverables: [
       { name: '데이터베이스 설계서', path: '/design' },
       { name: '엔티티 정의서', path: '/forms/entity-definition-document' },
+      { name: '속성 정의서', path: '/forms/attribute-definition-document' },
       { name: '테이블/프로그램 연관도', path: '/design' },
       { name: '테이블 정의서 (객체지향 모델)', path: '/design' },
       { name: '코드설계서 (객체지향 모델)', path: '/design' },

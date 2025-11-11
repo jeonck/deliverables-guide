@@ -166,6 +166,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/design',
   },
   {
+    name: '속성 정의서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/attribute-definition-document',
+  },
+  {
     name: '엔티티 정의서',
     category: '설계',
     categoryPath: '/design',

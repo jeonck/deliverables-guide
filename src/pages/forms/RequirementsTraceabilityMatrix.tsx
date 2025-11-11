@@ -37,6 +37,62 @@ const RequirementsTraceabilityMatrix: React.FC = () => {
         </button>
       </div>
 
+      <div className="overflow-x-auto mb-8">
+        <table className="min-w-full bg-white border-2 border-gray-300">
+          <thead>
+            <tr>
+              <th colSpan={2} className="border border-gray-300 px-4 py-2">RFP</th>
+              <th colSpan={2} className="border border-gray-300 px-4 py-2">제안서</th>
+              <th colSpan={2} className="border border-gray-300 px-4 py-2">수행계획서 (착수단계)</th>
+              <th className="border border-gray-300 px-4 py-2">분석 단계</th>
+              <th className="border border-gray-300 px-4 py-2">설계 단계</th>
+              <th className="border border-gray-300 px-4 py-2">구현 단계</th>
+              <th colSpan={6} className="border border-gray-300 px-4 py-2">시험 단계</th>
+              <th className="border border-gray-300 px-4 py-2">기타</th>
+            </tr>
+            <tr>
+              <th className="border border-gray-300 px-4 py-2">page</th>
+              <th className="border border-gray-300 px-4 py-2">번호</th>
+              <th className="border border-gray-300 px-4 py-2">내용</th>
+              <th className="border border-gray-300 px-4 py-2">page</th>
+              <th className="border border-gray-300 px-4 py-2">번호</th>
+              <th className="border border-gray-300 px-4 py-2">내용</th>
+              <th className="border border-gray-300 px-4 py-2">요구 사항 ID</th>
+              <th className="border border-gray-300 px-4 py-2">화면 UI ID</th>
+              <th className="border border-gray-300 px-4 py-2">배치 Job ID</th>
+              <th className="border border-gray-300 px-4 py-2">트랜 잭션 ID</th>
+              <th className="border border-gray-300 px-4 py-2">이벤트 ID</th>
+              <th className="border border-gray-300 px-4 py-2">프로 그램 소스 ID</th>
+              <th className="border border-gray-300 px-4 py-2">단위 테스트 시나 리오 ID</th>
+              <th className="border border-gray-300 px-4 py-2">통합 테스트 시나 리오 ID</th>
+              <th className="border border-gray-300 px-4 py-2">사용자 테스트 시나 리오 ID</th>
+              <th className="border border-gray-300 px-4 py-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-gray-300 px-4 py-2">1</td>
+              <td className="border border-gray-300 px-4 py-2">10</td>
+              <td className="border border-gray-300 px-4 py-2">회원가입 기능</td>
+              <td className="border border-gray-300 px-4 py-2">2</td>
+              <td className="border border-gray-300 px-4 py-2">25</td>
+              <td className="border border-gray-300 px-4 py-2">사용자 인증 및 가입</td>
+              <td className="border border-gray-300 px-4 py-2">REQ-001</td>
+              <td className="border border-gray-300 px-4 py-2">UI-001</td>
+              <td className="border border-gray-300 px-4 py-2"></td>
+              <td className="border border-gray-300 px-4 py-2">TRN-001</td>
+              <td className="border border-gray-300 px-4 py-2">EVT-001</td>
+              <td className="border border-gray-300 px-4 py-2">PGM-001</td>
+              <td className="border border-gray-300 px-4 py-2">UT-001</td>
+              <td className="border border-gray-300 px-4 py-2">IT-001</td>
+              <td className="border border-gray-300 px-4 py-2">UAT-001</td>
+              <td className="border border-gray-300 px-4 py-2"></td>
+            </tr>
+            {/* Add more table body rows here */}
+          </tbody>
+        </table>
+      </div>
+
       <div className="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm">
         <h2 className="text-xl font-semibold mb-3 flex items-center">
           <span className="text-2xl mr-2">📝</span> 요구사항 추적표 (Requirements Traceability Matrix) 정의
@@ -66,8 +122,6 @@ const RequirementsTraceabilityMatrix: React.FC = () => {
           <li><strong>최초 작성 시점:</strong> 주로 요구분석 단계에서 최초 작성되며, 프로젝트 진행에 따라 각 단계(설계, 구현, 테스트)의 산출물이 나올 때마다 지속적으로 갱신됩니다.</li>
         </ul>
       </div>
-
-      <div className="overflow-x-auto">
         <table className="min-w-full bg-white border-2 border-gray-300">
           <thead>
             <tr>

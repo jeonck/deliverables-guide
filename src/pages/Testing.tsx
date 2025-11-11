@@ -1,7 +1,7 @@
 const testDeliverables = [
   {
     category: '시험 결과/계획',
-    deliverables: '통합시험 계획/결과서, 시스템 시험 계획/결과서, 시스템 튜닝 계획/결과서, <a href="/#/forms/acceptance-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">인수시험 계획서</a>',
+    deliverables: '통합시험 계획/결과서, 시스템 시험 계획/결과서, 시스템 튜닝 계획/결과서, <a href="#/forms/acceptance-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">인수시험 계획서</a>',
   },
   {
     category: '문서/교육',

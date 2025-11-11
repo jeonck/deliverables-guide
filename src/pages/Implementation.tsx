@@ -13,7 +13,7 @@ const implementationDeliverables = [
   },
   {
     category: '관리/표준 (QA)',
-    deliverables: '<a href="/#/forms/applied-methodology-and-development-standards" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">적용 방법론 및 개발 표준</a>, 요구사항 추적표, 품질보증활동 계획/결과서, 반복 계획/평가서',
+    deliverables: '<a href="#/forms/applied-methodology-and-development-standards" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">적용 방법론 및 개발 표준</a>, 요구사항 추적표, 품질보증활동 계획/결과서, 반복 계획/평가서',
   },
 ];
 

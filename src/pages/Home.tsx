@@ -47,7 +47,7 @@ export default function Home() {
                     </Link>
                     {deliverable.formPath && (
                       <a
-                        href={`/#${deliverable.formPath}`}
+                        href={`#${deliverable.formPath}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-green-600 hover:underline"

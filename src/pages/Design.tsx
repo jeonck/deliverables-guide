@@ -1,11 +1,11 @@
 const designDeliverables = [
   {
     category: '시스템/아키텍처',
-    deliverables: '<a href="/#/forms/architecture-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">아키텍처 설계서</a>, 시스템 설치 및 검증 계획서, 시스템 전환 계획서, 보안정책서/시스템 보안정책서',
+    deliverables: '<a href="#/forms/architecture-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">아키텍처 설계서</a>, 시스템 설치 및 검증 계획서, 시스템 전환 계획서, 보안정책서/시스템 보안정책서',
   },
   {
     category: '응용/인터페이스',
-    deliverables: '<a href="/#/forms/application-system-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">응용시스템 설계서</a>, 인터페이스 설계서, <a href="/#/forms/user-interface-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">사용자 인터페이스 설계서</a>, 접근 권한 설계서',
+    deliverables: '<a href="#/forms/application-system-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">응용시스템 설계서</a>, 인터페이스 설계서, <a href="#/forms/user-interface-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">사용자 인터페이스 설계서</a>, 접근 권한 설계서',
   },
   {
     category: '데이터베이스',
@@ -17,7 +17,7 @@ const designDeliverables = [
   },
   {
     category: '계획 (시험)',
-    deliverables: '<a href="/#/forms/unit-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">단위시험 계획서</a>, <a href="/#/forms/integration-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">통합시험 계획서</a>',
+    deliverables: '<a href="#/forms/unit-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">단위시험 계획서</a>, <a href="#/forms/integration-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">통합시험 계획서</a>',
   },
   {
     category: '관리/전략 (QA)',

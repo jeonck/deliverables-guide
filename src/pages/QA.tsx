@@ -1,5 +1,5 @@
 const QADeliverables = [
-    { phase: '분석', deliverables: '<a href="/#/forms/quality-assurance-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">품질보증 계획서</a>, 요구사항 추적표, 총괄 시험 계획서' },
+    { phase: '분석', deliverables: '<a href="#/forms/quality-assurance-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">품질보증 계획서</a>, 요구사항 추적표, 총괄 시험 계획서' },
     { phase: '설계', deliverables: '시스템 전환 전략서, 반복 계획/평가서' },
     { phase: '구현', deliverables: '적용 방법론 및 개발 표준, 요구사항 추적표, 품질보증활동 계획/결과서, 반복 계획/평가서' },
     { phase: '테스트', deliverables: '요구사항 추적표, 품질보증활동 계획/결과서' },

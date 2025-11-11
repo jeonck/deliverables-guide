@@ -166,6 +166,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/design',
   },
   {
+    name: '엔티티 정의서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/entity-definition-document',
+  },
+  {
     name: '데이터베이스 설계서',
     category: '설계',
     categoryPath: '/design',

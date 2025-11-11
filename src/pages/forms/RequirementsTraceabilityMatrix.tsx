@@ -4,8 +4,9 @@ import * as XLSX from 'xlsx';
 
 const RequirementsTraceabilityMatrix: React.FC = () => {
   const tableData = [
-    ['RFP', null, '제안서', null, '수행계획서', null, '분석 단계', '설계 단계', '구현 단계', '시험 단계', null, null, '기타'],
-    ['page', '번호', '내용', 'page', '번호', '내용', '요구 사항 ID', '화면 UI ID', '배치 Job ID', '트랜 잭션 ID', '이벤트 ID', '프로 그램 소스 ID', '단위 테스트 시나 리오 ID', '통합 테스트 시나 리오 ID', '사용자 테스트 시나 리오 ID'],
+    ['RFP', null, '제안서', null, '수행계획서', null, '분석 단계', '설계 단계', '구현 단계', '시험 단계', null, null, null, null, null, '기타'],
+    ['page', '번호', '내용', 'page', '번호', '내용', '요구 사항 ID', '화면 UI ID', '배치 Job ID', '트랜 잭션 ID', '이벤트 ID', '프로 그램 소스 ID', '단위 테스트 시나 리오 ID', '통합 테스트 시나 리오 ID', '사용자 테스트 시나 리오 ID', null],
+    ['1', '10', '회원가입 기능', '2', '25', '사용자 인증 및 가입', 'REQ-001', 'UI-001', '', 'TRN-001', 'EVT-001', 'PGM-001', 'UT-001', 'IT-001', 'UAT-001', ''],
   ];
 
   const handleExcelDownload = () => {
@@ -15,7 +16,7 @@ const RequirementsTraceabilityMatrix: React.FC = () => {
       { s: { r: 0, c: 0 }, e: { r: 0, c: 1 } }, // RFP
       { s: { r: 0, c: 2 }, e: { r: 0, c: 3 } }, // 제안서
       { s: { r: 0, c: 4 }, e: { r: 0, c: 5 } }, // 수행계획서
-      { s: { r: 0, c: 9 }, e: { r: 0, c: 11 } }, // 시험 단계
+      { s: { r: 0, c: 9 }, e: { r: 0, c: 14 } }, // 시험 단계 (col 9 to 14 is 6 columns)
     ];
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, '요구사항추적표');
@@ -45,7 +46,7 @@ const RequirementsTraceabilityMatrix: React.FC = () => {
               <th className="border border-gray-300 px-4 py-2">분석 단계</th>
               <th className="border border-gray-300 px-4 py-2">설계 단계</th>
               <th className="border border-gray-300 px-4 py-2">구현 단계</th>
-              <th colSpan={3} className="border border-gray-300 px-4 py-2">시험 단계</th>
+              <th colSpan={6} className="border border-gray-300 px-4 py-2">시험 단계</th>
               <th className="border border-gray-300 px-4 py-2">기타</th>
             </tr>
             <tr>
@@ -64,10 +65,29 @@ const RequirementsTraceabilityMatrix: React.FC = () => {
               <th className="border border-gray-300 px-4 py-2">단위 테스트 시나 리오 ID</th>
               <th className="border border-gray-300 px-4 py-2">통합 테스트 시나 리오 ID</th>
               <th className="border border-gray-300 px-4 py-2">사용자 테스트 시나 리오 ID</th>
+              <th className="border border-gray-300 px-4 py-2"></th>
             </tr>
           </thead>
           <tbody>
-            {/* Add table body rows here */}
+            <tr>
+              <td className="border border-gray-300 px-4 py-2">1</td>
+              <td className="border border-gray-300 px-4 py-2">10</td>
+              <td className="border border-gray-300 px-4 py-2">회원가입 기능</td>
+              <td className="border border-gray-300 px-4 py-2">2</td>
+              <td className="border border-gray-300 px-4 py-2">25</td>
+              <td className="border border-gray-300 px-4 py-2">사용자 인증 및 가입</td>
+              <td className="border border-gray-300 px-4 py-2">REQ-001</td>
+              <td className="border border-gray-300 px-4 py-2">UI-001</td>
+              <td className="border border-gray-300 px-4 py-2"></td>
+              <td className="border border-gray-300 px-4 py-2">TRN-001</td>
+              <td className="border border-gray-300 px-4 py-2">EVT-001</td>
+              <td className="border border-gray-300 px-4 py-2">PGM-001</td>
+              <td className="border border-gray-300 px-4 py-2">UT-001</td>
+              <td className="border border-gray-300 px-4 py-2">IT-001</td>
+              <td className="border border-gray-300 px-4 py-2">UAT-001</td>
+              <td className="border border-gray-300 px-4 py-2"></td>
+            </tr>
+            {/* Add more table body rows here */}
           </tbody>
         </table>
       </div>

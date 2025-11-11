@@ -9,7 +9,7 @@ const analysisDeliverables = [
   },
   {
     category: '모델링/응용',
-    deliverables: '이벤트 시나리오, 기능차트/데이터흐름도/프로세스 정의서, 엔티티 정의서, 엔티티 관계도, 엔티티/프로세스 매트릭스',
+    deliverables: '이벤트 시나리오, 기능차트/데이터흐름도/<a href="/#/forms/process-definition-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">프로세스 정의서</a>, 엔티티 정의서, 엔티티 관계도, 엔티티/프로세스 매트릭스',
   },
   {
     category: '데이터베이스',

@@ -14,6 +14,7 @@ import RequirementsTraceabilityMatrix from './pages/forms/RequirementsTraceabili
 import RequirementsDefinitionDocument from './pages/forms/RequirementsDefinitionDocument';
 import DocumentManagement from './pages/DocumentManagement';
 import UserInterfaceDesignDocument from './pages/forms/UserInterfaceDesignDocument';
+import ProcessDefinitionDocument from './pages/forms/ProcessDefinitionDocument';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
             <Route path="/forms/requirements-traceability-matrix" element={<RequirementsTraceabilityMatrix />} />
             <Route path="/forms/requirements-definition-document" element={<RequirementsDefinitionDocument />} />
             <Route path="/forms/user-interface-design-document" element={<UserInterfaceDesignDocument />} />
+            <Route path="/forms/process-definition-document" element={<ProcessDefinitionDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

@@ -32,6 +32,28 @@ const DataStandardizationDefinitionDocument: React.FC = () => {
           엑셀 다운로드
         </button>
       </div>
+      <div className="overflow-x-auto mb-8">
+        <table className="min-w-full bg-white border-2 border-gray-300">
+          <thead>
+            <tr>
+              <th className="border border-gray-300 px-4 py-2">항목</th>
+              <th className="border border-gray-300 px-4 py-2">설명</th>
+              <th className="border border-gray-300 px-4 py-2">예시</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tableData.slice(1).map((row, rowIndex) => ( // Skip header row for rendering
+              <tr key={rowIndex}>
+                {row.map((cell, cellIndex) => (
+                  <td key={cellIndex} className="border border-gray-300 px-4 py-2">
+                    {cellIndex === 0 ? <span className="font-bold">{cell}</span> : cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

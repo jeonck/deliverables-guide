@@ -35,6 +35,7 @@ const analysisDeliverables = [
     deliverables: [
       { name: '전환데이타 분석서', path: '/requirements' },
       { name: '데이터베이스 표준설계 지침서', path: '/forms/database-standard-design-guidelines' },
+      { name: '데이터 표준화 정의서', path: '/forms/data-standardization-definition-document' },
       { name: '기존 시스템 데이터 모형 분석서 (객체지향 모델)', path: '/requirements' },
     ],
   },

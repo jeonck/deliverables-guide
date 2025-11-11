@@ -95,6 +95,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/requirements',
   },
   {
+    name: '데이터베이스 표준설계 지침서',
+    category: '요구사항',
+    categoryPath: '/requirements',
+    formPath: '/forms/database-standard-design-guidelines',
+  },
+  {
     name: '기존 시스템 데이터 모형 분석서 (객체지향 모델)',
     category: '요구사항',
     categoryPath: '/requirements',

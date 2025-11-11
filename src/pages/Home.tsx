@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const categories = [
@@ -13,6 +14,12 @@ const categories = [
 ];
 
 export default function Home() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredCategories = categories.filter((category) =>
+    category.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="text-center mb-12 py-8">
@@ -24,22 +31,38 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {categories.map((category) => (
-          <Link
-            key={category.name}
-            to={category.path}
-            className="group block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
-          >
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-              <span className="text-3xl">{category.icon}</span>
-            </div>
-            <h3 className="text-center text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
-              {category.name}
-            </h3>
-          </Link>
-        ))}
+      {/* Search Bar */}
+      <div className="mb-12 max-w-2xl mx-auto">
+        <input
+          type="text"
+          placeholder="산출물 검색..."
+          className="w-full p-4 text-lg border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
+
+      {/* Categories Grid */}
+      {filteredCategories.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {filteredCategories.map((category) => (
+            <Link
+              key={category.name}
+              to={category.path}
+              className="group block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <span className="text-3xl">{category.icon}</span>
+              </div>
+              <h3 className="text-center text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+                {category.name}
+              </h3>
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center text-gray-500 text-lg">검색 결과가 없습니다.</div>
+      )}
     </div>
   );
 }

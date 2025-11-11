@@ -133,6 +133,7 @@ export const allDeliverables: Deliverable[] = [
     name: '시스템 설치 및 검증 계획서',
     category: '설계',
     categoryPath: '/design',
+    formPath: '/forms/system-installation-verification-plan',
   },
   {
     name: '시스템 전환 계획서',

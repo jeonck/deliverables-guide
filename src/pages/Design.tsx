@@ -5,7 +5,7 @@ const designDeliverables = [
   },
   {
     category: '응용/인터페이스',
-    deliverables: '응용시스템 설계서, 인터페이스 설계서, 사용자 인터페이스 설계서, 접근 권한 설계서',
+    deliverables: '응용시스템 설계서, 인터페이스 설계서, <a href="/#/forms/user-interface-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">사용자 인터페이스 설계서</a>, 접근 권한 설계서',
   },
   {
     category: '데이터베이스',
@@ -43,7 +43,7 @@ const Design = () => {
             {designDeliverables.map((item, index) => (
               <tr key={index}>
                 <td className="px-6 py-4 whitespace-nowrap font-bold">{item.category}</td>
-                <td className="px-6 py-4">{item.deliverables}</td>
+                <td className="px-6 py-4" dangerouslySetInnerHTML={{ __html: item.deliverables }}></td>
               </tr>
             ))}
           </tbody>

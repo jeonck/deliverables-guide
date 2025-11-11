@@ -13,6 +13,7 @@ import Transition from './pages/Transition';
 import RequirementsTraceabilityMatrix from './pages/forms/RequirementsTraceabilityMatrix';
 import RequirementsDefinitionDocument from './pages/forms/RequirementsDefinitionDocument';
 import DocumentManagement from './pages/DocumentManagement';
+import UserInterfaceDesignDocument from './pages/forms/UserInterfaceDesignDocument';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/etc" element={<Etc />} />
             <Route path="/forms/requirements-traceability-matrix" element={<RequirementsTraceabilityMatrix />} />
             <Route path="/forms/requirements-definition-document" element={<RequirementsDefinitionDocument />} />
+            <Route path="/forms/user-interface-design-document" element={<UserInterfaceDesignDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

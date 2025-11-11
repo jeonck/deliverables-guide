@@ -22,6 +22,16 @@ const DataStandardizationDefinitionDocument: React.FC = () => {
   };
 
   return (
-    <div>Hello</div>
+    <div className="container mx-auto p-4">
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">데이터 표준화 정의서</h1>
+        <button
+          onClick={handleExcelDownload}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          엑셀 다운로드
+        </button>
+      </div>
+    </div>
   );
 };

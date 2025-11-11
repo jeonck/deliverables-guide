@@ -94,6 +94,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/design',
   },
   {
+    name: '아키텍처 설계서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/architecture-design-document',
+  },
+  {
     name: '시스템 설치 및 검증 계획서',
     category: '설계',
     categoryPath: '/design',

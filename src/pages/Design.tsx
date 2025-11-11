@@ -1,7 +1,7 @@
 const designDeliverables = [
   {
     category: '시스템/아키텍처',
-    deliverables: '아키텍처 설계서, 시스템 설치 및 검증 계획서, 시스템 전환 계획서, 보안정책서/시스템 보안정책서',
+    deliverables: '<a href="/#/forms/architecture-design-document" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">아키텍처 설계서</a>, 시스템 설치 및 검증 계획서, 시스템 전환 계획서, 보안정책서/시스템 보안정책서',
   },
   {
     category: '응용/인터페이스',

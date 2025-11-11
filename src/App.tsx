@@ -20,6 +20,7 @@ import UnitTestPlan from './pages/forms/UnitTestPlan';
 import IntegrationTestPlan from './pages/forms/IntegrationTestPlan';
 import QualityAssurancePlan from './pages/forms/QualityAssurancePlan';
 import ApplicationSystemDesignDocument from './pages/forms/ApplicationSystemDesignDocument';
+import ArchitectureDesignDocument from './pages/forms/ArchitectureDesignDocument';
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
             <Route path="/forms/integration-test-plan" element={<IntegrationTestPlan />} />
             <Route path="/forms/quality-assurance-plan" element={<QualityAssurancePlan />} />
             <Route path="/forms/application-system-design-document" element={<ApplicationSystemDesignDocument />} />
+            <Route path="/forms/architecture-design-document" element={<ArchitectureDesignDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

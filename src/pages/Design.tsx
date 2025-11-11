@@ -17,7 +17,7 @@ const designDeliverables = [
   },
   {
     category: '계획 (시험)',
-    deliverables: '단위시험 계획서, <a href="/#/forms/integration-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">통합시험 계획서</a>',
+    deliverables: '<a href="/#/forms/unit-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">단위시험 계획서</a>, <a href="/#/forms/integration-test-plan" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">통합시험 계획서</a>',
   },
   {
     category: '관리/전략 (QA)',

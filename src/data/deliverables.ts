@@ -429,11 +429,6 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/testing',
   },
   {
-    name: '교육 계획서',
-    category: '테스트',
-    categoryPath: '/testing',
-  },
-  {
     name: '요구사항 추적표',
     category: '테스트',
     categoryPath: '/testing',

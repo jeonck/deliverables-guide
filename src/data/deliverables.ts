@@ -257,9 +257,10 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/design',
   },
   {
-    name: '데이터 전환계획서',
+    name: '데이터 전환 계획서',
     category: '설계',
     categoryPath: '/design',
+    formPath: '/forms/data-migration-plan',
   },
   {
     name: '데이터 전환프로그램',

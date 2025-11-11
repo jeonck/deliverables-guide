@@ -40,6 +40,7 @@ import MasterTestPlan from './pages/forms/MasterTestPlan';
 import DataSystemDefinitionDocument from './pages/forms/DataSystemDefinitionDocument';
 import ScreenDesignDocument from './pages/forms/ScreenDesignDocument';
 import SystemTransitionPlan from './pages/forms/SystemTransitionPlan';
+import DataMigrationPlan from './pages/forms/DataMigrationPlan';
 
 function App() {
   return (
@@ -88,6 +89,7 @@ function App() {
             <Route path="/forms/data-system-definition-document" element={<DataSystemDefinitionDocument />} />
             <Route path="/forms/screen-design-document" element={<ScreenDesignDocument />} />
             <Route path="/forms/system-transition-plan" element={<SystemTransitionPlan />} />
+            <Route path="/forms/data-migration-plan" element={<DataMigrationPlan />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

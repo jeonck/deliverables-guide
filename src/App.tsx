@@ -35,6 +35,7 @@ import DatabaseDesignDocument from './pages/forms/DatabaseDesignDocument';
 import ProgramDesignDocument from './pages/forms/ProgramDesignDocument';
 import InterfaceDesignDocument from './pages/forms/InterfaceDesignDocument';
 import InitialDataConstructionPlan from './pages/forms/InitialDataConstructionPlan';
+import EducationPlan from './pages/forms/EducationPlan';
 
 function App() {
   return (
@@ -78,6 +79,7 @@ function App() {
             <Route path="/forms/program-design-document" element={<ProgramDesignDocument />} />
             <Route path="/forms/interface-design-document" element={<InterfaceDesignDocument />} />
             <Route path="/forms/initial-data-construction-plan" element={<InitialDataConstructionPlan />} />
+            <Route path="/forms/education-plan" element={<EducationPlan />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

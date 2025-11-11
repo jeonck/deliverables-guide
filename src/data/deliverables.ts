@@ -178,6 +178,7 @@ export const allDeliverables: Deliverable[] = [
     name: '통합시험 계획서',
     category: '설계',
     categoryPath: '/design',
+    formPath: '/forms/integration-test-plan',
   },
   {
     name: '시스템 전환 전략서',

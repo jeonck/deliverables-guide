@@ -17,7 +17,6 @@ const designDeliverables = [
       { name: '응용시스템 설계서', path: '/forms/application-system-design-document' },
       { name: '프로그램 설계서', path: '/forms/program-design-document' },
       { name: '인터페이스 설계서', path: '/forms/interface-design-document' },
-      { name: '인터페이스 설계서', path: '/design' },
       { name: '사용자 인터페이스 설계서', path: '/forms/user-interface-design-document' },
       { name: '화면 설계서', path: '/forms/screen-design-document' },
       { name: '접근 권한 설계서', path: '/design' },

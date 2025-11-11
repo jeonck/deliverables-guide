@@ -247,16 +247,6 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/initial-data-construction-plan',
   },
   {
-    name: '백업 및 복구계획서',
-    category: '설계',
-    categoryPath: '/design',
-  },
-  {
-    name: '초기데이터 구축 계획서',
-    category: '설계',
-    categoryPath: '/design',
-  },
-  {
     name: '데이터 전환 계획서',
     category: '설계',
     categoryPath: '/design',

@@ -41,6 +41,7 @@ import DataSystemDefinitionDocument from './pages/forms/DataSystemDefinitionDocu
 import ScreenDesignDocument from './pages/forms/ScreenDesignDocument';
 import SystemTransitionPlan from './pages/forms/SystemTransitionPlan';
 import DataMigrationPlan from './pages/forms/DataMigrationPlan';
+import BackupAndRecoveryPlan from './pages/forms/BackupAndRecoveryPlan';
 
 function App() {
   return (
@@ -90,6 +91,7 @@ function App() {
             <Route path="/forms/screen-design-document" element={<ScreenDesignDocument />} />
             <Route path="/forms/system-transition-plan" element={<SystemTransitionPlan />} />
             <Route path="/forms/data-migration-plan" element={<DataMigrationPlan />} />
+            <Route path="/forms/backup-and-recovery-plan" element={<BackupAndRecoveryPlan />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

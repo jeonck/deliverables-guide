@@ -169,6 +169,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/design',
   },
   {
+    name: '단위시험 계획서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/unit-test-plan',
+  },
+  {
     name: '통합시험 계획서',
     category: '설계',
     categoryPath: '/design',

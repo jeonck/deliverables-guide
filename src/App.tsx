@@ -32,6 +32,7 @@ import AttributeDefinitionDocument from './pages/forms/AttributeDefinitionDocume
 import ColumnDefinitionDocument from './pages/forms/ColumnDefinitionDocument';
 import TableDefinitionDocument from './pages/forms/TableDefinitionDocument';
 import DatabaseDesignDocument from './pages/forms/DatabaseDesignDocument';
+import ProgramDesignDocument from './pages/forms/ProgramDesignDocument';
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
             <Route path="/forms/column-definition-document" element={<ColumnDefinitionDocument />} />
             <Route path="/forms/table-definition-document" element={<TableDefinitionDocument />} />
             <Route path="/forms/database-design-document" element={<DatabaseDesignDocument />} />
+            <Route path="/forms/program-design-document" element={<ProgramDesignDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

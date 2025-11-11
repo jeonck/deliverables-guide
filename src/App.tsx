@@ -12,6 +12,7 @@ import Etc from './pages/Etc';
 import Transition from './pages/Transition';
 import RequirementsTraceabilityMatrix from './pages/forms/RequirementsTraceabilityMatrix';
 import RequirementsDefinitionDocument from './pages/forms/RequirementsDefinitionDocument';
+import DocumentManagement from './pages/DocumentManagement';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/qa" element={<QA />} />
             <Route path="/security" element={<Security />} />
             <Route path="/transition" element={<Transition />} />
+            <Route path="/document-management" element={<DocumentManagement />} />
             <Route path="/etc" element={<Etc />} />
             <Route path="/forms/requirements-traceability-matrix" element={<RequirementsTraceabilityMatrix />} />
             <Route path="/forms/requirements-definition-document" element={<RequirementsDefinitionDocument />} />

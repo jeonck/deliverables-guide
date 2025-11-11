@@ -29,6 +29,7 @@ import QualityAssuranceActivityPlanResult from './pages/forms/QualityAssuranceAc
 import DataStandardizationDefinitionDocument from './pages/forms/DataStandardizationDefinitionDocument';
 import EntityDefinitionDocument from './pages/forms/EntityDefinitionDocument';
 import AttributeDefinitionDocument from './pages/forms/AttributeDefinitionDocument';
+import ColumnDefinitionDocument from './pages/forms/ColumnDefinitionDocument';
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
             <Route path="/forms/data-standardization-definition-document" element={<DataStandardizationDefinitionDocument />} />
             <Route path="/forms/entity-definition-document" element={<EntityDefinitionDocument />} />
             <Route path="/forms/attribute-definition-document" element={<AttributeDefinitionDocument />} />
+            <Route path="/forms/column-definition-document" element={<ColumnDefinitionDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

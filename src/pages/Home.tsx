@@ -1,23 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-const categories = [
-  { name: '사업수행', path: '/project-plan', icon: '📝' },
-  { name: '요구사항', path: '/requirements', icon: '📋' },
-  { name: '설계', path: '/design', icon: '📐' },
-  { name: '구현', path: '/implementation', icon: '💻' },
-  { name: '테스트', path: '/testing', icon: '🧪' },
-  { name: '품질보증', path: '/qa', icon: '🛡️' },
-  { name: '보안', path: '/security', icon: '🔒' },
-  { name: '전환', path: '/transition', icon: '🚚' },
-  { name: '기타', path: '/etc', icon: '📎' },
-];
+import { allDeliverables } from '../data/deliverables';
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredCategories = categories.filter((category) =>
-    category.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredDeliverables = allDeliverables.filter((deliverable) =>
+    deliverable.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -42,10 +31,54 @@ export default function Home() {
         />
       </div>
 
-      {/* Categories Grid */}
-      {filteredCategories.length > 0 ? (
+      {/* Search Results */}
+      {searchTerm && (
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">검색 결과</h2>
+          {filteredDeliverables.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredDeliverables.map((deliverable, index) => (
+                <div key={index} className="bg-white p-4 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{deliverable.name}</h3>
+                  <p className="text-gray-600 mb-2">카테고리: {deliverable.category}</p>
+                  <div className="flex space-x-2">
+                    <Link to={deliverable.categoryPath} className="text-blue-600 hover:underline">
+                      카테고리 보기
+                    </Link>
+                    {deliverable.formPath && (
+                      <a
+                        href={deliverable.formPath}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-green-600 hover:underline"
+                      >
+                        양식 보기
+                      </a>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center text-gray-500 text-lg">검색 결과가 없습니다.</div>
+          )}
+        </div>
+      )}
+
+      {/* All Categories Grid (only if no search term) */}
+      {!searchTerm && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredCategories.map((category) => (
+          {[
+            { name: '사업수행', path: '/project-plan', icon: '📝' },
+            { name: '요구사항', path: '/requirements', icon: '📋' },
+            { name: '설계', path: '/design', icon: '📐' },
+            { name: '구현', path: '/implementation', icon: '💻' },
+            { name: '테스트', path: '/testing', icon: '🧪' },
+            { name: '품질보증', path: '/qa', icon: '🛡️' },
+            { name: '보안', path: '/security', icon: '🔒' },
+            { name: '전환', path: '/transition', icon: '🚚' },
+            { name: '기타', path: '/etc', icon: '📎' },
+          ].map((category) => (
             <Link
               key={category.name}
               to={category.path}
@@ -60,8 +93,6 @@ export default function Home() {
             </Link>
           ))}
         </div>
-      ) : (
-        <div className="text-center text-gray-500 text-lg">검색 결과가 없습니다.</div>
       )}
     </div>
   );

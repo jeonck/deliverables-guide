@@ -2,7 +2,7 @@ import React from 'react';
 import { saveAs } from 'file-saver';
 import * as XLSX from 'xlsx'; // Added a comment to force re-evaluation
 
-const DataStandardizationDefinitionDocument: React.FC = () => {
+export const DataStandardizationDefinitionDocument: React.FC = () => {
   const tableData = [
     ['항목', '설명', '예시'],
     ['표준 용어 정의', '시스템 내 모든 용어에 대한 표준 명칭, 정의, 약어 등을 정의한 목록 (표준 용어 사전)', '고객 (Customer), 고객 식별 번호 (Cust_ID)'],

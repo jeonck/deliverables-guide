@@ -26,7 +26,7 @@ import AsIsBusinessAnalysisDocument from './pages/forms/AsIsBusinessAnalysisDocu
 import AsIsSystemAnalysisDocument from './pages/forms/AsIsSystemAnalysisDocument';
 import DatabaseStandardDesignGuidelines from './pages/forms/DatabaseStandardDesignGuidelines';
 import QualityAssuranceActivityPlanResult from './pages/forms/QualityAssuranceActivityPlanResult';
-import DataStandardizationDefinitionDocument from './pages/forms/DataStandardizationDefinitionDocument';
+import { DataStandardizationDefinitionDocument } from './pages/forms/DataStandardizationDefinitionDocument';
 import EntityDefinitionDocument from './pages/forms/EntityDefinitionDocument';
 import AttributeDefinitionDocument from './pages/forms/AttributeDefinitionDocument';
 import ColumnDefinitionDocument from './pages/forms/ColumnDefinitionDocument';

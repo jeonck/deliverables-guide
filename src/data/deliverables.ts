@@ -179,6 +179,12 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/user-interface-design-document',
   },
   {
+    name: '화면 설계서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/screen-design-document',
+  },
+  {
     name: '접근 권한 설계서',
     category: '설계',
     categoryPath: '/design',

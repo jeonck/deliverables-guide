@@ -38,6 +38,7 @@ import InitialDataConstructionPlan from './pages/forms/InitialDataConstructionPl
 import EducationPlan from './pages/forms/EducationPlan';
 import MasterTestPlan from './pages/forms/MasterTestPlan';
 import DataSystemDefinitionDocument from './pages/forms/DataSystemDefinitionDocument';
+import ScreenDesignDocument from './pages/forms/ScreenDesignDocument';
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
             <Route path="/forms/education-plan" element={<EducationPlan />} />
             <Route path="/forms/master-test-plan" element={<MasterTestPlan />} />
             <Route path="/forms/data-system-definition-document" element={<DataSystemDefinitionDocument />} />
+            <Route path="/forms/screen-design-document" element={<ScreenDesignDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

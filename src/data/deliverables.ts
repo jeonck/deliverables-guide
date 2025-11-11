@@ -48,6 +48,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/requirements',
   },
   {
+    name: '현행 시스템 분석서',
+    category: '요구사항',
+    categoryPath: '/requirements',
+    formPath: '/forms/as-is-system-analysis-document',
+  },
+  {
     name: '프로세스 정의서',
     category: '요구사항',
     categoryPath: '/requirements',

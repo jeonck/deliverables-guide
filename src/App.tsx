@@ -23,6 +23,7 @@ import ApplicationSystemDesignDocument from './pages/forms/ApplicationSystemDesi
 import ArchitectureDesignDocument from './pages/forms/ArchitectureDesignDocument';
 import AcceptanceTestPlan from './pages/forms/AcceptanceTestPlan';
 import AsIsBusinessAnalysisDocument from './pages/forms/AsIsBusinessAnalysisDocument';
+import AsIsSystemAnalysisDocument from './pages/forms/AsIsSystemAnalysisDocument';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
             <Route path="/forms/architecture-design-document" element={<ArchitectureDesignDocument />} />
             <Route path="/forms/acceptance-test-plan" element={<AcceptanceTestPlan />} />
             <Route path="/forms/as-is-business-analysis-document" element={<AsIsBusinessAnalysisDocument />} />
+            <Route path="/forms/as-is-system-analysis-document" element={<AsIsSystemAnalysisDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

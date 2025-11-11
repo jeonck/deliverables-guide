@@ -8,6 +8,12 @@ export interface Deliverable {
 export const allDeliverables: Deliverable[] = [
   // 사업수행 (Project Plan)
   {
+    name: '품질보증 계획서',
+    category: '사업수행',
+    categoryPath: '/project-plan',
+    formPath: '/forms/quality-assurance-plan',
+  },
+  {
     name: '요구사항 추적표',
     category: '사업수행',
     categoryPath: '/project-plan',

@@ -19,7 +19,7 @@ const designDeliverables = [
       { name: '인터페이스 설계서', path: '/forms/interface-design-document' },
       { name: '사용자 인터페이스 설계서', path: '/forms/user-interface-design-document' },
       { name: '화면 설계서', path: '/forms/screen-design-document' },
-      { name: '접근 권한 설계서', path: '/design' },
+      { name: '접근 권한 설계서', path: '/forms/access-control-design-document' },
     ],
   },
   {

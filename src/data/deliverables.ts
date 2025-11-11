@@ -190,6 +190,7 @@ export const allDeliverables: Deliverable[] = [
     name: '접근 권한 설계서',
     category: '설계',
     categoryPath: '/design',
+    formPath: '/forms/access-control-design-document',
   },
   {
     name: '데이터베이스 설계서',

@@ -43,6 +43,7 @@ import SystemTransitionPlan from './pages/forms/SystemTransitionPlan';
 import DataMigrationPlan from './pages/forms/DataMigrationPlan';
 import BackupAndRecoveryPlan from './pages/forms/BackupAndRecoveryPlan';
 import SystemInstallationVerificationPlan from './pages/forms/SystemInstallationVerificationPlan';
+import AccessControlDesignDocument from './pages/forms/AccessControlDesignDocument';
 
 function App() {
   return (
@@ -94,6 +95,7 @@ function App() {
             <Route path="/forms/data-migration-plan" element={<DataMigrationPlan />} />
             <Route path="/forms/backup-and-recovery-plan" element={<BackupAndRecoveryPlan />} />
             <Route path="/forms/system-installation-verification-plan" element={<SystemInstallationVerificationPlan />} />
+            <Route path="/forms/access-control-design-document" element={<AccessControlDesignDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

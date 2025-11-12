@@ -67,3 +67,19 @@ TypeScript 환경에서 모듈 내보내기 시 `export const`와 `export defaul
 
 ### 교훈
 새로운 페이지 컴포넌트를 추가할 때는 해당 컴포넌트의 파일 생성, 데이터 목록 업데이트, 그리고 `App.tsx`에 라우트 정의 추가의 세 가지 단계를 항상 확인해야 합니다. 이 중 하나라도 누락되면 페이지 접근 시 오류가 발생할 수 있습니다. 특히 SPA에서는 모든 라우트가 중앙 `Routes` 컴포넌트에 명시적으로 정의되어야 합니다.
+
+---
+
+## 5. `UserInterfaceDesignDocumentForm` 모듈을 찾을 수 없음 (`TS2307`)
+
+### 문제 발생
+`npm run build` 실행 시 `src/App.tsx`에서 `'./pages/forms/UserInterfaceDesignDocumentForm'` 모듈을 찾을 수 없다는 TypeScript 오류 `TS2307`이 발생했습니다.
+
+### 원인 분석
+`UserInterfaceDesignDocumentForm.tsx` 파일이 정상적으로 생성되었고 `App.tsx`의 import 경로도 올바르게 보였음에도 불구하고 발생한 오류였습니다. 이는 TypeScript 컴파일러 또는 빌드 도구(Vite)의 캐싱 문제, 또는 `node_modules` 내의 타입 정의 불일치로 인해 발생할 수 있습니다. 특히, 새로운 파일을 추가한 후 빌드 시스템이 변경 사항을 즉시 인식하지 못하는 경우에 나타납니다.
+
+### 해결
+프로젝트의 `node_modules` 디렉토리와 `package-lock.json` 파일을 삭제하여 기존 종속성 및 캐시를 완전히 제거했습니다. 이후 `npm install` 명령을 통해 모든 종속성을 새로 설치하고, `npm run build`를 다시 실행하여 문제를 해결했습니다.
+
+### 교훈
+새로운 파일이나 모듈을 추가한 후 `Cannot find module`과 같은 모듈 관련 오류가 발생하고 코드 상의 경로에 문제가 없어 보일 경우, `node_modules` 및 `package-lock.json`을 정리하고 종속성을 재설치하는 것이 효과적인 해결책이 될 수 있습니다. 이는 빌드 시스템의 캐시 문제를 해결하고 최신 종속성 상태를 반영하는 데 도움이 됩니다.

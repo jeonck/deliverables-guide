@@ -27,7 +27,7 @@ const implementationDeliverables = [
       { name: '테이블 정의서', path: '/implementation' },
       { name: '데이터베이스 테이블', path: '/forms/database-table-form' },
       { name: '프로그램 코드', path: '/implementation' },
-      { name: '단위시험 결과서', path: '/implementation' },
+      { name: '단위시험 결과서', path: '/forms/unit-test-result-document-form' },
     ],
   },
   {

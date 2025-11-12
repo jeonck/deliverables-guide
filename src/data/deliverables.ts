@@ -405,6 +405,7 @@ export const allDeliverables: Deliverable[] = [
     name: '운영자 지침서',
     category: '테스트',
     categoryPath: '/testing',
+    formPath: '/forms/operator-manual',
   },
   {
     name: '교육교재',

@@ -7,10 +7,11 @@ const testDeliverables = [
     deliverables: [
       { name: '총괄 시험 계획서', path: '/forms/master-test-plan' },
       { name: '통합시험 계획/결과서', path: '/testing' },
-      { name: '시스템 시험 계획/결과서', path: '/testing' },
+      { name: '시스템 시험 계획/결과서', path: '/forms/system-test-result-document-form' },
       { name: '시스템 튜닝 계획/결과서', path: '/testing' },
       { name: '인수시험 계획서', path: '/forms/acceptance-test-plan' },
       { name: '인수시험 시나리오', path: '/forms/acceptance-test-scenario' },
+      { name: '인수시험 결과서', path: '/forms/acceptance-test-result-document-form' },
     ],
   },
   {

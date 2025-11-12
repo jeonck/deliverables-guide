@@ -392,6 +392,7 @@ export const allDeliverables: Deliverable[] = [
     name: '시스템 시험 계획/결과서',
     category: '테스트',
     categoryPath: '/testing',
+    formPath: '/forms/system-test-result-document-form',
   },
   {
     name: '시스템 튜닝 계획/결과서',
@@ -414,6 +415,12 @@ export const allDeliverables: Deliverable[] = [
     category: '테스트',
     categoryPath: '/testing',
     formPath: '/forms/acceptance-test-scenario',
+  },
+  {
+    name: '인수시험 결과서',
+    category: '테스트',
+    categoryPath: '/testing',
+    formPath: '/forms/acceptance-test-result-document-form',
   },
   {
     name: '사용자 지침서',

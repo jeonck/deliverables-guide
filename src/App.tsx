@@ -56,6 +56,7 @@ import UserInterfaceDesignDocumentForm from './pages/forms/UserInterfaceDesignDo
 import ClassSpecificationDocumentForm from './pages/forms/ClassSpecificationDocumentForm';
 import DatabaseTableForm from './pages/forms/DatabaseTableForm';
 import UnitTestResultDocumentForm from './pages/forms/UnitTestResultDocumentForm';
+import IntegrationTestResultDocumentForm from './pages/forms/IntegrationTestResultDocumentForm';
 
 function App() {
   return (
@@ -120,6 +121,7 @@ function App() {
             <Route path="/forms/class-specification-document-form" element={<ClassSpecificationDocumentForm />} />
             <Route path="/forms/database-table-form" element={<DatabaseTableForm />} />
             <Route path="/forms/unit-test-result-document-form" element={<UnitTestResultDocumentForm />} />
+            <Route path="/forms/integration-test-result-document-form" element={<IntegrationTestResultDocumentForm />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

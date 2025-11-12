@@ -17,7 +17,7 @@ const implementationDeliverables = [
       { name: '프로그램 소스', path: '/implementation' },
       { name: '구현된 응용시스템', path: '/implementation' },
       { name: '단위시험 계획/결과서', path: '/implementation' },
-      { name: '통합시험 계획서', path: '/implementation' },
+      { name: '통합시험 계획서', path: '/forms/integration-test-result-document-form' },
     ],
   },
   {

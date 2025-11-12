@@ -314,6 +314,7 @@ export const allDeliverables: Deliverable[] = [
     name: '통합시험 계획서',
     category: '구현',
     categoryPath: '/implementation',
+    formPath: '/forms/integration-test-result-document-form',
   },
   {
     name: '데이터베이스 설계서',

@@ -1,5 +1,8 @@
+import { Link } from 'react-router-dom';
+import { allDeliverables } from '../data/deliverables';
+
 const Etc = () => {
-  const deliverables = [
+  const cbdDeliverables = [
     { phase: '분석 단계', code: 'R1', name: '사용자 요구사항 정의서' },
     { phase: '분석 단계', code: 'R2', name: '유스케이스 명세서' },
     { phase: '분석 단계', code: 'R3', name: '요구사항 추적표' },
@@ -43,13 +46,24 @@ const Etc = () => {
             </tr>
           </thead>
           <tbody>
-            {deliverables.map((item, index) => (
-              <tr key={index}>
-                <td className="px-4 py-2 border border-gray-300">{item.phase}</td>
-                <td className="px-4 py-2 border border-gray-300">{item.code}</td>
-                <td className="px-4 py-2 border border-gray-300">{item.name}</td>
-              </tr>
-            ))}
+            {cbdDeliverables.map((item, index) => {
+              const matchingDeliverable = allDeliverables.find(d => d.name === item.name);
+              return (
+                <tr key={index}>
+                  <td className="px-4 py-2 border border-gray-300">{item.phase}</td>
+                  <td className="px-4 py-2 border border-gray-300">{item.code}</td>
+                  <td className="px-4 py-2 border border-gray-300">
+                    {matchingDeliverable && matchingDeliverable.formPath ? (
+                      <Link to={matchingDeliverable.formPath} className="text-blue-600 hover:underline">
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <span>{item.name}</span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

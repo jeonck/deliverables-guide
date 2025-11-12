@@ -33,11 +33,6 @@ const designDeliverables = [
       { name: '테이블/프로그램 연관도', path: '/forms/table-program-relationship-diagram' },
       { name: '코드설계서', path: '/design' },
       { name: '코드 정의서', path: '/forms/code-definition-document' },
-    ],
-  },
-  {
-    category: '계획 (DB)',
-    deliverables: [
       { name: '백업 및 복구 계획서', path: '/forms/backup-and-recovery-plan' },
       { name: '초기데이터 구축 계획서', path: '/forms/initial-data-construction-plan' },
       { name: '데이터 전환 계획서', path: '/forms/data-migration-plan' },

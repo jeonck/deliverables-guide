@@ -46,6 +46,7 @@ import SystemInstallationVerificationPlan from './pages/forms/SystemInstallation
 import AccessControlDesignDocument from './pages/forms/AccessControlDesignDocument';
 import BusinessFunctionDecompositionDiagram from './pages/forms/BusinessFunctionDecompositionDiagram';
 import CodeDefinitionDocument from './pages/forms/CodeDefinitionDocument';
+import TableProgramRelationshipDiagram from './pages/forms/TableProgramRelationshipDiagram';
 
 function App() {
   return (
@@ -100,6 +101,7 @@ function App() {
             <Route path="/forms/access-control-design-document" element={<AccessControlDesignDocument />} />
             <Route path="/forms/business-function-decomposition-diagram" element={<BusinessFunctionDecompositionDiagram />} />
             <Route path="/forms/code-definition-document" element={<CodeDefinitionDocument />} />
+            <Route path="/forms/table-program-relationship-diagram" element={<TableProgramRelationshipDiagram />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

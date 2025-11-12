@@ -194,6 +194,7 @@ export const allDeliverables: Deliverable[] = [
     name: '테이블/프로그램 연관도',
     category: '설계',
     categoryPath: '/design',
+    formPath: '/forms/table-program-relationship-diagram',
   },
   {
     name: '테이블 정의서 (객체지향 모델)',

@@ -45,6 +45,7 @@ import BackupAndRecoveryPlan from './pages/forms/BackupAndRecoveryPlan';
 import SystemInstallationVerificationPlan from './pages/forms/SystemInstallationVerificationPlan';
 import AccessControlDesignDocument from './pages/forms/AccessControlDesignDocument';
 import BusinessFunctionDecompositionDiagram from './pages/forms/BusinessFunctionDecompositionDiagram';
+import CodeDefinitionDocument from './pages/forms/CodeDefinitionDocument';
 
 function App() {
   return (
@@ -98,6 +99,7 @@ function App() {
             <Route path="/forms/system-installation-verification-plan" element={<SystemInstallationVerificationPlan />} />
             <Route path="/forms/access-control-design-document" element={<AccessControlDesignDocument />} />
             <Route path="/forms/business-function-decomposition-diagram" element={<BusinessFunctionDecompositionDiagram />} />
+            <Route path="/forms/code-definition-document" element={<CodeDefinitionDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

@@ -32,6 +32,7 @@ const designDeliverables = [
       { name: '데이터베이스 설계서', path: '/forms/database-design-document' },
       { name: '테이블/프로그램 연관도', path: '/design' },
       { name: '코드설계서', path: '/design' },
+      { name: '코드 정의서', path: '/forms/code-definition-document' },
     ],
   },
   {

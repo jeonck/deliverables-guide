@@ -24,6 +24,7 @@ const designDeliverables = [
       { name: '통합시험 계획서', path: '/forms/integration-test-plan' },
       { name: '단위시험 케이스', path: '/forms/unit-test-cases' },
       { name: '통합시험 시나리오', path: '/forms/integration-test-scenario' },
+      { name: '시스템시험 시나리오', path: '/forms/system-test-scenario' },
     ],
   },
   {

@@ -253,6 +253,12 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/integration-test-scenario',
   },
   {
+    name: '시스템시험 시나리오',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/system-test-scenario',
+  },
+  {
     name: '시스템 전환 전략서',
     category: '설계',
     categoryPath: '/design',

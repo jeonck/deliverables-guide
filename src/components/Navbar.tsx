@@ -20,15 +20,15 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
-            <NavLink to="/project-plan">사업수행</NavLink>
             <NavLink to="/requirements">요구사항</NavLink>
             <NavLink to="/design">설계</NavLink>
             <NavLink to="/implementation">구현</NavLink>
             <NavLink to="/testing">테스트</NavLink>
-            <NavLink to="/qa">품질보증</NavLink>
-            <NavLink to="/security">보안</NavLink>
             <NavLink to="/transition">전환</NavLink>
             <NavLink to="/document-management">문서관리</NavLink>
+            <NavLink to="/project-plan">사업수행</NavLink>
+            <NavLink to="/qa">품질보증</NavLink>
+            <NavLink to="/security">보안</NavLink>
             <NavLink to="/etc">기타</NavLink>
           </div>
 
@@ -57,15 +57,15 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 animate-fadeIn">
           <div className="px-4 pt-2 pb-4 space-y-2">
-            <MobileNavLink to="/project-plan" onClick={() => setIsOpen(false)}>사업수행</MobileNavLink>
             <MobileNavLink to="/requirements" onClick={() => setIsOpen(false)}>요구사항</MobileNavLink>
             <MobileNavLink to="/design" onClick={() => setIsOpen(false)}>설계</MobileNavLink>
             <MobileNavLink to="/implementation" onClick={() => setIsOpen(false)}>구현</MobileNavLink>
             <MobileNavLink to="/testing" onClick={() => setIsOpen(false)}>테스트</MobileNavLink>
-            <MobileNavLink to="/qa" onClick={() => setIsOpen(false)}>품질보증</MobileNavLink>
-            <MobileNavLink to="/security" onClick={() => setIsOpen(false)}>보안</MobileNavLink>
             <MobileNavLink to="/transition" onClick={() => setIsOpen(false)}>전환</MobileNavLink>
             <MobileNavLink to="/document-management" onClick={() => setIsOpen(false)}>문서관리</MobileNavLink>
+            <MobileNavLink to="/project-plan" onClick={() => setIsOpen(false)}>사업수행</MobileNavLink>
+            <MobileNavLink to="/qa" onClick={() => setIsOpen(false)}>품질보증</MobileNavLink>
+            <MobileNavLink to="/security" onClick={() => setIsOpen(false)}>보안</MobileNavLink>
             <MobileNavLink to="/etc" onClick={() => setIsOpen(false)}>기타</MobileNavLink>
           </div>
         </div>

@@ -3,31 +3,31 @@ import { allDeliverables } from '../data/deliverables';
 
 const Etc = () => {
   const cbdDeliverables = [
-    { phase: '분석 단계', code: 'R1', name: '사용자 요구사항 정의서' },
-    { phase: '분석 단계', code: 'R2', name: '유스케이스 명세서' },
-    { phase: '분석 단계', code: 'R3', name: '요구사항 추적표' },
-    { phase: '설계 단계', code: 'D1', name: '클래스 설계서' },
-    { phase: '설계 단계', code: 'D2', name: '사용자 인터페이스 설계서' },
-    { phase: '설계 단계', code: 'D3', name: '컴포넌트 설계서' },
-    { phase: '설계 단계', code: 'D4', name: '인터페이스 설계서' },
-    { phase: '설계 단계', code: 'D5', name: '아키텍처 설계서' },
-    { phase: '설계 단계', code: 'D6', name: '총괄 시험 계획서' },
-    { phase: '설계 단계', code: 'D7', name: '시스템시험 시나리오' },
-    { phase: '설계 단계', code: 'D8', name: '엔티티 관계 모델 기술서' },
-    { phase: '설계 단계', code: 'D9', name: '데이터베이스 설계서' },
-    { phase: '설계 단계', code: 'D10', name: '통합시험 시나리오' },
-    { phase: '설계 단계', code: 'D11', name: '단위시험 케이스' },
-    { phase: '설계 단계', code: 'D12', name: '데이터 전환 및 초기 데이터 설계서' },
-    { phase: '구현 단계', code: 'I1', name: '프로그램 코드' },
-    { phase: '구현 단계', code: 'I2', name: '단위시험 결과서' },
-    { phase: '구현 단계', code: 'I3', name: '데이터베이스 테이블' },
-    { phase: '시험 단계', code: 'T1', name: '통합시험 결과서' },
-    { phase: '시험 단계', code: 'T2', name: '시스템시험 결과서' },
-    { phase: '시험 단계', code: 'T3', name: '사용자 지침서' },
-    { phase: '시험 단계', code: 'T4', name: '운영자 지침서' },
-    { phase: '시험 단계', code: 'T5', name: '시스템 설치 결과서' },
-    { phase: '시험 단계', code: 'T6', name: '인수시험 시나리오' },
-    { phase: '시험 단계', code: 'T7', name: '인수시험 결과서' },
+    { phase: '분석 단계', code: 'R1', name: '사용자 요구사항 정의서', otherMethodology: '상위 요구사항 정의서', eaDeliverable: '' },
+    { phase: '분석 단계', code: 'R2', name: '유스케이스 명세서', otherMethodology: '과업대비표, 요구 시스템분석서', eaDeliverable: 'AV2응용시스템관계도' },
+    { phase: '분석 단계', code: 'R3', name: '요구사항 추적표', otherMethodology: '현행 시스템분석서', eaDeliverable: '' },
+    { phase: '설계 단계', code: 'D1', name: '클래스 명세서', otherMethodology: '상세 클래스 설계서', eaDeliverable: '' },
+    { phase: '설계 단계', code: 'D2', name: '사용자 인터페이스 설계서', otherMethodology: '사용자 화면정의서, 화면설계서, 메뉴구성도, 인터페이스 명세서, 상호작용 명세서, 프로그램 명세서', eaDeliverable: 'AV3응용기능분할도' },
+    { phase: '설계 단계', code: 'D3', name: '컴포넌트 설계서', otherMethodology: '컴포넌트 명세서', eaDeliverable: '' },
+    { phase: '설계 단계', code: 'D4', name: '인터페이스 설계서', otherMethodology: '인터페이스 명세서', eaDeliverable: '' },
+    { phase: '설계 단계', code: 'D5', name: '아키텍처 설계서', otherMethodology: '아키텍처 정의서, 시스템 구성도', eaDeliverable: 'TV2기반구조관계도' },
+    { phase: '설계 단계', code: 'D6', name: '총괄 시험 계획서', otherMethodology: '', eaDeliverable: '' },
+    { phase: '설계 단계', code: 'D7', name: '시스템시험 시나리오', otherMethodology: '', eaDeliverable: '' },
+    { phase: '설계 단계', code: 'D8', name: '엔티티 관계 모델 기술서', otherMethodology: '데이터모델링 설계서', eaDeliverable: 'DV4논리데이터모델' },
+    { phase: '설계 단계', code: 'D9', name: '데이터베이스 설계서', otherMethodology: '', eaDeliverable: 'DV6물리데이터모델' },
+    { phase: '설계 단계', code: 'D10', name: '통합시험 시나리오', otherMethodology: '', eaDeliverable: '' },
+    { phase: '설계 단계', code: 'D11', name: '단위시험 케이스', otherMethodology: '', eaDeliverable: '' },
+    { phase: '설계 단계', code: 'D12', name: '데이터 전환 및 초기 데이터 설계서', otherMethodology: '', eaDeliverable: '' },
+    { phase: '구현 단계', code: 'I1', name: '프로그램 코드', otherMethodology: '프로그램 소스, 프로그램 목록', eaDeliverable: 'TV3기반구조설계도' },
+    { phase: '구현 단계', code: 'I2', name: '단위시험 결과서', otherMethodology: '', eaDeliverable: '' },
+    { phase: '구현 단계', code: 'I3', name: '데이터베이스 테이블', otherMethodology: '', eaDeliverable: '' },
+    { phase: '시험 단계', code: 'T1', name: '통합시험 결과서', otherMethodology: '', eaDeliverable: '' },
+    { phase: '시험 단계', code: 'T2', name: '시스템시험 결과서', otherMethodology: '', eaDeliverable: '' },
+    { phase: '시험 단계', code: 'T3', name: '사용자 지침서', otherMethodology: '', eaDeliverable: '' },
+    { phase: '시험 단계', code: 'T4', name: '운영자 지침서', otherMethodology: '', eaDeliverable: '' },
+    { phase: '시험 단계', code: 'T5', name: '시스템 설치 결과서', otherMethodology: '', eaDeliverable: '' },
+    { phase: '시험 단계', code: 'T6', name: '인수시험 시나리오', otherMethodology: '', eaDeliverable: '' },
+    { phase: '시험 단계', code: 'T7', name: '인수시험 결과서', otherMethodology: '', eaDeliverable: '' },
   ];
 
   return (
@@ -43,6 +43,8 @@ const Etc = () => {
               <th className="px-4 py-2 border border-gray-300">단계</th>
               <th className="px-4 py-2 border border-gray-300">코드</th>
               <th className="px-4 py-2 border border-gray-300">산출물</th>
+              <th className="px-4 py-2 border border-gray-300">다른 방법론의 산출물명</th>
+              <th className="px-4 py-2 border border-gray-300">범정부 EA 산출물명</th>
             </tr>
           </thead>
           <tbody>
@@ -61,6 +63,8 @@ const Etc = () => {
                       <span>{item.name}</span>
                     )}
                   </td>
+                  <td className="px-4 py-2 border border-gray-300">{item.otherMethodology}</td>
+                  <td className="px-4 py-2 border border-gray-300">{item.eaDeliverable}</td>
                 </tr>
               );
             })}

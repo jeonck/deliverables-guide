@@ -64,7 +64,6 @@ function App() {
             <Route path="/design" element={<Design />} />
             <Route path="/implementation" element={<Implementation />} />
             <Route path="/testing" element={<Testing />} />
-            <Route path="/qa" element={<QA />} />
             <Route path="/transition" element={<Transition />} />
             <Route path="/document-management" element={<DocumentManagement />} />
             <Route path="/etc" element={<Etc />} />

@@ -79,7 +79,7 @@ export default function Home() {
 
       {/* All Categories Grid (only if no search term) */}
       {!searchTerm && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
           {[
             { name: '요구사항', path: '/requirements', icon: '📋' },
             { name: '설계', path: '/design', icon: '📐' },
@@ -92,12 +92,12 @@ export default function Home() {
             <Link
               key={category.name}
               to={category.path}
-              className="group block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300"
+              className="group block p-3 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 w-48 h-48 flex flex-col justify-center items-center"
             >
-              <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                <span className="text-3xl">{category.icon}</span>
+              <div className="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-600 mx-auto mb-2 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <span className="text-xl">{category.icon}</span>
               </div>
-              <h3 className="text-center text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+              <h3 className="text-center text-base font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                 {category.name}
               </h3>
             </Link>

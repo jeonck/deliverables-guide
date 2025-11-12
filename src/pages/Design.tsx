@@ -8,7 +8,7 @@ const designDeliverables = [
       { name: '아키텍처 설계서', path: '/forms/architecture-design-document' },
       { name: '시스템 설치 및 검증 계획서', path: '/forms/system-installation-verification-plan' },
       { name: '시스템 전환 계획서', path: '/forms/system-transition-plan' },
-      { name: '보안정책서/시스템 보안정책서', path: '/design' },
+      { name: '보안정책 및 설계서', path: '/design' },
     ],
   },
   {
@@ -31,8 +31,7 @@ const designDeliverables = [
       { name: '테이블 정의서', path: '/forms/table-definition-document' },
       { name: '데이터베이스 설계서', path: '/forms/database-design-document' },
       { name: '테이블/프로그램 연관도', path: '/design' },
-      { name: '테이블 정의서 (객체지향 모델)', path: '/design' },
-      { name: '코드설계서 (객체지향 모델)', path: '/design' },
+      { name: '코드설계서', path: '/design' },
     ],
   },
   {

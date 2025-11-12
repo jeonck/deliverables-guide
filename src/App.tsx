@@ -1,13 +1,10 @@
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import ProjectPlan from './pages/ProjectPlan';
 import Requirements from './pages/Requirements';
 import Design from './pages/Design';
 import Implementation from './pages/Implementation';
 import Testing from './pages/Testing';
-import QA from './pages/QA';
-import Security from './pages/Security';
 import Etc from './pages/Etc';
 import Transition from './pages/Transition';
 import RequirementsTraceabilityMatrix from './pages/forms/RequirementsTraceabilityMatrix';

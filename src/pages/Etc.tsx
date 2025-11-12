@@ -11,7 +11,7 @@ const Etc = () => {
     { phase: '설계 단계', code: 'D3', name: '컴포넌트 설계서' },
     { phase: '설계 단계', code: 'D4', name: '인터페이스 설계서' },
     { phase: '설계 단계', code: 'D5', name: '아키텍처 설계서' },
-    { phase: '설계 단계', code: 'D6', name: '총괄시험 계획서' },
+    { phase: '설계 단계', code: 'D6', name: '총괄 시험 계획서' },
     { phase: '설계 단계', code: 'D7', name: '시스템시험 시나리오' },
     { phase: '설계 단계', code: 'D8', name: '엔티티 관계 모델 기술서' },
     { phase: '설계 단계', code: 'D9', name: '데이터베이스 설계서' },

@@ -401,6 +401,12 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/acceptance-test-plan',
   },
   {
+    name: '인수시험 시나리오',
+    category: '테스트',
+    categoryPath: '/testing',
+    formPath: '/forms/acceptance-test-scenario',
+  },
+  {
     name: '사용자 지침서',
     category: '테스트',
     categoryPath: '/testing',

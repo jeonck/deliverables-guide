@@ -51,6 +51,7 @@ import OperatorManual from './pages/forms/OperatorManual';
 import UnitTestCases from './pages/forms/UnitTestCases';
 import IntegrationTestScenario from './pages/forms/IntegrationTestScenario';
 import SystemTestScenario from './pages/forms/SystemTestScenario';
+import AcceptanceTestScenario from './pages/forms/AcceptanceTestScenario';
 
 function App() {
   return (
@@ -110,6 +111,7 @@ function App() {
             <Route path="/forms/unit-test-cases" element={<UnitTestCases />} />
             <Route path="/forms/integration-test-scenario" element={<IntegrationTestScenario />} />
             <Route path="/forms/system-test-scenario" element={<SystemTestScenario />} />
+            <Route path="/forms/acceptance-test-scenario" element={<AcceptanceTestScenario />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

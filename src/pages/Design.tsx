@@ -25,6 +25,23 @@ const designDeliverables = [
     ],
   },
   {
+    category: '데이터베이스',
+    deliverables: [
+      { name: '엔티티 정의서', path: '/forms/entity-definition-document' },
+      { name: '속성 정의서', path: '/forms/attribute-definition-document' },
+      { name: '컬럼 정의서', path: '/forms/column-definition-document' },
+      { name: '테이블 정의서', path: '/forms/table-definition-document' },
+      { name: '데이터베이스 설계서', path: '/forms/database-design-document' },
+      { name: '테이블/프로그램 연관도', path: '/forms/table-program-relationship-diagram' },
+      { name: '코드설계서', path: '/design' },
+      { name: '코드 정의서', path: '/forms/code-definition-document' },
+      { name: '백업 및 복구 계획서', path: '/forms/backup-and-recovery-plan' },
+      { name: '초기데이터 구축 계획서', path: '/forms/initial-data-construction-plan' },
+      { name: '데이터 전환 계획서', path: '/forms/data-migration-plan' },
+      { name: '데이터 전환프로그램', path: '/design' },
+    ],
+  },
+  {
     category: '관리/전략 (QA)',
     deliverables: [
       { name: '시스템 전환 전략서', path: '/design' },

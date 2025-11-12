@@ -25,6 +25,7 @@ const analysisDeliverables = [
     category: '모델링/응용',
     deliverables: [
       { name: '이벤트 시나리오', path: '/requirements' },
+      { name: '프로세스 설계서', path: '/forms/process-design-document' },
       { name: '기능차트/데이터흐름도', path: '/requirements' },
       { name: '프로세스 정의서', path: '/forms/process-definition-document' },
       { name: '업무 기능 분해도', path: '/forms/business-function-decomposition-diagram' },

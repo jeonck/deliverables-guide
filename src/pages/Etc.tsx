@@ -37,14 +37,14 @@ const Etc = () => {
 
       <h2 className="text-2xl font-bold mb-4">CBD SW 개발 표준 산출물 목록</h2>
       <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border-2 border-gray-300">
+        <table className="min-w-full bg-white border-2 border-gray-300 table-fixed">
           <thead>
             <tr>
-              <th className="px-4 py-2 border border-gray-300">단계</th>
-              <th className="px-4 py-2 border border-gray-300">코드</th>
-              <th className="px-4 py-2 border border-gray-300 w-1/3">산출물</th>
-              <th className="px-4 py-2 border border-gray-300 w-1/3">다른 방법론의 산출물명</th>
-              <th className="px-4 py-2 border border-gray-300 w-1/3">범정부 EA 산출물명</th>
+              <th className="px-4 py-2 border border-gray-300 w-1/4">단계</th>
+              <th className="px-4 py-2 border border-gray-300 w-1/8">코드</th>
+              <th className="px-4 py-2 border border-gray-300 w-1/4">산출물</th>
+              <th className="px-4 py-2 border border-gray-300 w-1/4">다른 방법론의 산출물명</th>
+              <th className="px-4 py-2 border border-gray-300 w-1/8">범정부 EA 산출물명</th>
             </tr>
           </thead>
           <tbody>
@@ -52,9 +52,9 @@ const Etc = () => {
               const matchingDeliverable = allDeliverables.find(d => d.name === item.name);
               return (
                 <tr key={index}>
-                  <td className="px-4 py-2 border border-gray-300">{item.phase}</td>
-                  <td className="px-4 py-2 border border-gray-300">{item.code}</td>
-                  <td className="px-4 py-2 border border-gray-300 w-1/3">
+                  <td className="px-4 py-2 border border-gray-300 w-1/4">{item.phase}</td>
+                  <td className="px-4 py-2 border border-gray-300 w-1/8">{item.code}</td>
+                  <td className="px-4 py-2 border border-gray-300 w-1/4">
                     {matchingDeliverable && matchingDeliverable.formPath ? (
                       <Link to={matchingDeliverable.formPath} className="text-blue-600 hover:underline">
                         {item.name}
@@ -63,8 +63,8 @@ const Etc = () => {
                       <span>{item.name}</span>
                     )}
                   </td>
-                  <td className="px-4 py-2 border border-gray-300 w-1/3">{item.otherMethodology}</td>
-                  <td className="px-4 py-2 border border-gray-300 w-1/3">{item.eaDeliverable}</td>
+                  <td className="px-4 py-2 border border-gray-300 w-1/4">{item.otherMethodology}</td>
+                  <td className="px-4 py-2 border border-gray-300 w-1/8">{item.eaDeliverable}</td>
                 </tr>
               );
             })}

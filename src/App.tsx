@@ -52,6 +52,8 @@ import UnitTestCases from './pages/forms/UnitTestCases';
 import IntegrationTestScenario from './pages/forms/IntegrationTestScenario';
 import SystemTestScenario from './pages/forms/SystemTestScenario';
 import AcceptanceTestScenario from './pages/forms/AcceptanceTestScenario';
+import UserInterfaceDesignDocumentForm from './pages/forms/UserInterfaceDesignDocumentForm';
+import ClassSpecificationDocumentForm from './pages/forms/ClassSpecificationDocumentForm';
 
 function App() {
   return (
@@ -112,6 +114,8 @@ function App() {
             <Route path="/forms/integration-test-scenario" element={<IntegrationTestScenario />} />
             <Route path="/forms/system-test-scenario" element={<SystemTestScenario />} />
             <Route path="/forms/acceptance-test-scenario" element={<AcceptanceTestScenario />} />
+            <Route path="/forms/user-interface-design-document-form" element={<UserInterfaceDesignDocumentForm />} />
+            <Route path="/forms/class-specification-document-form" element={<ClassSpecificationDocumentForm />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

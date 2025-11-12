@@ -329,6 +329,7 @@ export const allDeliverables: Deliverable[] = [
     name: '데이터베이스 테이블',
     category: '구현',
     categoryPath: '/implementation',
+    formPath: '/forms/database-table-form',
   },
   {
     name: '프로그램 코드',

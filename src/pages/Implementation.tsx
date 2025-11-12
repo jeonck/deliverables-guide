@@ -25,7 +25,7 @@ const implementationDeliverables = [
     deliverables: [
       { name: '데이터베이스 설계서', path: '/implementation' },
       { name: '테이블 정의서', path: '/implementation' },
-      { name: '데이터베이스 테이블', path: '/implementation' },
+      { name: '데이터베이스 테이블', path: '/forms/database-table-form' },
       { name: '프로그램 코드', path: '/implementation' },
       { name: '단위시험 결과서', path: '/implementation' },
     ],

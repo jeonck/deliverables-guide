@@ -79,25 +79,25 @@ export default function Home() {
 
       {/* All Categories Grid (only if no search term) */}
       {!searchTerm && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 justify-items-center">
           {[
+            { name: '표준산출물목록', path: '/etc', icon: '📦' },
             { name: '요구사항', path: '/requirements', icon: '📋' },
             { name: '설계', path: '/design', icon: '📐' },
             { name: '구현', path: '/implementation', icon: '💻' },
             { name: '테스트', path: '/testing', icon: '🧪' },
             { name: '전환', path: '/transition', icon: '🚚' },
             { name: '문서관리', path: '/document-management', icon: '🗂️' },
-            { name: '기타', path: '/etc', icon: '📦' },
           ].map((category) => (
             <Link
               key={category.name}
               to={category.path}
-              className="group block p-3 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 w-48 h-48 flex flex-col justify-center items-center"
+              className="group block p-2 bg-white rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 w-36 h-36 flex flex-col justify-center items-center"
             >
-              <div className="flex items-center justify-center h-8 w-8 rounded-full bg-blue-100 text-blue-600 mx-auto mb-2 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                <span className="text-xl">{category.icon}</span>
+              <div className="flex items-center justify-center h-7 w-7 rounded-full bg-blue-100 text-blue-600 mx-auto mb-1 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+                <span className="text-lg">{category.icon}</span>
               </div>
-              <h3 className="text-center text-base font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
+              <h3 className="text-center text-sm font-semibold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                 {category.name}
               </h3>
             </Link>

@@ -87,7 +87,6 @@ export default function Home() {
             { name: '테스트', path: '/testing', icon: '🧪' },
             { name: '전환', path: '/transition', icon: '🚚' },
             { name: '문서관리', path: '/document-management', icon: '🗂️' },
-            { name: '사업수행', path: '/project-plan', icon: '📝' },
             { name: '품질보증', path: '/qa', icon: '🛡️' },
             { name: '보안', path: '/security', icon: '🔒' },
             { name: '기타', path: '/etc', icon: '📎' },

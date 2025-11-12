@@ -60,7 +60,6 @@ function App() {
         <main className="container mx-auto px-4 py-8 max-w-7xl">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/project-plan" element={<ProjectPlan />} />
             <Route path="/requirements" element={<Requirements />} />
             <Route path="/design" element={<Design />} />
             <Route path="/implementation" element={<Implementation />} />

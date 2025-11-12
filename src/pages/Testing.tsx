@@ -15,7 +15,8 @@ const testDeliverables = [
   {
     category: '문서/교육',
     deliverables: [
-      { name: '사용자/운영자 지침서', path: '/testing' },
+      { name: '사용자 지침서', path: '/testing' },
+      { name: '운영자 지침서', path: '/testing' },
       { name: '교육교재', path: '/testing' },
     ],
   },

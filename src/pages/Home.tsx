@@ -81,14 +81,15 @@ export default function Home() {
       {!searchTerm && (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {[
-            { name: '사업수행', path: '/project-plan', icon: '📝' },
             { name: '요구사항', path: '/requirements', icon: '📋' },
             { name: '설계', path: '/design', icon: '📐' },
             { name: '구현', path: '/implementation', icon: '💻' },
             { name: '테스트', path: '/testing', icon: '🧪' },
+            { name: '전환', path: '/transition', icon: '🚚' },
+            { name: '문서관리', path: '/document-management', icon: '🗂️' },
+            { name: '사업수행', path: '/project-plan', icon: '📝' },
             { name: '품질보증', path: '/qa', icon: '🛡️' },
             { name: '보안', path: '/security', icon: '🔒' },
-            { name: '전환', path: '/transition', icon: '🚚' },
             { name: '기타', path: '/etc', icon: '📎' },
           ].map((category) => (
             <Link

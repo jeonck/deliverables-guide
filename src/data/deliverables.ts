@@ -60,6 +60,12 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/process-definition-document',
   },
   {
+    name: '업무 기능 분해도',
+    category: '요구사항',
+    categoryPath: '/requirements',
+    formPath: '/forms/business-function-decomposition-diagram',
+  },
+  {
     name: '이벤트 시나리오',
     category: '요구사항',
     categoryPath: '/requirements',
@@ -93,23 +99,6 @@ export const allDeliverables: Deliverable[] = [
     name: '데이터베이스 표준설계 지침서',
     category: '요구사항',
     categoryPath: '/requirements',
-  },
-  {
-    name: '데이터 표준화 정의서',
-    category: '요구사항',
-    categoryPath: '/requirements',
-    formPath: '/forms/data-standardization-definition-document',
-  },
-  {
-    name: '데이터 체계 정의서',
-    category: '요구사항',
-    categoryPath: '/requirements',
-    formPath: '/forms/data-system-definition-document',
-  },
-  {
-    name: '데이터베이스 표준설계 지침서',
-    category: '요구사항',
-    categoryPath: '/requirements',
     formPath: '/forms/database-standard-design-guidelines',
   },
   {
@@ -118,11 +107,6 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/requirements',
   },
   // 설계 (Design)
-  {
-    name: '아키텍처 설계서',
-    category: '설계',
-    categoryPath: '/design',
-  },
   {
     name: '아키텍처 설계서',
     category: '설계',
@@ -150,35 +134,13 @@ export const allDeliverables: Deliverable[] = [
     name: '응용시스템 설계서',
     category: '설계',
     categoryPath: '/design',
-  },
-  {
-    name: '인터페이스 설계서',
-    category: '설계',
-    categoryPath: '/design',
-    formPath: '/forms/interface-design-document',
-  },
-  {
-    name: '프로그램 설계서',
-    category: '설계',
-    categoryPath: '/design',
-    formPath: '/forms/program-design-document',
-  },
-  {
-    name: '응용시스템 설계서',
-    category: '설계',
-    categoryPath: '/design',
     formPath: '/forms/application-system-design-document',
   },
   {
     name: '인터페이스 설계서',
     category: '설계',
     categoryPath: '/design',
-  },
-  {
-    name: '사용자 인터페이스 설계서',
-    category: '설계',
-    categoryPath: '/design',
-    formPath: '/forms/user-interface-design-document',
+    formPath: '/forms/interface-design-document',
   },
   {
     name: '화면 설계서',
@@ -226,6 +188,7 @@ export const allDeliverables: Deliverable[] = [
     name: '데이터베이스 설계서',
     category: '설계',
     categoryPath: '/design',
+    formPath: '/forms/database-design-document',
   },
   {
     name: '테이블/프로그램 연관도',

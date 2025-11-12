@@ -15,6 +15,8 @@ const analysisDeliverables = [
     category: '시스템/아키텍처',
     deliverables: [
       { name: '시스템 환경 분석서 (정보자원 조사서, 조사현황 등)', path: '/requirements' },
+      { name: '보안정책서/시스템 보안정책서', path: '/requirements' },
+      { name: '보안 취약점 분석평가 보고서', path: '/requirements' },
       { name: '아키텍처 설계서', path: '/forms/architecture-design-document' },
       { name: '시스템 아키텍처 검증결과 보고서', path: '/requirements' },
     ],
@@ -25,6 +27,7 @@ const analysisDeliverables = [
       { name: '이벤트 시나리오', path: '/requirements' },
       { name: '기능차트/데이터흐름도', path: '/requirements' },
       { name: '프로세스 정의서', path: '/forms/process-definition-document' },
+      { name: '업무 기능 분해도', path: '/forms/business-function-decomposition-diagram' },
       { name: '엔티티 정의서', path: '/requirements' },
       { name: '엔티티 관계도', path: '/requirements' },
       { name: '엔티티/프로세스 매트릭스', path: '/requirements' },

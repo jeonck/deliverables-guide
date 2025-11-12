@@ -88,8 +88,7 @@ export default function Home() {
             { name: '전환', path: '/transition', icon: '🚚' },
             { name: '문서관리', path: '/document-management', icon: '🗂️' },
             { name: '품질보증', path: '/qa', icon: '🛡️' },
-            { name: '보안', path: '/security', icon: '🔒' },
-            { name: '기타', path: '/etc', icon: '📎' },
+            { name: '기타', path: '/etc', icon: '📦' },
           ].map((category) => (
             <Link
               key={category.name}

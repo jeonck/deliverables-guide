@@ -65,7 +65,6 @@ function App() {
             <Route path="/implementation" element={<Implementation />} />
             <Route path="/testing" element={<Testing />} />
             <Route path="/qa" element={<QA />} />
-            <Route path="/security" element={<Security />} />
             <Route path="/transition" element={<Transition />} />
             <Route path="/document-management" element={<DocumentManagement />} />
             <Route path="/etc" element={<Etc />} />

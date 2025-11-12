@@ -241,6 +241,12 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/integration-test-plan',
   },
   {
+    name: '단위시험 케이스',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/unit-test-cases',
+  },
+  {
     name: '시스템 전환 전략서',
     category: '설계',
     categoryPath: '/design',

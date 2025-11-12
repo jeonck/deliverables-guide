@@ -22,6 +22,7 @@ const designDeliverables = [
       { name: '화면 설계서', path: '/forms/screen-design-document' },
       { name: '단위시험 계획서', path: '/forms/unit-test-plan' },
       { name: '통합시험 계획서', path: '/forms/integration-test-plan' },
+      { name: '단위시험 케이스', path: '/forms/unit-test-cases' },
     ],
   },
   {

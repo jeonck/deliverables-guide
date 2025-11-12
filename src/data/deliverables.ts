@@ -396,7 +396,13 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/acceptance-test-plan',
   },
   {
-    name: '사용자/운영자 지침서',
+    name: '사용자 지침서',
+    category: '테스트',
+    categoryPath: '/testing',
+    formPath: '/forms/user-manual',
+  },
+  {
+    name: '운영자 지침서',
     category: '테스트',
     categoryPath: '/testing',
   },

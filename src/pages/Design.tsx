@@ -9,6 +9,7 @@ const designDeliverables = [
       { name: '시스템 설치 및 검증 계획서', path: '/forms/system-installation-verification-plan' },
       { name: '시스템 전환 계획서', path: '/forms/system-transition-plan' },
       { name: '보안 정책 및 설계서', path: '/forms/security-policy-design-document' },
+      { name: '접근 권한 설계서', path: '/forms/access-control-design-document' },
     ],
   },
   {
@@ -19,7 +20,6 @@ const designDeliverables = [
       { name: '인터페이스 설계서', path: '/forms/interface-design-document' },
       { name: '사용자 인터페이스 설계서', path: '/forms/user-interface-design-document' },
       { name: '화면 설계서', path: '/forms/screen-design-document' },
-      { name: '접근 권한 설계서', path: '/forms/access-control-design-document' },
       { name: '단위시험 계획서', path: '/forms/unit-test-plan' },
       { name: '통합시험 계획서', path: '/forms/integration-test-plan' },
     ],

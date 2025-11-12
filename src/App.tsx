@@ -48,6 +48,7 @@ import BusinessFunctionDecompositionDiagram from './pages/forms/BusinessFunction
 import CodeDefinitionDocument from './pages/forms/CodeDefinitionDocument';
 import TableProgramRelationshipDiagram from './pages/forms/TableProgramRelationshipDiagram';
 import ProcessDesignDocument from './pages/forms/ProcessDesignDocument';
+import SecurityPolicyDesignDocument from './pages/forms/SecurityPolicyDesignDocument';
 
 function App() {
   return (
@@ -104,6 +105,7 @@ function App() {
             <Route path="/forms/code-definition-document" element={<CodeDefinitionDocument />} />
             <Route path="/forms/table-program-relationship-diagram" element={<TableProgramRelationshipDiagram />} />
             <Route path="/forms/process-design-document" element={<ProcessDesignDocument />} />
+            <Route path="/forms/security-policy-design-document" element={<SecurityPolicyDesignDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

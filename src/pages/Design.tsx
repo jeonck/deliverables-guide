@@ -8,7 +8,7 @@ const designDeliverables = [
       { name: '아키텍처 설계서', path: '/forms/architecture-design-document' },
       { name: '시스템 설치 및 검증 계획서', path: '/forms/system-installation-verification-plan' },
       { name: '시스템 전환 계획서', path: '/forms/system-transition-plan' },
-      { name: '보안정책 및 설계서', path: '/design' },
+      { name: '보안 정책 및 설계서', path: '/forms/security-policy-design-document' },
     ],
   },
   {

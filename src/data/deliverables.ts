@@ -132,9 +132,10 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/system-transition-plan',
   },
   {
-    name: '보안정책서/시스템 보안정책서',
+    name: '보안 정책 및 설계서',
     category: '설계',
     categoryPath: '/design',
+    formPath: '/forms/security-policy-design-document',
   },
   {
     name: '응용시스템 설계서',

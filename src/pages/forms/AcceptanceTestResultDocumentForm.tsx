@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const AcceptanceTestResultDocumentForm: React.FC = () => {
   const tableData = [
@@ -14,25 +13,15 @@ const AcceptanceTestResultDocumentForm: React.FC = () => {
     ['시험 요약 및 승인', '총 시험 항목 수, 기능 및 비기능 시험 합격률, 테스트 관리자 및 PM의 서명 (최종 승인).', '총 200개 항목, 기능 합격률 98%, 비기능 합격률 100%, 테스트 관리자: 김테스터, PM: 박PM'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '인수시험결과서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '인수시험결과서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">인수 시험 결과서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="인수시험결과서"
+          fileName="인수시험결과서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

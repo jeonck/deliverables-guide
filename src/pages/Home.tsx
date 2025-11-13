@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="text-center mb-12 py-8">
+      <div className="text-center mb-6 py-4">
         <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 text-balance">
           정보시스템 감리 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">산출물 가이드</span>
         </h1>

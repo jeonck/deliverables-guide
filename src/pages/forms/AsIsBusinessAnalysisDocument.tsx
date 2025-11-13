@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const AsIsBusinessAnalysisDocument: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const AsIsBusinessAnalysisDocument: React.FC = () => {
     ['문제점 및 개선 요구사항', '현행 업무 프로세스 및 시스템의 비효율성, 병목 현상, 사용자 불만 등의 명확한 식별 및 개선 방향 제시', '수동 데이터 입력으로 인한 오류 발생, 시스템 응답 속도 저하'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '현행업무분석서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '현행업무분석서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">현행 업무 분석서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="현행업무분석서"
+          fileName="현행업무분석서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

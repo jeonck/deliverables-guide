@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const AccessControlDesignDocument: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const AccessControlDesignDocument: React.FC = () => {
     ['권한 관리 프로세스', '신규 계정 생성, 권한 변경, 계정 비활성화 등에 대한 관리 절차', '신규 계정: 관리자 승인 후 생성 / 권한 변경: 신청서 제출 후 보안팀 승인'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '접근권한설계서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '접근권한설계서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">접근 권한 설계서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="접근권한설계서"
+          fileName="접근권한설계서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const CodeDefinitionDocument: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const CodeDefinitionDocument: React.FC = () => {
     ['사용 엔티티/컬럼 연계', '해당 코드가 어떤 테이블의 어떤 컬럼에서 사용되는지 명시', 'STATUS_CD: TB_ORDER.ORDER_STATUS, TB_USER.USER_STATUS'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '코드정의서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '코드정의서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">코드 정의서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="코드정의서"
+          fileName="코드정의서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

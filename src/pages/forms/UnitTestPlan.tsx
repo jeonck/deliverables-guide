@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const UnitTestPlan: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const UnitTestPlan: React.FC = () => {
     ['일정 및 담당자', '단위 시험의 수행 일정 및 각 프로그램별 담당자', '회원가입 모듈: 2023.01.10 ~ 2023.01.12 (담당: 홍길동)'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '단위시험계획서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '단위시험계획서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">단위시험 계획서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="단위시험계획서"
+          fileName="단위시험계획서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

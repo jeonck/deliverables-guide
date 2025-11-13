@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const TableProgramRelationshipDiagram: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const TableProgramRelationshipDiagram: React.FC = () => {
     ['인터페이스 연계', '테이블 접근이 외부 인터페이스와 연관되는 경우 해당 인터페이스 정보 명시', 'PGM_CUST_INQ -> TB_CUSTOMER (R) -> 외부 시스템 (고객 정보 API)'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '테이블프로그램연관도');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '테이블프로그램연관도.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">테이블/프로그램 연관도</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="테이블프로그램연관도"
+          fileName="테이블프로그램연관도.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

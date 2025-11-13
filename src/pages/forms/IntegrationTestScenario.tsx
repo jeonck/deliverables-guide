@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const IntegrationTestScenario: React.FC = () => {
   const tableData = [
@@ -14,25 +13,15 @@ const IntegrationTestScenario: React.FC = () => {
     ['오류 처리 시험', '연동 실패 등 예외 상황 발생 시 오류 메시지 및 처리 로직에 대한 시험 절차', '결제 실패 시: PaymentService에서 오류 반환, OrderService에서 주문 상태 "결제 실패"로 변경, 사용자에게 오류 메시지 표시'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '통합시험시나리오');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '통합시험시나리오.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">통합 시험 시나리오</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="통합시험시나리오"
+          fileName="통합시험시나리오.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

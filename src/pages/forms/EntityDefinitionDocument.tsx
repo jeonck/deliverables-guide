@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const EntityDefinitionDocument: React.FC = () => {
   const tableData = [
@@ -11,25 +10,15 @@ const EntityDefinitionDocument: React.FC = () => {
     ['관계 정의', '해당 엔티티가 다른 엔티티와 맺고 있는 관계 유형 (1:1, 1:N, M:N) 및 관계의 의미 (Relationship)', '관계 엔티티: 주문, 관계 유형: 1:N, 관계 의미: 고객은 여러 주문을 할 수 있다.'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '엔티티정의서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '엔티티정의서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">엔티티 정의서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="엔티티정의서"
+          fileName="엔티티정의서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

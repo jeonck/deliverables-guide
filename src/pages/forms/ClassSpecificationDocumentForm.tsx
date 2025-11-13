@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const ClassSpecificationDocumentForm: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const ClassSpecificationDocumentForm: React.FC = () => {
     ['제약조건', '해당 클래스 또는 속성/메소드에 적용되는 제약사항 및 불변 조건(Invariant).', 'userId는 반드시 유니크해야 함. email 형식은 유효해야 함.'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '클래스명세서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '클래스명세서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">클래스 명세서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="클래스명세서"
+          fileName="클래스명세서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const RequirementsTraceabilityMatrix: React.FC = () => {
   const tableData = [
@@ -9,32 +8,15 @@ const RequirementsTraceabilityMatrix: React.FC = () => {
     ['1', '10', '회원가입 기능', '2', '25', '사용자 인증 및 가입', 'REQ-001', 'UI-001', '', 'TRN-001', 'EVT-001', 'PGM-001', 'UT-001', 'IT-001', 'UAT-001', ''],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    // Merging cells for the header
-    worksheet['!merges'] = [
-      { s: { r: 0, c: 0 }, e: { r: 0, c: 1 } }, // RFP
-      { s: { r: 0, c: 2 }, e: { r: 0, c: 3 } }, // 제안서
-      { s: { r: 0, c: 4 }, e: { r: 0, c: 5 } }, // 수행계획서
-      { s: { r: 0, c: 9 }, e: { r: 0, c: 14 } }, // 시험 단계 (col 9 to 14 is 6 columns)
-    ];
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '요구사항추적표');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '요구사항추적표.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">요구사항 추적표</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="요구사항추적표"
+          fileName="요구사항추적표.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const OperatorManual: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const OperatorManual: React.FC = () => {
     ['운영 환경 설정', 'DBMS, WAS, OS 등 주요 미들웨어의 운영 파라미터 및 설정 값 목록', 'DBMS: max_connections=500, WAS: Xmx=4g, OS: ulimit -n 65535'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '운영자지침서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '운영자지침서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">운영자 지침서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="운영자지침서"
+          fileName="운영자지침서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

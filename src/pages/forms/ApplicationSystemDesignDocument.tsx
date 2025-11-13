@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const ApplicationSystemDesignDocument: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const ApplicationSystemDesignDocument: React.FC = () => {
     ['오류 처리 방안', '시스템 내부 및 외부 연동 시 발생하는 오류에 대한 처리 로직 및 복구 방안', '에러 로깅, 사용자 친화적 에러 메시지, 자동 복구 스크립트'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '응용시스템설계서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '응용시스템설계서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">응용시스템 설계서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="응용시스템설계서"
+          fileName="응용시스템설계서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

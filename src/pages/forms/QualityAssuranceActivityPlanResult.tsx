@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const QualityAssuranceActivityPlanResult: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const QualityAssuranceActivityPlanResult: React.FC = () => {
     ['품질 보증 이슈 및 해결 방안', '품질 관리에 영향을 미친 주요 이슈와 이를 해결하기 위한 조치 사항', '이슈: 개발팀의 테스트 케이스 작성 미흡, 해결: 테스트 케이스 작성 교육 실시'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '품질보증활동계획결과서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '품질보증활동계획결과서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">품질보증활동 계획/결과서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="품질보증활동계획결과서"
+          fileName="품질보증활동계획결과서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

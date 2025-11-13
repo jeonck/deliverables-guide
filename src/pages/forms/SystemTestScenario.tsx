@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const SystemTestScenario: React.FC = () => {
   const tableData = [
@@ -15,25 +14,15 @@ const SystemTestScenario: React.FC = () => {
     ['합격 기준', '시스템 시험을 통과하기 위한 성능 목표 달성률, 치명적 결함 발생 건수 등 공식 기준.', '성능 목표 90% 달성, 치명적 결함 0건, 주요 결함 5건 이하'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '시스템시험시나리오');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '시스템시험시나리오.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">시스템 시험 시나리오</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="시스템시험시나리오"
+          fileName="시스템시험시나리오.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

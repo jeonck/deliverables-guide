@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const UserInterfaceDesignDocumentForm: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const UserInterfaceDesignDocumentForm: React.FC = () => {
     ['접근성 및 호환성', '장애인 접근성 지침 준수 여부 및 브라우저/디바이스 호환성 확보 방안.', '웹 접근성 표준 (WCAG 2.1) 준수, Chrome, Firefox, Edge 최신 버전 및 모바일 (iOS, Android) 호환성 확보.'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '사용자인터페이스설계서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '사용자인터페이스설계서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">사용자 인터페이스 설계서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="사용자인터페이스설계서"
+          fileName="사용자인터페이스설계서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

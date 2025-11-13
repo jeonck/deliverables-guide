@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const BusinessFunctionDecompositionDiagram: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const BusinessFunctionDecompositionDiagram: React.FC = () => {
     ['업무 중요도/우선순위', '해당 기능이 시스템 구축에서 갖는 중요도 또는 구현 우선순위 명시', '고객 등록: 중요도 (상), 우선순위 (1순위)'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '업무기능분해도');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '업무기능분해도.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">업무 기능 분해도</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="업무기능분해도"
+          fileName="업무기능분해도.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

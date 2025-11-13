@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const AppliedMethodologyAndDevelopmentStandards: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const AppliedMethodologyAndDevelopmentStandards: React.FC = () => {
     ['형상 관리 및 변경 관리 표준', '소스 코드 및 문서의 버전 관리 및 변경 요청 처리 절차', 'Git 사용, Jira를 통한 변경 요청 관리'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '적용방법론및개발표준');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '적용방법론및개발표준.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">적용 방법론 및 개발 표준</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="적용방법론및개발표준"
+          fileName="적용방법론및개발표준.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

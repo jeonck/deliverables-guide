@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const InterfaceDesignDocument: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const InterfaceDesignDocument: React.FC = () => {
     ['보안 방안', '통신 구간 암호화(HTTPS), 인증/인가 방식 등 보안 요구사항을 위한 기술적 처리 방안', '암호화: HTTPS, 인증: OAuth 2.0'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '인터페이스설계서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '인터페이스설계서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">인터페이스 설계서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="인터페이스설계서"
+          fileName="인터페이스설계서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const SystemInstallationVerificationPlan: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const SystemInstallationVerificationPlan: React.FC = () => {
     ['최종 승인 기준', '시스템 설치 및 검증이 완료되었음을 공식적으로 인정받는 기준 및 발주처의 최종 승인 절차', '모든 검증 항목 통과, 발주처 운영팀장 최종 서명'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '시스템설치및검증계획서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '시스템설치및검증계획서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">시스템 설치 및 검증 계획서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="시스템설치및검증계획서"
+          fileName="시스템설치및검증계획서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

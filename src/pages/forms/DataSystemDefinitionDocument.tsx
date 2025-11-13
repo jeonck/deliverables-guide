@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const DataSystemDefinitionDocument: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const DataSystemDefinitionDocument: React.FC = () => {
     ['데이터 보안 및 품질 관리 방안', '데이터 접근 통제, 암호화 등 보안 관리 체계와 데이터 품질 목표 및 관리 절차 정의', '접근 통제: 역할 기반 접근 제어 (RBAC), 암호화: 개인정보 필드 암호화'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '데이터체계정의서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '데이터체계정의서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">데이터 체계 정의서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="데이터체계정의서"
+          fileName="데이터체계정의서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

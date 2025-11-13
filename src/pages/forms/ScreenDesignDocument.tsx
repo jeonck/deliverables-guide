@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const ScreenDesignDocument: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const ScreenDesignDocument: React.FC = () => {
     ['오류 및 메시지', '유효성 검증 실패 시 표시될 에러 메시지 및 표시 위치', '고객명 미입력 시: "고객명을 입력해주세요." 메시지, 입력 필드 하단에 표시'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '화면설계서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '화면설계서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">화면 설계서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="화면설계서"
+          fileName="화면설계서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const TableDefinitionDocument: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const TableDefinitionDocument: React.FC = () => {
     ['인덱스 정의', '데이터 검색 성능 향상을 위해 정의된 모든 인덱스 목록, 구성 컬럼, 인덱스 유형', '인덱스명: IDX_CUSTOMER_NAME, 구성 컬럼: CUST_NM, 유형: 일반 인덱스'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '테이블정의서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '테이블정의서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">테이블 정의서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="테이블정의서"
+          fileName="테이블정의서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

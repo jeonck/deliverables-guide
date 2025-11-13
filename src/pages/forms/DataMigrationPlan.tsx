@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const DataMigrationPlan: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const DataMigrationPlan: React.FC = () => {
     ['비상 및 복구 계획', '전환 작업 실패 시 복구(Rollback) 방안, 책임자, 소요 시간 등 비상 대응 절차', '복구: 전환 전 백업 데이터로 롤백 (3시간, DBA) / 책임자: 데이터 전환 PM'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '데이터전환계획서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '데이터전환계획서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">데이터 전환 계획서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="데이터전환계획서"
+          fileName="데이터전환계획서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

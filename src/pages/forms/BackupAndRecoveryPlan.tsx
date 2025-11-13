@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const BackupAndRecoveryPlan: React.FC = () => {
   const tableData = [
@@ -13,25 +12,15 @@ const BackupAndRecoveryPlan: React.FC = () => {
     ['비상 연락망 및 대응 조직', '장애 발생 시 즉시 가동될 복구 담당 조직 및 연락 체계', '담당 조직: IT 운영팀, 비상 연락망: 팀장, DBA, 개발팀장'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '백업및복구계획서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '백업및복구계획서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">백업 및 복구 계획서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="백업및복구계획서"
+          fileName="백업및복구계획서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

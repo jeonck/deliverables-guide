@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const AcceptanceTestScenario: React.FC = () => {
   const tableData = [
@@ -14,25 +13,15 @@ const AcceptanceTestScenario: React.FC = () => {
     ['시험 조직 및 책임', '발주자 측 시험 담당자와 사업자 측 지원 인력의 역할 및 책임 정의.', '발주자: 업무팀장 (시험 총괄), 실무 담당자 (시나리오 실행 및 결과 검토). 사업자: 테스트 매니저 (시험 지원), 개발자 (결함 수정)'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '인수시험시나리오');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '인수시험시나리오.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">인수 시험 시나리오</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="인수시험시나리오"
+          fileName="인수시험시나리오.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

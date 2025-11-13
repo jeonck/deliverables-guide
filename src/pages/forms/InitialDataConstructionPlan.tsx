@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const InitialDataConstructionPlan: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const InitialDataConstructionPlan: React.FC = () => {
     ['장애 복구 방안', '데이터 구축 작업 실패 시 기존 시스템으로 복귀(Rollback)하거나 데이터를 재구축하는 비상 대책', 'Rollback: 이관 전 DB 스냅샷 복원, 재구축: 오류 데이터 수정 후 재실행'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '초기데이터구축계획서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '초기데이터구축계획서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">초기데이터 구축 계획서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="초기데이터구축계획서"
+          fileName="초기데이터구축계획서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

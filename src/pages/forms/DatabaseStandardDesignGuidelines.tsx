@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const DatabaseStandardDesignGuidelines: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const DatabaseStandardDesignGuidelines: React.FC = () => {
     ['인덱스 및 성능 표준', '인덱스 생성 기준, 성능 향상을 위한 데이터 분할(Partitioning) 등 기술적 지침', '대용량 테이블에 PK/FK 인덱스 필수, 자주 조회되는 컬럼에 인덱스 생성'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '데이터베이스표준설계지침서');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '데이터베이스표준설계지침서.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">데이터베이스 표준설계 지침서</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="데이터베이스표준설계지침서"
+          fileName="데이터베이스표준설계지침서.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

@@ -1,6 +1,5 @@
 import React from 'react';
-import { saveAs } from 'file-saver';
-import * as XLSX from 'xlsx';
+import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 
 const DatabaseTableForm: React.FC = () => {
   const tableData = [
@@ -12,25 +11,15 @@ const DatabaseTableForm: React.FC = () => {
     ['테이블 스페이스 및 저장 옵션', '테이블이 저장되는 물리적 공간(Tablespace) 및 저장 옵션(Storage Option).', '테이블스페이스: TS_DATA_01, 초기 저장 공간: 10M, 다음 증분: 5M'],
   ];
 
-  const handleExcelDownload = () => {
-    const worksheet = XLSX.utils.aoa_to_sheet(tableData);
-    const workbook = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(workbook, worksheet, '데이터베이스테이블');
-    const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
-    const data = new Blob([excelBuffer], { type: 'application/octet-stream' });
-    saveAs(data, '데이터베이스테이블.xlsx');
-  };
-
   return (
     <div className="container mx-auto p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl font-bold">데이터베이스 테이블</h1>
-        <button
-          onClick={handleExcelDownload}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          엑셀 다운로드
-        </button>
+        <ExcelDownloadButton
+          tableData={tableData}
+          sheetName="데이터베이스테이블"
+          fileName="데이터베이스테이블.xlsx"
+        />
       </div>
 
       <div className="overflow-x-auto mb-8">

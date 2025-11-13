@@ -139,6 +139,11 @@ deliverables-guide/
 
 MIT
 
+## 저작권 및 기여자
+
+*   **최초 작성/배포:** metacog (email:metacog@abc.com)
+*   **수정자:** metacog
+
 ## 🤝 기여
 
 기여, 이슈 보고 및 기능 요청을 환영합니다!

@@ -58,6 +58,7 @@ import DatabaseTableForm from './pages/forms/DatabaseTableForm';
 import UnitTestResultDocumentForm from './pages/forms/UnitTestResultDocumentForm';
 import IntegrationTestResultDocumentForm from './pages/forms/IntegrationTestResultDocumentForm';
 import SystemTestResultDocumentForm from './pages/forms/SystemTestResultDocumentForm';
+import UseCaseSpecification from './pages/forms/UseCaseSpecification';
 import AcceptanceTestResultDocumentForm from './pages/forms/AcceptanceTestResultDocumentForm';
 
 function App() {
@@ -125,6 +126,7 @@ function App() {
             <Route path="/forms/unit-test-result-document-form" element={<UnitTestResultDocumentForm />} />
             <Route path="/forms/integration-test-result-document-form" element={<IntegrationTestResultDocumentForm />} />
             <Route path="/forms/system-test-result-document-form" element={<SystemTestResultDocumentForm />} />
+            <Route path="/forms/use-case-specification" element={<UseCaseSpecification />} />
             <Route path="/forms/acceptance-test-result-document-form" element={<AcceptanceTestResultDocumentForm />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

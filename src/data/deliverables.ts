@@ -14,6 +14,12 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/requirements-definition-document',
   },
   {
+    name: '유스케이스 명세서',
+    category: '요구사항',
+    categoryPath: '/requirements',
+    formPath: '/forms/use-case-specification',
+  },
+  {
     name: '사용자 요구사항 분석서',
     category: '요구사항',
     categoryPath: '/requirements',

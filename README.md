@@ -141,7 +141,7 @@ MIT
 
 ## 저작권 및 기여자
 
-*   **최초 작성/배포:** metacog (email:metacog@abc.com)
+*   **최초 작성/배포:** metacog (email:metacog@kakao.com)
 *   **수정자:** metacog
 
 ## 🤝 기여

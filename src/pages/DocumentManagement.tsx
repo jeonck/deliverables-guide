@@ -24,13 +24,13 @@ const DocumentManagement: React.FC = () => {
               <tr>
                 <td className="border border-gray-300 px-4 py-2">1.0</td>
                 <td className="border border-gray-300 px-4 py-2">15/12/2020</td>
-                <td className="border border-gray-300 px-4 py-2">쓰루</td>
-                <td className="border border-gray-300 px-4 py-2">최초 작성/배포( 쓰루(https://blog.naver.com/sunhoskm, email:sunhoskm@naver.com )</td>
+                <td className="border border-gray-300 px-4 py-2">metacog</td>
+                <td className="border border-gray-300 px-4 py-2">최초 작성/배포( metacog(email:metacog@abc.com )</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-2">2.0</td>
                 <td className="border border-gray-300 px-4 py-2">04/01/2023</td>
-                <td className="border border-gray-300 px-4 py-2">쓰루</td>
+                <td className="border border-gray-300 px-4 py-2">metacog</td>
                 <td className="border border-gray-300 px-4 py-2">버전/사용가이드 시트(Sheet) 추가 및 요구사항추적표 항목 추가</td>
               </tr>
             </tbody>
@@ -52,11 +52,11 @@ const DocumentManagement: React.FC = () => {
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-2 font-bold">문서작성자</td>
-                <td className="border border-gray-300 px-4 py-2">홍길동</td>
+                <td className="border border-gray-300 px-4 py-2">Tom</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-2 font-bold">승인자</td>
-                <td className="border border-gray-300 px-4 py-2">김유신</td>
+                <td className="border border-gray-300 px-4 py-2">Harry</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-2 font-bold">승인일자</td>
@@ -86,14 +86,14 @@ const DocumentManagement: React.FC = () => {
               <tr>
                 <td className="border border-gray-300 px-4 py-2">1.0</td>
                 <td className="border border-gray-300 px-4 py-2">04/01/2023</td>
-                <td className="border border-gray-300 px-4 py-2">홍길동</td>
+                <td className="border border-gray-300 px-4 py-2">Tom</td>
                 <td className="border border-gray-300 px-4 py-2">최초 작성</td>
               </tr>
               <tr>
                 <td className="border border-gray-300 px-4 py-2">1.1</td>
                 <td className="border border-gray-300 px-4 py-2">05/01/2023</td>
-                <td className="border border-gray-300 px-4 py-2">홍길동</td>
-                <td className="border border-gray-300 px-4 py-2">시스템 도입 관련 솔루션 선정 변경사항 반영</td>
+                <td className="border border-gray-300 px-4 py-2">Harry</td>
+                <td className="border border-gray-300 px-4 py-2">테일러링 산출물 수정사항 변경</td>
               </tr>
             </tbody>
           </table>

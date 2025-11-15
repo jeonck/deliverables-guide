@@ -5,10 +5,10 @@ const analysisDeliverables = [
   {
     category: '초기 요구사항 정의 및 분석',
     deliverables: [
-      { name: '사용자 요구사항 정의서', path: '/forms/requirements-definition-document' },
-      { name: '사용자 요구사항 분석서', path: '/requirements' },
       { name: '현행 업무 분석서', path: '/forms/as-is-business-analysis-document' },
       { name: '현행 시스템 분석서', path: '/forms/as-is-system-analysis-document' },
+      { name: '사용자 요구사항 분석서', path: '/requirements' },
+      { name: '사용자 요구사항 정의서', path: '/forms/requirements-definition-document' },
     ],
   },
   {
@@ -16,6 +16,7 @@ const analysisDeliverables = [
     deliverables: [
       { name: '프로세스 정의서', path: '/forms/process-definition-document' },
       { name: '업무 기능 분해도', path: '/forms/business-function-decomposition-diagram' },
+      { name: '유스케이스 명세서', path: '/forms/use-case-specification' },
       { name: '이벤트 시나리오', path: '/requirements' },
       { name: '프로세스 설계서', path: '/forms/process-design-document' },
       { name: '기능차트/데이터흐름도', path: '/requirements' },
@@ -24,14 +25,14 @@ const analysisDeliverables = [
   {
     category: '데이터 모델링',
     deliverables: [
-      { name: '엔티티 정의서', path: '/forms/entity-definition-document' },
-      { name: '엔티티 관계도', path: '/requirements' }, // Note: This is '엔티티 관계도', not '엔티티 관계 모델 기술서'
-      { name: '엔티티/프로세스 매트릭스', path: '/requirements' },
       { name: '데이터베이스 표준설계 지침서', path: '/forms/database-standard-design-guidelines' },
       { name: '데이터 표준화 정의서', path: '/forms/data-standardization-definition-document' },
       { name: '데이터 체계 정의서', path: '/forms/data-system-definition-document' },
-      { name: '전환데이타 분석서', path: '/requirements' },
       { name: '기존 시스템 데이터 모형 분석서 (객체지향 모델)', path: '/requirements' },
+      { name: '전환데이타 분석서', path: '/requirements' },
+      { name: '엔티티 정의서', path: '/forms/entity-definition-document' },
+      { name: '엔티티 관계도', path: '/requirements' }, // Note: This is '엔티티 관계도', not '엔티티 관계 모델 기술서'
+      { name: '엔티티/프로세스 매트릭스', path: '/requirements' },
     ],
   },
   {
@@ -39,8 +40,8 @@ const analysisDeliverables = [
     deliverables: [
       { name: '시스템 환경 분석서 (정보자원 조사서, 조사현황 등)', path: '/requirements' },
       { name: '보안정책서/시스템 보안정책서', path: '/forms/security-policy-design-document' },
-      { name: '보안 취약점 분석평가 보고서', path: '/requirements' },
       { name: '아키텍처 설계서', path: '/forms/architecture-design-document' },
+      { name: '보안 취약점 분석평가 보고서', path: '/requirements' },
       { name: '시스템 아키텍처 검증결과 보고서', path: '/requirements' },
     ],
   },

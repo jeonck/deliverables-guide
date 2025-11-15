@@ -395,6 +395,12 @@ export const allDeliverables: Deliverable[] = [
     category: '구현',
     categoryPath: '/implementation',
   },
+  {
+    name: '아키텍처 준수 보고서',
+    category: '구현',
+    categoryPath: '/implementation',
+    formPath: '/forms/architecture-compliance-report',
+  },
   // 테스트 (Testing)
   {
     name: '총괄 시험 계획서',

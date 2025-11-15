@@ -5,39 +5,31 @@ const implementationDeliverables = [
   {
     category: '응용시스템 구현',
     deliverables: [
-      { name: '프로그램 소스', path: '/implementation' },
       { name: '프로그램 코드', path: '/forms/program-source-code' },
-      { name: '구현된 응용시스템', path: '/implementation' },
     ],
   },
   {
     category: '데이터베이스 구현',
     deliverables: [
-      { name: '데이터베이스 설계서', path: '/implementation' },
-      { name: '테이블 정의서', path: '/implementation' },
       { name: '데이터베이스 테이블', path: '/forms/database-table-form' },
     ],
   },
   {
     category: '단위 시험',
     deliverables: [
-      { name: '단위시험 계획/결과서', path: '/implementation' },
       { name: '단위시험 결과서', path: '/forms/unit-test-result-document-form' },
     ],
   },
   {
     category: '통합 시험',
     deliverables: [
-      { name: '통합시험 계획서', path: '/forms/integration-test-result-document-form' },
+      { name: '통합시험 결과서', path: '/forms/integration-test-result-document-form' },
     ],
   },
   {
     category: '시스템/아키텍처',
     deliverables: [
-      { name: '시스템 아키텍처 정의서', path: '/implementation' },
-      { name: '시스템 설치시험 결과서', path: '/implementation' },
-      { name: '보안정책 및 설계서', path: '/implementation' },
-      { name: '시스템시험 계획서', path: '/implementation' },
+      { name: '아키텍처 준수 보고서', path: '/forms/architecture-compliance-report' },
     ],
   },
   {

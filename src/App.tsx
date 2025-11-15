@@ -65,6 +65,7 @@ import DataMigrationAndInitialDataDesignDocument from './pages/forms/DataMigrati
 import SystemInstallationResultDocument from './pages/forms/SystemInstallationResultDocument';
 import EntityRelationshipModelSpecification from './pages/forms/EntityRelationshipModelSpecification';
 import ProgramSourceCode from './pages/forms/ProgramSourceCode';
+import ArchitectureComplianceReport from './pages/forms/ArchitectureComplianceReport';
 import AcceptanceTestResultDocumentForm from './pages/forms/AcceptanceTestResultDocumentForm';
 
 function App() {
@@ -140,6 +141,7 @@ function App() {
             <Route path="/forms/system-installation-result-document" element={<SystemInstallationResultDocument />} />
             <Route path="/forms/entity-relationship-model-specification" element={<EntityRelationshipModelSpecification />} />
             <Route path="/forms/program-source-code" element={<ProgramSourceCode />} />
+            <Route path="/forms/architecture-compliance-report" element={<ArchitectureComplianceReport />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

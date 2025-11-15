@@ -44,6 +44,7 @@ const designDeliverables = [
       { name: '초기데이터 구축 계획서', path: '/forms/initial-data-construction-plan' },
       { name: '데이터 전환 계획서', path: '/forms/data-migration-plan' },
       { name: '데이터 전환프로그램', path: '/design' },
+      { name: '데이터 전환 및 초기 데이터 설계서', path: '/forms/data-migration-and-initial-data-design-document' },
     ],
   },
   {

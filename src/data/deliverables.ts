@@ -225,6 +225,12 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/data-migration-plan',
   },
   {
+    name: '데이터 전환 및 초기 데이터 설계서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/data-migration-and-initial-data-design-document',
+  },
+  {
     name: '데이터 전환프로그램',
     category: '설계',
     categoryPath: '/design',
@@ -389,13 +395,15 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/testing',
     formPath: '/forms/master-test-plan',
   },
+
   {
-    name: '통합시험 계획/결과서',
+    name: '통합시험 결과서',
     category: '테스트',
     categoryPath: '/testing',
+    formPath: '/forms/integration-test-result-document',
   },
   {
-    name: '시스템 시험 계획/결과서',
+    name: '시스템시험 결과서',
     category: '테스트',
     categoryPath: '/testing',
     formPath: '/forms/system-test-result-document-form',

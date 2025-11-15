@@ -60,6 +60,8 @@ import IntegrationTestResultDocumentForm from './pages/forms/IntegrationTestResu
 import SystemTestResultDocumentForm from './pages/forms/SystemTestResultDocumentForm';
 import UseCaseSpecification from './pages/forms/UseCaseSpecification';
 import ComponentDesignDocument from './pages/forms/ComponentDesignDocument';
+import IntegrationTestResultDocument from './pages/forms/IntegrationTestResultDocument';
+import DataMigrationAndInitialDataDesignDocument from './pages/forms/DataMigrationAndInitialDataDesignDocument';
 import AcceptanceTestResultDocumentForm from './pages/forms/AcceptanceTestResultDocumentForm';
 
 function App() {
@@ -130,6 +132,8 @@ function App() {
             <Route path="/forms/use-case-specification" element={<UseCaseSpecification />} />
             <Route path="/forms/component-design-document" element={<ComponentDesignDocument />} />
             <Route path="/forms/acceptance-test-result-document-form" element={<AcceptanceTestResultDocumentForm />} />
+            <Route path="/forms/integration-test-result-document" element={<IntegrationTestResultDocument />} />
+            <Route path="/forms/data-migration-and-initial-data-design-document" element={<DataMigrationAndInitialDataDesignDocument />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

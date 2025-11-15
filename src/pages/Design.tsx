@@ -26,6 +26,7 @@ const designDeliverables = [
       { name: '통합시험 시나리오', path: '/forms/integration-test-scenario' },
       { name: '시스템시험 시나리오', path: '/forms/system-test-scenario' },
       { name: '클래스 명세서', path: '/forms/class-specification-document-form' },
+      { name: '컴포넌트 설계서', path: '/forms/component-design-document' },
     ],
   },
   {

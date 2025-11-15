@@ -59,6 +59,7 @@ import UnitTestResultDocumentForm from './pages/forms/UnitTestResultDocumentForm
 import IntegrationTestResultDocumentForm from './pages/forms/IntegrationTestResultDocumentForm';
 import SystemTestResultDocumentForm from './pages/forms/SystemTestResultDocumentForm';
 import UseCaseSpecification from './pages/forms/UseCaseSpecification';
+import ComponentDesignDocument from './pages/forms/ComponentDesignDocument';
 import AcceptanceTestResultDocumentForm from './pages/forms/AcceptanceTestResultDocumentForm';
 
 function App() {
@@ -127,6 +128,7 @@ function App() {
             <Route path="/forms/integration-test-result-document-form" element={<IntegrationTestResultDocumentForm />} />
             <Route path="/forms/system-test-result-document-form" element={<SystemTestResultDocumentForm />} />
             <Route path="/forms/use-case-specification" element={<UseCaseSpecification />} />
+            <Route path="/forms/component-design-document" element={<ComponentDesignDocument />} />
             <Route path="/forms/acceptance-test-result-document-form" element={<AcceptanceTestResultDocumentForm />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

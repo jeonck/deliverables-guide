@@ -5,6 +5,7 @@ const ClassSpecificationDocumentForm: React.FC = () => {
   const tableData = [
     ['항목', '설명', '예시'],
     ['클래스 개요', '클래스 이름, 역할 및 책임, 상속 관계(슈퍼/서브 클래스) 등 개요 정보.', '클래스명: User, 역할: 사용자 정보 관리, 상속: Person 클래스 상속'],
+    ['요구사항ID', '해당 클래스가 구현하는 기능과 관련된 요구사항 ID', 'REQ-001, REQ-005'],
     ['속성(Attribute) 정의', '클래스가 갖는 데이터의 이름, 데이터 타입, 접근 제어자 (private, public 등), 상세 설명.', '속성명: userId, 타입: String, 접근: private, 설명: 사용자 고유 ID'],
     ['기능/메소드(Operation) 정의', '클래스가 제공하는 기능의 메소드 이름, 반환 타입, 매개변수(Parameter) 목록, 접근 제어자, 로직 설명.', '메소드명: createUser(), 반환: User, 매개변수: (name: String, email: String), 접근: public, 로직: 새로운 사용자 생성 및 저장'],
     ['관계 정의', '해당 클래스가 다른 클래스와 맺고 있는 관계 (예: 연관(Association), 의존(Dependency), 집합(Aggregation), 합성(Composition)).', 'User 클래스는 Order 클래스와 1:N 연관 관계를 가짐 (한 명의 사용자는 여러 개의 주문을 할 수 있음).'],

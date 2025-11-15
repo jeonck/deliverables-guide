@@ -4,6 +4,7 @@ import ExcelDownloadButton from '../../components/ExcelDownloadButton';
 export const DataStandardizationDefinitionDocument: React.FC = () => {
   const tableData = [
     ['항목', '설명', '예시'],
+    ['표준 단어 정의', '표준 용어를 구성하는 최소 단위의 명사형 단어에 대한 표준 (단어명, 영문명, 약어 등)을 정의', '고객, 계약, 일자, 번호'],
     ['표준 용어 정의', '시스템 내 모든 용어에 대한 표준 명칭, 정의, 약어 등을 정의한 목록 (표준 용어 사전)', '고객 (Customer), 고객 식별 번호 (Cust_ID)'],
     ['표준 도메인 정의', '데이터가 가질 수 있는 값의 범위나 유형을 정의한 목록 (예: 숫자, 날짜, 금액)', '금액 (NUMBER, 18, 2), 날짜 (DATE)'],
     ['표준 코드 정의', '시스템에서 공통으로 사용되는 코드 목록 및 코드 값의 의미 (예: 상태 코드, 성별 코드)', '상태 코드 (01: 정상, 02: 대기, 03: 오류)'],
@@ -55,16 +56,16 @@ export const DataStandardizationDefinitionDocument: React.FC = () => {
           데이터 표준화 정의서는 전사적인 데이터 품질 및 상호 운용성을 확보하기 위해 수립하는 기준 문서이며, 주요 구성 요소는 다음과 같습니다.
         </p>
 
-        <h3 className="text-lg font-semibold mt-4 mb-2">표준 용어 정의서 (Standard Vocabulary Definition):</h3>
-        <p className="mb-2 text-gray-700">
-          업무적으로 사용되는 개념이나 데이터 항목에 대해 전사적인 <strong>통일된 이름(명칭)</strong>과 명확한 정의를 부여합니다.
-          예: '고객명', '계약일자' 등.
-        </p>
-
         <h3 className="text-lg font-semibold mt-4 mb-2">표준 단어 정의서 (Standard Word Definition):</h3>
         <p className="mb-2 text-gray-700">
           표준 용어를 구성하는 가장 기본적인 최소 단위의 명사형 단어에 대한 표준(단어명, 영문명, 약어 등)을 정의합니다. 이는 용어 생성 시 중복 및 불일치를 방지하는 기반이 됩니다.
           예: '고객', '계약', '일자', '번호' 등의 원자 단어.
+        </p>
+
+        <h3 className="text-lg font-semibold mt-4 mb-2">표준 용어 정의서 (Standard Vocabulary Definition):</h3>
+        <p className="mb-2 text-gray-700">
+          업무적으로 사용되는 개념이나 데이터 항목에 대해 전사적인 <strong>통일된 이름(명칭)</strong>과 명확한 정의를 부여합니다.
+          예: '고객명', '계약일자' 등.
         </p>
 
         <h3 className="text-lg font-semibold mt-4 mb-2">표준 도메인 정의서 (Standard Domain Definition):</h3>

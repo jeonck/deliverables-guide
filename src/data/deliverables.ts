@@ -71,8 +71,8 @@ export const allDeliverables: Deliverable[] = [
   },
   {
     name: '프로세스 설계서',
-    category: '요구사항',
-    categoryPath: '/requirements',
+    category: '설계',
+    categoryPath: '/design',
     formPath: '/forms/process-design-document',
   },
   {

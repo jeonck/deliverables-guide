@@ -16,6 +16,7 @@ const designDeliverables = [
     category: '응용/인터페이스 상세 설계',
     deliverables: [
       { name: '응용시스템 설계서', path: '/forms/application-system-design-document' },
+      { name: '프로세스 설계서', path: '/forms/process-design-document' },
       { name: '컴포넌트 설계서', path: '/forms/component-design-document' },
       { name: '클래스 명세서', path: '/forms/class-specification-document-form' },
       { name: '프로그램 설계서', path: '/forms/program-design-document' },
@@ -55,7 +56,6 @@ const designDeliverables = [
     category: '관리/전략 (QA)',
     deliverables: [
       { name: '시스템 전환 전략서', path: '/design' },
-      { name: '반복 계획/평가서', path: '/design' },
     ],
   },
 ];

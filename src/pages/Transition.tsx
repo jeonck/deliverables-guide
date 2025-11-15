@@ -5,10 +5,10 @@ const transitionDeliverables = [
   {
     category: '운영 환경 구축 및 데이터 전환',
     deliverables: [
-      { name: '운영환경 설치 결과서', path: '/transition' },
+      { name: '운영환경 설치 결과서', path: '/forms/operating-environment-installation-result-document' },
       { name: '시스템 설치 결과서', path: '/forms/system-installation-result-document' },
-      { name: '초기데이터 구축 결과서', path: '/transition' },
-      { name: '데이터 전환 결과서', path: '/transition' },
+      { name: '초기데이터 구축 결과서', path: '/forms/initial-data-construction-result-document' },
+      { name: '데이터 전환 결과서', path: '/forms/data-migration-result-document' },
       { name: '시스템 및 업무 전환 결과서', path: '/transition' },
     ],
   },
@@ -18,7 +18,7 @@ const transitionDeliverables = [
       { name: '사용자 인수시험 결과서', path: '/transition' },
       { name: '교육 계획서', path: '/forms/education-plan' },
       { name: '교육교재', path: '/transition' },
-      { name: '교육 결과서', path: '/transition' },
+      { name: '교육 결과서', path: '/forms/education-result-document' },
     ],
   },
   {

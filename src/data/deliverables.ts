@@ -401,6 +401,12 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/implementation',
     formPath: '/forms/architecture-compliance-report',
   },
+  {
+    name: '시스템 튜닝 결과서',
+    category: '구현',
+    categoryPath: '/implementation',
+    formPath: '/forms/system-tuning-result-document',
+  },
   // 테스트 (Testing)
   {
     name: '총괄 시험 계획서',
@@ -540,4 +546,36 @@ export const allDeliverables: Deliverable[] = [
     category: '전환',
     categoryPath: '/transition',
   },
+  {
+    name: '교육 결과서',
+    category: '전환',
+    categoryPath: '/transition',
+    formPath: '/forms/education-result-document',
+  },
+  {
+    name: '초기데이터 구축 결과서',
+    category: '전환',
+    categoryPath: '/transition',
+    formPath: '/forms/initial-data-construction-result-document',
+  },
+  {
+    name: '데이터 전환 결과서',
+    category: '전환',
+    categoryPath: '/transition',
+    formPath: '/forms/data-migration-result-document',
+  },
+  {
+    name: '운영환경 설치 결과서',
+    category: '전환',
+    categoryPath: '/transition',
+    formPath: '/forms/operating-environment-installation-result-document',
+  },
+  {
+    name: '사용자 인수시험 결과서',
+    category: '전환',
+    categoryPath: '/transition',
+    formPath: '/forms/user-acceptance-test-result-document',
+  },
+
+
 ];

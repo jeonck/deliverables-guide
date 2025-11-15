@@ -30,6 +30,7 @@ const implementationDeliverables = [
     category: '시스템/아키텍처',
     deliverables: [
       { name: '아키텍처 준수 보고서', path: '/forms/architecture-compliance-report' },
+      { name: '시스템 튜닝 결과서', path: '/forms/system-tuning-result-document' },
     ],
   },
   {

@@ -171,7 +171,7 @@ const IntegrationTestResultDocument: React.FC = () => {
       </section>
 
       <section id="contents" className="mb-12 p-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold text-gray-700 mb-4">4. 주요 포함 내용 (간략)</h2>
+        <h2 className="text-2xl font-bold text-gray-700 mb-4">4. 주요 포함 내용</h2>
         <ul className="list-disc list-inside text-gray-800 space-y-2">
           <li><strong>시험 개요:</strong> 시험 대상 모듈 그룹 또는 서브시스템 명칭, 시험 환경, 시험 기간.</li>
           <li><strong>시험 시나리오 연계:</strong> 실행된 통합 시험 시나리오 목록 및 관련 설계서 (인터페이스 설계서, 프로세스 설계서) 연계 정보.</li>

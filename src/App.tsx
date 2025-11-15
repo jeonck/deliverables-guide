@@ -62,6 +62,9 @@ import UseCaseSpecification from './pages/forms/UseCaseSpecification';
 import ComponentDesignDocument from './pages/forms/ComponentDesignDocument';
 import IntegrationTestResultDocument from './pages/forms/IntegrationTestResultDocument';
 import DataMigrationAndInitialDataDesignDocument from './pages/forms/DataMigrationAndInitialDataDesignDocument';
+import SystemInstallationResultDocument from './pages/forms/SystemInstallationResultDocument';
+import EntityRelationshipModelSpecification from './pages/forms/EntityRelationshipModelSpecification';
+import ProgramSourceCode from './pages/forms/ProgramSourceCode';
 import AcceptanceTestResultDocumentForm from './pages/forms/AcceptanceTestResultDocumentForm';
 
 function App() {
@@ -134,6 +137,9 @@ function App() {
             <Route path="/forms/acceptance-test-result-document-form" element={<AcceptanceTestResultDocumentForm />} />
             <Route path="/forms/integration-test-result-document" element={<IntegrationTestResultDocument />} />
             <Route path="/forms/data-migration-and-initial-data-design-document" element={<DataMigrationAndInitialDataDesignDocument />} />
+            <Route path="/forms/system-installation-result-document" element={<SystemInstallationResultDocument />} />
+            <Route path="/forms/entity-relationship-model-specification" element={<EntityRelationshipModelSpecification />} />
+            <Route path="/forms/program-source-code" element={<ProgramSourceCode />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>

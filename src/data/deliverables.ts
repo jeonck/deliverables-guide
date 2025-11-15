@@ -185,6 +185,12 @@ export const allDeliverables: Deliverable[] = [
     formPath: '/forms/entity-definition-document',
   },
   {
+    name: '엔티티 관계 모델 기술서',
+    category: '설계',
+    categoryPath: '/design',
+    formPath: '/forms/entity-relationship-model-specification',
+  },
+  {
     name: '데이터베이스 설계서',
     category: '설계',
     categoryPath: '/design',
@@ -348,6 +354,7 @@ export const allDeliverables: Deliverable[] = [
     name: '프로그램 코드',
     category: '구현',
     categoryPath: '/implementation',
+    formPath: '/forms/program-source-code',
   },
   {
     name: '단위시험 결과서',
@@ -469,6 +476,12 @@ export const allDeliverables: Deliverable[] = [
     name: '운영환경 설치 결과서',
     category: '전환',
     categoryPath: '/transition',
+  },
+  {
+    name: '시스템 설치 결과서',
+    category: '전환',
+    categoryPath: '/transition',
+    formPath: '/forms/system-installation-result-document',
   },
   {
     name: '초기데이터 구축 결과서',

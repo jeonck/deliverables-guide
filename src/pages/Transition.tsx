@@ -10,6 +10,7 @@ const transitionDeliverables = [
       { name: '데이터 전환 결과서', path: '/transition' },
       { name: '시스템 및 업무 전환 결과서', path: '/transition' },
       { name: '사용자 인수시험 결과서', path: '/transition' },
+      { name: '시스템 설치 결과서', path: '/forms/system-installation-result-document' },
     ],
   },
   {

@@ -18,6 +18,7 @@ const implementationDeliverables = [
       { name: '구현된 응용시스템', path: '/implementation' },
       { name: '단위시험 계획/결과서', path: '/implementation' },
       { name: '통합시험 계획서', path: '/forms/integration-test-result-document-form' },
+      { name: '프로그램 코드', path: '/forms/program-source-code' },
     ],
   },
   {
@@ -26,7 +27,6 @@ const implementationDeliverables = [
       { name: '데이터베이스 설계서', path: '/implementation' },
       { name: '테이블 정의서', path: '/implementation' },
       { name: '데이터베이스 테이블', path: '/forms/database-table-form' },
-      { name: '프로그램 코드', path: '/implementation' },
       { name: '단위시험 결과서', path: '/forms/unit-test-result-document-form' },
     ],
   },

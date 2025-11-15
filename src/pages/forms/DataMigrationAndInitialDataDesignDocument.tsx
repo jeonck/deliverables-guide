@@ -173,7 +173,7 @@ const DataMigrationAndInitialDataDesignDocument: React.FC = () => {
       </section>
 
       <section id="contents" className="mb-12 p-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold text-gray-700 mb-4">4. 주요 포함 내용 (간략)</h2>
+        <h2 className="text-2xl font-bold text-gray-700 mb-4">4. 주요 포함 내용</h2>
         <ul className="list-disc list-inside text-gray-800 space-y-2">
           <li><strong>전환 및 구축 범위:</strong> 이관 대상 기존 데이터와 새롭게 구축할 초기 기준 데이터의 목록.</li>
           <li><strong>데이터 매핑 및 변환 설계:</strong> 기존 테이블/컬럼과 신규 테이블/컬럼 간의 1:1 매핑 정보, 데이터 변환 로직(수식/규칙) 상세 정의.</li>

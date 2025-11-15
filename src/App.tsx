@@ -71,6 +71,8 @@ import EducationResultDocument from './pages/forms/EducationResultDocument';
 import InitialDataConstructionResultDocument from './pages/forms/InitialDataConstructionResultDocument';
 import DataMigrationResultDocument from './pages/forms/DataMigrationResultDocument';
 import OperatingEnvironmentInstallationResultDocument from './pages/forms/OperatingEnvironmentInstallationResultDocument';
+import SystemAndBusinessTransitionResultDocument from './pages/forms/SystemAndBusinessTransitionResultDocument';
+import UserAcceptanceTestResultDocument from './pages/forms/UserAcceptanceTestResultDocument';
 import AcceptanceTestResultDocumentForm from './pages/forms/AcceptanceTestResultDocumentForm';
 
 function App() {
@@ -152,6 +154,8 @@ function App() {
             <Route path="/forms/initial-data-construction-result-document" element={<InitialDataConstructionResultDocument />} />
             <Route path="/forms/data-migration-result-document" element={<DataMigrationResultDocument />} />
             <Route path="/forms/operating-environment-installation-result-document" element={<OperatingEnvironmentInstallationResultDocument />} />
+            <Route path="/forms/system-and-business-transition-result-document" element={<SystemAndBusinessTransitionResultDocument />} />
+            <Route path="/forms/user-acceptance-test-result-document" element={<UserAcceptanceTestResultDocument />} />
 
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

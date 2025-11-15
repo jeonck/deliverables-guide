@@ -9,13 +9,13 @@ const transitionDeliverables = [
       { name: '시스템 설치 결과서', path: '/forms/system-installation-result-document' },
       { name: '초기데이터 구축 결과서', path: '/forms/initial-data-construction-result-document' },
       { name: '데이터 전환 결과서', path: '/forms/data-migration-result-document' },
-      { name: '시스템 및 업무 전환 결과서', path: '/transition' },
+      { name: '시스템 및 업무 전환 결과서', path: '/forms/system-and-business-transition-result-document' },
     ],
   },
   {
     category: '사용자 인수 및 교육',
     deliverables: [
-      { name: '사용자 인수시험 결과서', path: '/transition' },
+      { name: '사용자 인수시험 결과서', path: '/forms/user-acceptance-test-result-document' },
       { name: '교육 계획서', path: '/forms/education-plan' },
       { name: '교육교재', path: '/transition' },
       { name: '교육 결과서', path: '/forms/education-result-document' },

@@ -40,8 +40,8 @@ const analysisDeliverables = [
     deliverables: [
       { name: '시스템 환경 분석서', path: '/forms/system-environment-analysis-document' },
       { name: '보안정책서/시스템 보안정책서', path: '/forms/security-policy-design-document' },
-      { name: '보안 취약점 분석평가 보고서', path: '/requirements' },
-      { name: '시스템 아키텍처 검증결과 보고서', path: '/requirements' },
+      { name: '보안 취약점 분석평가 보고서', path: '/forms/security-vulnerability-analysis-report' },
+      { name: '시스템 아키텍처 검증결과 보고서', path: '/forms/system-architecture-verification-report' },
     ],
   },
   {

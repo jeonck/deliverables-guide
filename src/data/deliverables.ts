@@ -117,6 +117,18 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/requirements',
     formPath: '/forms/system-environment-analysis-document',
   },
+  {
+    name: '보안 취약점 분석평가 보고서',
+    category: '요구사항',
+    categoryPath: '/requirements',
+    formPath: '/forms/security-vulnerability-analysis-report',
+  },
+  {
+    name: '시스템 아키텍처 검증결과 보고서',
+    category: '요구사항',
+    categoryPath: '/requirements',
+    formPath: '/forms/system-architecture-verification-report',
+  },
   // 설계 (Design)
   {
     name: '아키텍처 설계서',

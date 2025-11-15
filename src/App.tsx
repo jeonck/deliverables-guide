@@ -13,6 +13,9 @@ import UserRequirementsAnalysisDocument from './pages/forms/UserRequirementsAnal
 import SystemEnvironmentAnalysisDocument from './pages/forms/SystemEnvironmentAnalysisDocument';
 import SecurityVulnerabilityAnalysisReport from './pages/forms/SecurityVulnerabilityAnalysisReport';
 import SystemArchitectureVerificationReport from './pages/forms/SystemArchitectureVerificationReport';
+import ExistingSystemDataModelAnalysisDocument from './pages/forms/ExistingSystemDataModelAnalysisDocument';
+import EntityProcessMatrix from './pages/forms/EntityProcessMatrix';
+import TransitionDataAnalysisDocument from './pages/forms/TransitionDataAnalysisDocument';
 import DocumentManagement from './pages/DocumentManagement';
 import UserInterfaceDesignDocument from './pages/forms/UserInterfaceDesignDocument';
 import ProcessDefinitionDocument from './pages/forms/ProcessDefinitionDocument';
@@ -100,6 +103,9 @@ function App() {
             <Route path="/forms/system-environment-analysis-document" element={<SystemEnvironmentAnalysisDocument />} />
             <Route path="/forms/security-vulnerability-analysis-report" element={<SecurityVulnerabilityAnalysisReport />} />
             <Route path="/forms/system-architecture-verification-report" element={<SystemArchitectureVerificationReport />} />
+            <Route path="/forms/existing-system-data-model-analysis-document" element={<ExistingSystemDataModelAnalysisDocument />} />
+            <Route path="/forms/entity-process-matrix" element={<EntityProcessMatrix />} />
+            <Route path="/forms/transition-data-analysis-document" element={<TransitionDataAnalysisDocument />} />
             <Route path="/forms/user-interface-design-document" element={<UserInterfaceDesignDocument />} />
             <Route path="/forms/process-definition-document" element={<ProcessDefinitionDocument />} />
             <Route path="/forms/applied-methodology-and-development-standards" element={<AppliedMethodologyAndDevelopmentStandards />} />

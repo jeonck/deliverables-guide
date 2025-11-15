@@ -94,11 +94,13 @@ export const allDeliverables: Deliverable[] = [
     name: '엔티티/프로세스 매트릭스',
     category: '요구사항',
     categoryPath: '/requirements',
+    formPath: '/forms/entity-process-matrix',
   },
   {
     name: '전환데이타 분석서',
     category: '요구사항',
     categoryPath: '/requirements',
+    formPath: '/forms/transition-data-analysis-document',
   },
   {
     name: '데이터베이스 표준설계 지침서',
@@ -110,6 +112,12 @@ export const allDeliverables: Deliverable[] = [
     name: '기존 시스템 데이터 모형 분석서 (객체지향 모델)',
     category: '요구사항',
     categoryPath: '/requirements',
+  },
+  {
+    name: '기존 시스템 데이터 모형 분석서',
+    category: '요구사항',
+    categoryPath: '/requirements',
+    formPath: '/forms/existing-system-data-model-analysis-document',
   },
   {
     name: '시스템 환경 분석서',

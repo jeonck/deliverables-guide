@@ -3,7 +3,7 @@ import React from 'react';
 
 const designDeliverables = [
   {
-    category: '시스템/아키텍처',
+    category: '시스템/아키텍처 설계',
     deliverables: [
       { name: '아키텍처 설계서', path: '/forms/architecture-design-document' },
       { name: '시스템 설치 및 검증 계획서', path: '/forms/system-installation-verification-plan' },
@@ -13,38 +13,44 @@ const designDeliverables = [
     ],
   },
   {
-    category: '응용/인터페이스',
+    category: '응용/인터페이스 상세 설계',
     deliverables: [
       { name: '응용시스템 설계서', path: '/forms/application-system-design-document' },
       { name: '프로그램 설계서', path: '/forms/program-design-document' },
+      { name: '클래스 명세서', path: '/forms/class-specification-document-form' },
+      { name: '컴포넌트 설계서', path: '/forms/component-design-document' },
       { name: '인터페이스 설계서', path: '/forms/interface-design-document' },
       { name: '사용자 인터페이스 설계서', path: '/forms/user-interface-design-document-form' },
       { name: '화면 설계서', path: '/forms/screen-design-document' },
-      { name: '단위시험 계획서', path: '/forms/unit-test-plan' },
-      { name: '통합시험 계획서', path: '/forms/integration-test-plan' },
-      { name: '단위시험 케이스', path: '/forms/unit-test-cases' },
-      { name: '통합시험 시나리오', path: '/forms/integration-test-scenario' },
-      { name: '시스템시험 시나리오', path: '/forms/system-test-scenario' },
-      { name: '클래스 명세서', path: '/forms/class-specification-document-form' },
-      { name: '컴포넌트 설계서', path: '/forms/component-design-document' },
     ],
   },
   {
-    category: '데이터베이스',
+    category: '데이터베이스 상세 설계',
     deliverables: [
       { name: '엔티티 정의서', path: '/forms/entity-definition-document' },
+      { name: '엔티티 관계 모델 기술서', path: '/forms/entity-relationship-model-specification' },
       { name: '속성 정의서', path: '/forms/attribute-definition-document' },
       { name: '컬럼 정의서', path: '/forms/column-definition-document' },
       { name: '테이블 정의서', path: '/forms/table-definition-document' },
       { name: '데이터베이스 설계서', path: '/forms/database-design-document' },
       { name: '테이블/프로그램 연관도', path: '/forms/table-program-relationship-diagram' },
-      { name: '코드설계서', path: '/design' },
       { name: '코드 정의서', path: '/forms/code-definition-document' },
+      { name: '코드설계서', path: '/design' },
       { name: '백업 및 복구 계획서', path: '/forms/backup-and-recovery-plan' },
       { name: '초기데이터 구축 계획서', path: '/forms/initial-data-construction-plan' },
       { name: '데이터 전환 계획서', path: '/forms/data-migration-plan' },
-      { name: '데이터 전환프로그램', path: '/design' },
       { name: '데이터 전환 및 초기 데이터 설계서', path: '/forms/data-migration-and-initial-data-design-document' },
+      { name: '데이터 전환프로그램', path: '/design' },
+    ],
+  },
+  {
+    category: '시험 계획',
+    deliverables: [
+      { name: '단위시험 계획서', path: '/forms/unit-test-plan' },
+      { name: '통합시험 계획서', path: '/forms/integration-test-plan' },
+      { name: '단위시험 케이스', path: '/forms/unit-test-cases' },
+      { name: '통합시험 시나리오', path: '/forms/integration-test-scenario' },
+      { name: '시스템시험 시나리오', path: '/forms/system-test-scenario' },
     ],
   },
   {

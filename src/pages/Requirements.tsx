@@ -3,7 +3,7 @@ import React from 'react'; // React를 명시적으로 임포트
 
 const analysisDeliverables = [
   {
-    category: '요구사항/업무',
+    category: '초기 요구사항 정의 및 분석',
     deliverables: [
       { name: '사용자 요구사항 정의서', path: '/forms/requirements-definition-document' },
       { name: '사용자 요구사항 분석서', path: '/requirements' },
@@ -12,17 +12,30 @@ const analysisDeliverables = [
     ],
   },
   {
-    category: '사업수행/관리',
+    category: '업무 프로세스 및 기능 모델링',
     deliverables: [
-      { name: '제안요청서/제안서/계약서/사업수행계획서', path: '/requirements' },
-      { name: '품질보증 계획서', path: '/forms/quality-assurance-plan' },
-      { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
-      { name: '총괄 시험 계획서', path: '/forms/master-test-plan' },
-      { name: '반복계획서 (반복적 방법론 적용 시)', path: '/requirements' },
+      { name: '프로세스 정의서', path: '/forms/process-definition-document' },
+      { name: '업무 기능 분해도', path: '/forms/business-function-decomposition-diagram' },
+      { name: '이벤트 시나리오', path: '/requirements' },
+      { name: '프로세스 설계서', path: '/forms/process-design-document' },
+      { name: '기능차트/데이터흐름도', path: '/requirements' },
     ],
   },
   {
-    category: '시스템/아키텍처',
+    category: '데이터 모델링',
+    deliverables: [
+      { name: '엔티티 정의서', path: '/forms/entity-definition-document' },
+      { name: '엔티티 관계도', path: '/requirements' }, // Note: This is '엔티티 관계도', not '엔티티 관계 모델 기술서'
+      { name: '엔티티/프로세스 매트릭스', path: '/requirements' },
+      { name: '데이터베이스 표준설계 지침서', path: '/forms/database-standard-design-guidelines' },
+      { name: '데이터 표준화 정의서', path: '/forms/data-standardization-definition-document' },
+      { name: '데이터 체계 정의서', path: '/forms/data-system-definition-document' },
+      { name: '전환데이타 분석서', path: '/requirements' },
+      { name: '기존 시스템 데이터 모형 분석서 (객체지향 모델)', path: '/requirements' },
+    ],
+  },
+  {
+    category: '시스템 환경 및 보안 분석',
     deliverables: [
       { name: '시스템 환경 분석서 (정보자원 조사서, 조사현황 등)', path: '/requirements' },
       { name: '보안정책서/시스템 보안정책서', path: '/forms/security-policy-design-document' },
@@ -32,26 +45,13 @@ const analysisDeliverables = [
     ],
   },
   {
-    category: '모델링/응용',
+    category: '사업 수행 및 관리',
     deliverables: [
-      { name: '이벤트 시나리오', path: '/requirements' },
-      { name: '프로세스 설계서', path: '/forms/process-design-document' },
-      { name: '기능차트/데이터흐름도', path: '/requirements' },
-      { name: '프로세스 정의서', path: '/forms/process-definition-document' },
-      { name: '업무 기능 분해도', path: '/forms/business-function-decomposition-diagram' },
-      { name: '엔티티 정의서', path: '/requirements' },
-      { name: '엔티티 관계도', path: '/requirements' },
-      { name: '엔티티/프로세스 매트릭스', path: '/requirements' },
-    ],
-  },
-  {
-    category: '데이터베이스',
-    deliverables: [
-      { name: '전환데이타 분석서', path: '/requirements' },
-      { name: '데이터베이스 표준설계 지침서', path: '/forms/database-standard-design-guidelines' },
-      { name: '데이터 표준화 정의서', path: '/forms/data-standardization-definition-document' },
-      { name: '데이터 체계 정의서', path: '/forms/data-system-definition-document' },
-      { name: '기존 시스템 데이터 모형 분석서 (객체지향 모델)', path: '/requirements' },
+      { name: '제안요청서/제안서/계약서/사업수행계획서', path: '/requirements' },
+      { name: '품질보증 계획서', path: '/forms/quality-assurance-plan' },
+      { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
+      { name: '총괄 시험 계획서', path: '/forms/master-test-plan' },
+      { name: '반복계획서 (반복적 방법론 적용 시)', path: '/requirements' },
     ],
   },
 ];

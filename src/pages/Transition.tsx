@@ -3,24 +3,29 @@ import React from 'react';
 
 const transitionDeliverables = [
   {
-    category: '운영 준비',
+    category: '운영 환경 구축 및 데이터 전환',
     deliverables: [
       { name: '운영환경 설치 결과서', path: '/transition' },
+      { name: '시스템 설치 결과서', path: '/forms/system-installation-result-document' },
       { name: '초기데이터 구축 결과서', path: '/transition' },
       { name: '데이터 전환 결과서', path: '/transition' },
       { name: '시스템 및 업무 전환 결과서', path: '/transition' },
-      { name: '사용자 인수시험 결과서', path: '/transition' },
-      { name: '시스템 설치 결과서', path: '/forms/system-installation-result-document' },
     ],
   },
   {
-    category: '관리/인수',
+    category: '사용자 인수 및 교육',
     deliverables: [
-      { name: '적용방법론 및 사업 표준', path: '/transition' },
-      { name: '교육교재', path: '/transition' },
+      { name: '사용자 인수시험 결과서', path: '/transition' },
       { name: '교육 계획서', path: '/forms/education-plan' },
+      { name: '교육교재', path: '/transition' },
       { name: '교육 결과서', path: '/transition' },
+    ],
+  },
+  {
+    category: '인수/운영 관리',
+    deliverables: [
       { name: '인수운영 조직도', path: '/transition' },
+      { name: '적용방법론 및 사업 표준', path: '/transition' },
     ],
   },
   {

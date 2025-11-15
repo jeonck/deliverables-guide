@@ -3,14 +3,19 @@ import React from 'react';
 
 const testDeliverables = [
   {
-    category: '시험 계획/결과',
+    category: '시험 계획',
     deliverables: [
       { name: '총괄 시험 계획서', path: '/forms/master-test-plan' },
-      { name: '통합시험 결과서', path: '/forms/integration-test-result-document' },
-      { name: '시스템시험 결과서', path: '/forms/system-test-result-document-form' },
-      { name: '시스템 튜닝 계획/결과서', path: '/testing' },
       { name: '인수시험 계획서', path: '/forms/acceptance-test-plan' },
       { name: '인수시험 시나리오', path: '/forms/acceptance-test-scenario' },
+      { name: '시스템 튜닝 계획/결과서', path: '/testing' },
+    ],
+  },
+  {
+    category: '시험 실행 및 결과',
+    deliverables: [
+      { name: '통합시험 결과서', path: '/forms/integration-test-result-document' },
+      { name: '시스템시험 결과서', path: '/forms/system-test-result-document-form' },
       { name: '인수시험 결과서', path: '/forms/acceptance-test-result-document-form' },
     ],
   },

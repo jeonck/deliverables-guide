@@ -7,7 +7,7 @@ const analysisDeliverables = [
     deliverables: [
       { name: '현행 업무 분석서', path: '/forms/as-is-business-analysis-document' },
       { name: '현행 시스템 분석서', path: '/forms/as-is-system-analysis-document' },
-      { name: '사용자 요구사항 분석서', path: '/requirements' },
+      { name: '사용자 요구사항 분석서', path: '/forms/user-requirements-analysis-document' },
       { name: '사용자 요구사항 정의서', path: '/forms/requirements-definition-document' },
     ],
   },

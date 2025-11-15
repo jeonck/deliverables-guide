@@ -10,6 +10,7 @@ import Transition from './pages/Transition';
 import RequirementsTraceabilityMatrix from './pages/forms/RequirementsTraceabilityMatrix';
 import RequirementsDefinitionDocument from './pages/forms/RequirementsDefinitionDocument';
 import UserRequirementsAnalysisDocument from './pages/forms/UserRequirementsAnalysisDocument';
+import SystemEnvironmentAnalysisDocument from './pages/forms/SystemEnvironmentAnalysisDocument';
 import DocumentManagement from './pages/DocumentManagement';
 import UserInterfaceDesignDocument from './pages/forms/UserInterfaceDesignDocument';
 import ProcessDefinitionDocument from './pages/forms/ProcessDefinitionDocument';
@@ -94,6 +95,7 @@ function App() {
             <Route path="/forms/requirements-traceability-matrix" element={<RequirementsTraceabilityMatrix />} />
             <Route path="/forms/requirements-definition-document" element={<RequirementsDefinitionDocument />} />
             <Route path="/forms/user-requirements-analysis-document" element={<UserRequirementsAnalysisDocument />} />
+            <Route path="/forms/system-environment-analysis-document" element={<SystemEnvironmentAnalysisDocument />} />
             <Route path="/forms/user-interface-design-document" element={<UserInterfaceDesignDocument />} />
             <Route path="/forms/process-definition-document" element={<ProcessDefinitionDocument />} />
             <Route path="/forms/applied-methodology-and-development-standards" element={<AppliedMethodologyAndDevelopmentStandards />} />

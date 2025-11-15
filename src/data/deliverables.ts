@@ -111,6 +111,12 @@ export const allDeliverables: Deliverable[] = [
     category: '요구사항',
     categoryPath: '/requirements',
   },
+  {
+    name: '시스템 환경 분석서',
+    category: '요구사항',
+    categoryPath: '/requirements',
+    formPath: '/forms/system-environment-analysis-document',
+  },
   // 설계 (Design)
   {
     name: '아키텍처 설계서',
@@ -582,6 +588,7 @@ export const allDeliverables: Deliverable[] = [
     categoryPath: '/transition',
     formPath: '/forms/user-acceptance-test-result-document',
   },
+
 
 
 

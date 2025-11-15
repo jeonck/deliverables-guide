@@ -28,7 +28,7 @@ const analysisDeliverables = [
       { name: '데이터베이스 표준설계 지침서', path: '/forms/database-standard-design-guidelines' },
       { name: '데이터 표준화 정의서', path: '/forms/data-standardization-definition-document' },
       { name: '데이터 체계 정의서', path: '/forms/data-system-definition-document' },
-      { name: '기존 시스템 데이터 모형 분석서 (객체지향 모델)', path: '/requirements' },
+      { name: '기존 시스템 데이터 모형 분석서', path: '/requirements' },
       { name: '전환데이타 분석서', path: '/requirements' },
       { name: '엔티티 정의서', path: '/forms/entity-definition-document' },
       { name: '엔티티 관계도', path: '/requirements' }, // Note: This is '엔티티 관계도', not '엔티티 관계 모델 기술서'
@@ -38,9 +38,8 @@ const analysisDeliverables = [
   {
     category: '시스템 환경 및 보안 분석',
     deliverables: [
-      { name: '시스템 환경 분석서 (정보자원 조사서, 조사현황 등)', path: '/requirements' },
+      { name: '시스템 환경 분석서', path: '/forms/system-environment-analysis-document' },
       { name: '보안정책서/시스템 보안정책서', path: '/forms/security-policy-design-document' },
-      { name: '아키텍처 설계서', path: '/forms/architecture-design-document' },
       { name: '보안 취약점 분석평가 보고서', path: '/requirements' },
       { name: '시스템 아키텍처 검증결과 보고서', path: '/requirements' },
     ],

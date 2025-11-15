@@ -52,7 +52,6 @@ const analysisDeliverables = [
       { name: '품질보증 계획서', path: '/forms/quality-assurance-plan' },
       { name: '요구사항 추적표', path: '/forms/requirements-traceability-matrix' },
       { name: '총괄 시험 계획서', path: '/forms/master-test-plan' },
-      { name: '반복계획서 (반복적 방법론 적용 시)', path: '/requirements' },
     ],
   },
 ];

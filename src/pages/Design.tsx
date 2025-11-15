@@ -34,13 +34,11 @@ const designDeliverables = [
       { name: '테이블 정의서', path: '/forms/table-definition-document' },
       { name: '데이터베이스 설계서', path: '/forms/database-design-document' },
       { name: '코드 정의서', path: '/forms/code-definition-document' },
-      { name: '코드설계서', path: '/design' },
       { name: '테이블/프로그램 연관도', path: '/forms/table-program-relationship-diagram' },
       { name: '백업 및 복구 계획서', path: '/forms/backup-and-recovery-plan' },
       { name: '초기데이터 구축 계획서', path: '/forms/initial-data-construction-plan' },
       { name: '데이터 전환 계획서', path: '/forms/data-migration-plan' },
       { name: '데이터 전환 및 초기 데이터 설계서', path: '/forms/data-migration-and-initial-data-design-document' },
-      { name: '데이터 전환프로그램', path: '/design' },
     ],
   },
   {

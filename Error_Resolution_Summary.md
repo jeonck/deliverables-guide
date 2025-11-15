@@ -83,3 +83,19 @@ TypeScript 환경에서 모듈 내보내기 시 `export const`와 `export defaul
 
 ### 교훈
 새로운 파일이나 모듈을 추가한 후 `Cannot find module`과 같은 모듈 관련 오류가 발생하고 코드 상의 경로에 문제가 없어 보일 경우, `node_modules` 및 `package-lock.json`을 정리하고 종속성을 재설치하는 것이 효과적인 해결책이 될 수 있습니다. 이는 빌드 시스템의 캐시 문제를 해결하고 최신 종속성 상태를 반영하는 데 도움이 됩니다.
+
+---
+
+## 6. `OperatingEnvironmentInstallationResultDocument.tsx` 파일의 `TS17002` 오류
+
+### 문제 발생
+`npm run build` 실행 시 `src/pages/forms/OperatingEnvironmentInstallationResultDocument.tsx` 파일에서 TypeScript 컴파일러 오류 `TS17002` ("Expected corresponding JSX closing tag for 'strong'.")가 발생했습니다.
+
+### 원인 분석
+해당 파일의 JSX 코드에서 `<strong>` 태그의 닫는 태그로 `</b>`가 잘못 사용되었습니다. 올바른 닫는 태그는 `</strong>`입니다.
+
+### 해결
+`src/pages/forms/OperatingEnvironmentInstallationResultDocument.tsx` 파일에서 잘못된 닫는 태그 `</b>`를 올바른 `</strong>`로 수정했습니다.
+
+### 교훈
+JSX 문법은 HTML과 유사하지만, 태그의 정확한 사용이 중요합니다. 특히, `<strong>`과 같은 의미론적 태그는 해당 태그에 맞는 닫는 태그를 사용해야 합니다. 자동 완성 기능에만 의존하기보다는 코드 리뷰나 린터(Linter)를 통해 이러한 실수를 방지하는 것이 좋습니다.
